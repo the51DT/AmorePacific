@@ -27,6 +27,7 @@
             </nav>
         </header>
         <section class="sec1">
+            <div class="back"><img src="./img/sec1_back.svg"></div>
             <div class="text text1"><p>WE MAKE</p></div>
             <div class="text text2"><p>A MORE</p></div>
             <div class="text text3"><p>BEAUTIFUL WORLD</p></div>
@@ -78,8 +79,8 @@
             </div>
         </section>
         <section class="sec3">
+            <h2>Follow<br>Our Brands</h2>
             <div class="swiper2">
-                <h2>Follow<br>Our Brands</h2>
                 <div class="swiper-wrapper">
                     <div class="img_slide swiper-slide">
                         <div class="img">
@@ -311,7 +312,7 @@
                             <img src="./img/sec5_img2.svg">
                             <h3>CREATIVE OFFICE</h3>
                             <div class="line"></div>
-                            <p>직원들의 사무 공간은 칸막이를 없앤<br>픈형 데스크를 통해 더욱 쉽게 소통하고<br>업무 공간도 넓게 사용할 수 있도록 했습니다.</p>
+                            <p>직원들의 사무 공간은 칸막이를 없앤<br>오픈형 데스크를 통해 더욱 쉽게 소통하고<br>업무 공간도 넓게 사용할 수 있도록 했습니다.</p>
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
@@ -335,7 +336,7 @@
                             <img src="./img/sec5_img2.svg">
                             <h3>CREATIVE OFFICE</h3>
                             <div class="line"></div>
-                            <p>직원들의 사무 공간은 칸막이를 없앤<br>픈형 데스크를 통해 더욱 쉽게 소통하고<br>업무 공간도 넓게 사용할 수 있도록 했습니다.</p>
+                            <p>직원들의 사무 공간은 칸막이를 없앤<br>오픈형 데스크를 통해 더욱 쉽게 소통하고<br>업무 공간도 넓게 사용할 수 있도록 했습니다.</p>
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
@@ -380,9 +381,10 @@
             // Optional parameters
             loop: true,
             autoplay: {
-                delay:3000,
+                delay:6000,
                 disableOnInteraction: false,
             },
+            speed: 2000,
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
@@ -413,7 +415,7 @@
             }
         });
 
-        const swiper2 = new Swiper('.swiper2', {
+        /* const swiper2 = new Swiper('.swiper2', {
             // Optional parameters
             loop: true,
             slidesPerView: 4, 
@@ -429,7 +431,7 @@
             // If we need pagination
             /* pagination: {
                 el: '.swiper-pagination',
-            }, */
+            },
 
             // Navigation arrows
             navigation: {
@@ -440,8 +442,23 @@
             // And if we need scrollbar
             /* scrollbar: {
                 el: '.swiper-scrollbar',
-            }, */
+            },
+        }); */
+
+        const swiper2 = new Swiper(".swiper2", {
+            loopedSlides: 6,
+            slidesPerView: "auto",
+            freeMode: true,
+            spaceBetween: 60,
+            mousewheel: {
+                releaseOnEdges: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
+
 
         const img_list = document.querySelectorAll('.img')
         img_list.forEach(el => {
@@ -460,9 +477,10 @@
             // Optional parameters
             loop: true,
             autoplay: {
-                delay:3000,
+                delay:6000,
                 disableOnInteraction: false,
             },
+            speed: 2000,
             // If we need pagination
             pagination: {
                 el: '.swiper-pagination',
@@ -503,7 +521,7 @@
             })
         });
 
-        const swiper4 = new Swiper('.swiper4', {
+        /* const swiper4 = new Swiper('.swiper4', {
             // Optional parameters
             loop: true,
             slidesPerView: 4, 
@@ -519,7 +537,7 @@
             // If we need pagination
             /* pagination: {
                 el: '.swiper-pagination',
-            }, */
+            },
 
             // Navigation arrows
             navigation: {
@@ -530,7 +548,21 @@
             // And if we need scrollbar
             /* scrollbar: {
                 el: '.swiper-scrollbar',
-            }, */
+            },
+        }); */
+
+        const swiper4 = new Swiper(".swiper4", {
+            loopedSlides: 6,
+            slidesPerView: "auto",
+            freeMode: true,
+            spaceBetween: 60,
+            mousewheel: {
+                releaseOnEdges: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
 
         const cont_list = document.querySelectorAll('.cont_wrap')
