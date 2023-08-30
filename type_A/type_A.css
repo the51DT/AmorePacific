@@ -2,6 +2,11 @@ body{
     font-family: 'AritaBuri';
     scroll-behavior: smooth;
 }
+.wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
 header{
     max-width: 1600px;
     width: 100%;
@@ -56,36 +61,43 @@ nav ul{
     height: 144px;
 }
 .sec1 .text p{
-    padding-top: 100px;
-    transform: rotate(8deg);
     transform-origin: left center;
-    animation: text_rotate 1s ease-in-out forwards;
-    animation-delay: 1.5s;
 }
 .sec1 .text + .text{
     margin-top: 27px;
 }
 .sec1 .text1{
     letter-spacing: 42px;
+    animation: text1 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
 }
 .sec1 .text2{
     letter-spacing: 30px;
+    animation: text2 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
 }
 .sec1 .text3{
     letter-spacing: 18px;
+    animation: text3 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
 }
-@keyframes text_rotate {
-    0%{
-        padding-top: 100px;
-        transform: rotate(8deg);
-    }
-    100%{
-        padding-top: 0px;
-        transform: rotate(0deg);
-    }
+@keyframes text1 {
+    0%{ letter-spacing: 80px; opacity: 0;}
+    100%{ letter-spacing: 42px; opacity: 1;}
+}
+@keyframes text2 {
+    0%{ letter-spacing: 80px; opacity: 0;}
+    100%{ letter-spacing: 30px; opacity: 1;}
+}
+@keyframes text3 {
+    0%{ letter-spacing: 40px; opacity: 0;}
+    100%{ letter-spacing: 18px; opacity: 1;}
 }
 .sec2{
-    padding: 64px 60px;
+    padding: 64px 0;
 }
 .sec2 .swiper1{
     position: relative;
@@ -94,14 +106,26 @@ nav ul{
     overflow: hidden;
 }
 .sec2 .swiper1 .img_slide img{
+    padding: 0 60px;
+    box-sizing: border-box;
+    width: 100%;
     filter: brightness(70%);
+    transition: padding 0.8s ease-in-out;
 }
 .sec2 .img_slide .text_wrap{
     position: absolute;
     top: 249px;
-    left: 100px;
+    left: 160px;
     color: #FFF;
     width: 602px;
+    padding-left: 100px;
+    animation: paddingL 1.2s ease-in-out forwards;
+    animation-delay: 1200ms;
+    opacity: 0;
+}
+@keyframes paddingL {
+    0%{padding-left: 100px; opacity: 0;}
+    100%{padding-left: 0px; opacity: 1;}
 }
 .text_wrap h2{
     font-size: 60px;
@@ -117,7 +141,7 @@ nav ul{
 .swiper1 .swiper-button-prev{
     position: absolute;
     top: 501px;
-    left: 100px;
+    left: 160px;
     width: 64px;
     height: 64px;
     background-image: url(./img/btn_prev_w.svg);
@@ -125,7 +149,7 @@ nav ul{
 .swiper1 .swiper-button-next{
     position: absolute;
     top: 501px;
-    left: 188px;
+    left: 248px;
     width: 64px;
     height: 64px;
     background-image: url(./img/btn_next_w.svg);
@@ -140,7 +164,7 @@ nav ul{
     justify-content: space-between;
     gap: 10px;
     top: 178px;
-    left: 100px;
+    left: 160px;
     color: #FFF;
     font-size: 24px;
     font-weight: 600;
@@ -232,23 +256,24 @@ nav ul{
 .swiper2 .img_dim{
     display: none;
     flex-direction: column;
-    gap: 81px;
+    padding: 160px 0 168px;
+    box-sizing: border-box;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #0000004d;
-    animation: dim 0.5s ease-in-out forwards;
+    animation: dim 0.8s ease-in-out forwards;
 }
 @keyframes dim{
-    0%{padding-top:727px}
-    100%{padding-top:0px;}
+    0%{padding-top:215px}
+    100%{padding-top:160px;}
 }
 .swiper2 .img_dim img:nth-child(1){
-    width: 200px;
+    width: fit-content;
 }
 .swiper2 .img_dim img:nth-child(2){
     width: 169px;
@@ -290,6 +315,10 @@ nav ul{
     left: 160px;
     width: 489px;
     z-index: 5;
+    padding-left: 100px;
+    animation: paddingL 1.2s ease-in-out forwards;
+    animation-delay: 1200ms;
+    opacity: 0;
 }
 .swiper3 .text_wrap h3{
     font-size: 60px;

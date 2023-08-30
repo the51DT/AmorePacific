@@ -87,7 +87,7 @@
                             <img src="./img/sec3_img1.svg">
                             <div class="img_dim">
                                 <img src="./img/dim1.svg">
-                                <img src="./img/dim2.svg">
+                                <img src="./img/dim_btn.svg">
                             </div>
                         </div>
                     </div>
@@ -95,8 +95,8 @@
                         <div class="img">
                             <img src="./img/sec3_img2.svg">
                             <div class="img_dim">
-                                <img src="./img/dim1.svg">
                                 <img src="./img/dim2.svg">
+                                <img src="./img/dim_btn.svg">
                             </div>
                         </div>
                     </div>
@@ -104,8 +104,8 @@
                         <div class="img">
                             <img src="./img/sec3_img3.svg">
                             <div class="img_dim">
-                                <img src="./img/dim1.svg">
-                                <img src="./img/dim2.svg">
+                                <img src="./img/dim3.svg">
+                                <img src="./img/dim_btn.svg">
                             </div>
                         </div>
                     </div>
@@ -113,8 +113,8 @@
                         <div class="img">
                             <img src="./img/sec3_img4.svg">
                             <div class="img_dim">
-                                <img src="./img/dim1.svg">
-                                <img src="./img/dim2.svg">
+                                <img src="./img/dim4.svg">
+                                <img src="./img/dim_btn.svg">
                             </div>
                         </div>
                     </div>
@@ -122,8 +122,8 @@
                         <div class="img">
                             <img src="./img/sec3_img5.svg">
                             <div class="img_dim">
-                                <img src="./img/dim1.svg">
-                                <img src="./img/dim2.svg">
+                                <img src="./img/dim5.svg">
+                                <img src="./img/dim_btn.svg">
                             </div>
                         </div>
                     </div>
@@ -131,8 +131,17 @@
                         <div class="img">
                             <img src="./img/sec3_img6.svg">
                             <div class="img_dim">
-                                <img src="./img/dim1.svg">
-                                <img src="./img/dim2.svg">
+                                <img src="./img/dim6.svg">
+                                <img src="./img/dim_btn.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <div class="img">
+                            <img src="./img/sec3_img7.svg">
+                            <div class="img_dim">
+                                <img src="./img/dim7.svg">
+                                <img src="./img/dim_btn.svg">
                             </div>
                         </div>
                     </div>
@@ -376,7 +385,6 @@
 
     <script>
         const progressLine1 = document.querySelector('.swiper1 .bar svg')
-        const progressLine2 = document.querySelector('.swiper3 .bar svg')
         const swiper1 = new Swiper('.swiper1', {
             // Optional parameters
             loop: true,
@@ -414,6 +422,33 @@
                 }
             }
         });
+
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                const $target = document.querySelectorAll('.sec2 .swiper1 .img_slide img');
+
+                // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
+                if (e.isIntersecting) {
+                    for(i=0; i<3;i++){
+                        $target[i].style.padding = "0 0"  
+                    }
+                    console.log('hi')
+                }
+            });
+            
+        }, {threshold: [1]});
+
+        // 옵저버할 대상을 선택하여 관찰 시작
+        const $items = document.querySelectorAll(".swiper1");
+        $items.forEach((item) => {
+            io.observe(item);
+        });
+
+        // 특정 요소만 옵저버를 해제
+        // io.unobserve(target);
+
+        // 옵저버 전체를 해제
+        // io.disconnect();
 
         /* const swiper2 = new Swiper('.swiper2', {
             // Optional parameters
@@ -459,7 +494,6 @@
             },
         });
 
-
         const img_list = document.querySelectorAll('.img')
         img_list.forEach(el => {
             el.addEventListener('mouseover', ()=>{
@@ -472,6 +506,8 @@
                 el.closest('.img_slide').querySelector('.img_dim').style.display = "none";
             })
         });
+
+        const progressLine2 = document.querySelector('.swiper3 .bar svg')
 
         const swiper3 = new Swiper('.swiper3', {
             // Optional parameters
