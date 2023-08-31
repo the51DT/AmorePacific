@@ -14,13 +14,27 @@ header {z-index: 100; position: fixed; padding: calc(100vw * 32 /1920);}
 header .gnb__wrap {display: flex; gap: calc(100vw * 100 /1920);}
 header .gnb__wrap .gnb {display: inline-flex; align-items: center; gap: calc(100vw * 120 /1920);}
 header .gnb__wrap .gnb li { transition: all ease-in-out 0.5s;}
-header .gnb__wrap .gnb li a { color: #FFF; font-family: 'Avenir'; font-size: calc(100vw * 18 /1920); font-style: normal; font-weight: 500; line-height: normal; text-transform: uppercase;}
+header .gnb__wrap .gnb li a {color: #FFF; font-family: 'Avenir'; font-size: calc(100vw * 18 /1920); font-style: normal; font-weight: 500; line-height: normal; text-transform: uppercase;}
+header .gnb__wrap.sub .gnb li a {color: #000;}
 header .gnb__wrap .gnb li .gnb_logo {font-family: 'APHQ'; font-size: calc(100vw * 30 /1920);}
 header .gnb__wrap .language .gnb_language img {background-image: '../assets/images/gnb_logo.png'; width: calc(100vw * 64 /1920); height: calc(100vw * 32 /1920); margin-top: calc(100vw * 2 /1920);}
 
+/* ---- footer ---- */
+footer {background-color: #fff; color: #000; position: relative;}
+footer .footer__wrap {padding: calc(100vw * 80 /1920) calc(100vw * 32 /1920) calc(100vw * 40 /1920);}
+footer .footer__wrap .text__wrap .list__wrap {display: flex;}
+footer .footer__wrap .text__wrap .list__wrap .title {font-family: 'Avenir'; font-size: calc(100vw * 100 /1920); font-style: normal; font-weight: 500; line-height: calc(100vw * 110 /1920); text-transform: uppercase;}
+footer .footer__wrap .text__wrap .list__wrap .list1 {padding-left: calc(100vw * 527 /1920);}
+footer .footer__wrap .text__wrap .list__wrap .list2 {padding-left: calc(100vw * 183 /1920);}
+footer .footer__wrap .text__wrap .list__wrap ul {display: inline-flex; flex-direction: column; align-items: flex-start; gap: calc(100vw * 32 /1920);}
+footer .footer__wrap .text__wrap .list__wrap ul li a {color: #fff; font-family:'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 400; line-height: normal; text-transform: uppercase;}
+footer .footer__wrap .text__wrap .bottom__wrap {display: flex; padding-top: calc(100vw * 115 /1920);}
+footer .footer__wrap .text__wrap .bottom__wrap .site {display: inline-flex; align-items: flex-start; gap: calc(100vw * 40 /1920);}
+footer .footer__wrap .text__wrap .bottom__wrap .site li a {color: #666; font-family: 'Avenir'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 500; line-height: normal; text-transform: capitalize;}
+footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 653 /1920);color: #666; font-family: 'Avenir'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 500; line-height: normal; text-transform: uppercase;}
+
 
 /* ---- main-wrap ---- */ 
-
 /* ---- section1 ---- */
 .main-wrap #section1 {height: calc(100vw * 1150 /1920);}
 .main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide img {width: 100%; height: 100%;}
@@ -148,7 +162,7 @@ header .gnb__wrap .language .gnb_language img {background-image: '../assets/imag
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide:nth-child(3){background: #FD5946;}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide:nth-child(4){background: #EAF3F6 ;}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap { padding: calc(100vw * 64 /1920);}
-.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .title {color: #FFF; font-family: 'Avenir'; font-size: calc(100vw * 40 /1920); font-style: normal; font-weight: 800; line-height: normal; text-transform: uppercase;}
+.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .title {font-family: 'Avenir'; font-size: calc(100vw * 40 /1920); font-style: normal; font-weight: 800; line-height: normal; text-transform: uppercase;}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-1 .text__wrap .list__wrap {padding-top: calc(100vw * 50 /1920);}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-1 .text__wrap .list__wrap ul {width: 100%; display: inline-flex; flex-direction: column; align-items: flex-start; gap: calc(100vw * 20 /1920);}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-1 .text__wrap .list__wrap ul li {width: 100%; display: flex; justify-content: space-between; padding-bottom: calc(100vw * 20 /1920); border-bottom: 1px solid #FFF;}
@@ -157,13 +171,9 @@ header .gnb__wrap .language .gnb_language img {background-image: '../assets/imag
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-1 .text__wrap .list__wrap ul li .list-title span {margin-right: calc(100vw * 17 /1920); font-family: 'Avenir'; font-size: calc(100vw * 24 /1920);  font-style: normal; font-weight: 500; line-height: normal; text-transform: uppercase;}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-1 .text__wrap .list__wrap ul li svg {width: calc(100vw * 32 /1920); height: calc(100vw * 32 /1920);}
 .main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .subtitle__wrap {display: flex; justify-content: space-between;}
-.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .subtitle__wrap .title {color: #FFF; font-family: 'Avenir'; font-size: calc(100vw * 40 /1920); font-style: normal; font-weight: 800; line-height: normal; text-transform: uppercase;}
-.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .content {padding-top: calc(100vw * 200 /1920); color: #FFF; font-family: 'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 300; line-height: normal; text-transform: uppercase;}
-
-
-
-
-
+.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .subtitle__wrap .title {font-family: 'Avenir'; font-size: calc(100vw * 40 /1920); font-style: normal; font-weight: 800; line-height: normal; text-transform: uppercase;}
+.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .text__wrap .content {padding-top: calc(100vw * 200 /1920); font-family: 'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 300; line-height: normal; text-transform: uppercase;}
+.main-wrap #section6 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-4 {color: #000;}
 .main-wrap #section6 .banner__wrap {color: #fff; padding: 0 calc(100vw * 32 /1920) calc(100vw * 32 /1920) calc(100vw * 32 /1920);}
 .main-wrap #section6 .banner {padding: 0 calc(100vw * 96 /1920); display: flex; justify-content: space-between; border-radius: calc(100vw * 24 /1920); background: #282828; }
 .main-wrap #section6 .banner__wrap .text__wrap {padding: calc(100vw * 50 /1920) 0;}
@@ -173,18 +183,17 @@ header .gnb__wrap .language .gnb_language img {background-image: '../assets/imag
 .main-wrap #section6 .banner__wrap .btn__wrap a {transition: all ease-out 0.3s; color: #fff; font-family: 'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 400; line-height: calc(100vw * 24 /1920); text-transform: uppercase;}
 .main-wrap #section6 .banner__wrap .btn__wrap:hover a {color: #000;}
 
-/* ---- footer ---- */
-.main-wrap #footer {background-color: #fff; color: #000; position: relative;}
-.main-wrap #footer .footer__wrap {padding: calc(100vw * 80 /1920) calc(100vw * 32 /1920) calc(100vw * 40 /1920);}
-.main-wrap #footer .footer__wrap .text__wrap .list__wrap {display: flex;}
-.main-wrap #footer .footer__wrap .text__wrap .list__wrap .title {font-family: 'Avenir'; font-size: calc(100vw * 100 /1920); font-style: normal; font-weight: 500; line-height: calc(100vw * 110 /1920); text-transform: uppercase;}
-.main-wrap #footer .footer__wrap .text__wrap .list__wrap .list1 {padding-left: calc(100vw * 527 /1920);}
-.main-wrap #footer .footer__wrap .text__wrap .list__wrap .list2 {padding-left: calc(100vw * 183 /1920);}
-.main-wrap #footer .footer__wrap .text__wrap .list__wrap ul {display: inline-flex; flex-direction: column; align-items: flex-start; gap: calc(100vw * 32 /1920);}
-.main-wrap #footer .footer__wrap .text__wrap .list__wrap ul li a {color: #fff; font-family:'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 400; line-height: normal; text-transform: uppercase;}
-.main-wrap #footer .footer__wrap .text__wrap .bottom__wrap {display: flex; padding-top: calc(100vw * 115 /1920);}
-.main-wrap #footer .footer__wrap .text__wrap .bottom__wrap .site {display: inline-flex; align-items: flex-start; gap: calc(100vw * 40 /1920);}
-.main-wrap #footer .footer__wrap .text__wrap .bottom__wrap .site li a {color: #666; font-family: 'Avenir'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 500; line-height: normal; text-transform: capitalize;}
-.main-wrap #footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 653 /1920);color: #666; font-family: 'Avenir'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 500; line-height: normal; text-transform: uppercase;}
+
+/* ---- aboutus-wrap ---- */ 
+.aboutus-wrap {padding: calc(100vw * 68 /1920) calc(100vw * 32 /1920) calc(100vw * 40 /1920);} 
+/* ---- section1 ---- */
+.aboutus-wrap #section1 {}
+.aboutus-wrap #section1 .text__wrap {padding: calc(100vw * 258 /1920) calc(100vw * 32 /1920) 0 ;}
+.aboutus-wrap #section1 .text__wrap .title__wrap {}
+.aboutus-wrap #section1 .text__wrap .title__wrap .title {color: #000; font-family: 'PP Neue Montreal'; font-size: calc(100vw * 160 /1920); font-style: normal; font-weight: 500; line-height: calc(100vw * 180 /1920); text-transform: uppercase;}
+.aboutus-wrap #section1 .text__wrap .content__wrap {opacity: 0%; padding-top: calc(100vw * 40 /1920);}
+.aboutus-wrap #section1 .text__wrap .content__wrap .content {color: #000; font-family: 'Arita-dotum'; font-size: calc(100vw * 32 /1920); font-style: normal; font-weight: 400; line-height: calc(100vw * 50 /1920); text-transform: uppercase;}
+
+
 
 
