@@ -1,0 +1,175 @@
+.none {
+  opacity: 0%;
+}
+.block {
+  opacity: 100%;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.color1 {
+  animation: color1 0.3s forwards;
+}
+.color2 {
+  animation: color2 0.3s forwards;
+}
+.color3 {
+  animation: color3 2s ease-in-out forwards;
+}
+.color4 {
+  animation: color4 2s ease-in-out forwards;
+}
+@keyframes color1 {
+  from {
+    color:#fff;
+  }
+  to {
+    color:#000000;
+  }
+}
+@keyframes color2 {
+  from {
+      color:#000000;
+  }
+  to {
+    color:#fff;
+  }
+}
+@keyframes color3 {
+  from {
+    background-color: #fff; 
+    color: #000;
+  }
+  to {
+    background-color: #000; 
+    color: #FFF; 
+  }
+}
+@keyframes color4 {
+  from {
+    background-color: #000; 
+    color: #FFF;
+  }
+  to {
+    background-color: #fff; 
+    color: #000;
+  }
+}
+
+.left  {
+  animation: left2 0.5s forwards;
+}
+.left1  {
+  animation: left1 0.5s forwards;
+}
+.left2  {
+  animation: left2 0.5s forwards;
+}
+.left3 {
+  animation: left3 2s ease-in-out forwards;
+}
+.left4 {
+  animation: left4 2s ease-in-out forwards;
+}
+@keyframes left1 {
+  from {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0%;
+    transform: translateX(-150px);
+  }
+}
+@keyframes left2 {
+  from {
+    opacity: 0%;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+@keyframes left3 {
+  from {
+    transform: translateX(-43%);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes left4 {
+  from {
+    transform: translateX(-16%);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.right  {
+  animation: right2 0.5s forwards;
+}
+.right1  {
+  animation: right1 0.5s forwards;
+}
+.right2  {
+  animation: right2 0.5s forwards;
+}
+.right3 {
+  animation: right3 2s ease-in-out forwards;
+}
+.right4 {
+  animation: right4 2s ease-in-out forwards;
+}
+@keyframes right1 {
+  from {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0%;
+    transform: translateX(150px);
+  }
+}
+@keyframes right2 {
+  from {
+    opacity: 0%;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+@keyframes right3 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-43%);
+  }
+}
+@keyframes right4 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-16%);
+  }
+}
+
+@keyframes up1 {
+  from {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
