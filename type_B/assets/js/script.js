@@ -221,6 +221,7 @@ $(window).scroll(function () {
 /* ---- section5 ---- */
 /* ---- hover ---- */  
 function se5HoverEvent() {
+  let $sec5 = $('#section5');
   let $list1 = $('.main-wrap #section5 .list__wrap ul .list-1');
   let $list2 = $('.main-wrap #section5 .list__wrap ul .list-2');
   let $list3 = $('.main-wrap #section5 .list__wrap ul .list-3');
@@ -229,81 +230,112 @@ function se5HoverEvent() {
   let $list6 = $('.main-wrap #section5 .list__wrap ul .list-6');
   let $list7 = $('.main-wrap #section5 .list__wrap ul .list-7');
   let $list8 = $('.main-wrap #section5 .list__wrap ul .list-8');
-  let $backImg = $('.main-wrap #section5 .back__wrap .brand-img');
+  let $cursorImg = $('.cursor');
+  let $cursorImg1 = $('.cursor .brand-01');
+  let $cursorImg2 = $('.cursor .brand-02');
+  let $cursorImg3 = $('.cursor .brand-03');
+  let $cursorImg4 = $('.cursor .brand-04');
+  let $cursorImg5 = $('.cursor .brand-05');
+  let $cursorImg6 = $('.cursor .brand-06');
+  let $cursorImg7 = $('.cursor .brand-07');
+  let $cursorImg8 = $('.cursor .brand-08');
 
+
+  $sec5.mousemove(function(e){
+    var mouseX = e.pageX;
+    var mouseY = e.pageY;
+    $cursorImg.css({
+        left: mouseX + 180 +"px",
+        top : mouseY + 50 +"px"
+    })
+  })
   $list1.hover(
     function() {
       $list1.addClass('active');
-      $backImg.addClass('brand-img-01');
+      $cursorImg1.addClass('active');
     }, function() {
       $list1.removeClass('active');
-      $backImg.removeClass('brand-img-01');
+      $cursorImg1.removeClass('active');
     }
   );
   $list2.hover(
     function() {
       $list2.addClass('active');
-      $backImg.addClass('brand-img-02');
+      $cursorImg2.addClass('active');
     }, function() {
       $list2.removeClass('active');
-      $backImg.removeClass('brand-img-02');
+      $cursorImg2.removeClass('active');
     }
   );
   $list3.hover(
     function() {
       $list3.addClass('active');
-      $backImg.addClass('brand-img-03');
+      $cursorImg3.addClass('active');
     }, function() {
       $list3.removeClass('active');
-      $backImg.removeClass('brand-img-03');
+      $cursorImg3.removeClass('active');
     }
   );
   $list4.hover(
     function() {
       $list4.addClass('active');
-      $backImg.addClass('brand-img-04');
+      $cursorImg4.addClass('active');
     }, function() {
       $list4.removeClass('active');
-      $backImg.removeClass('brand-img-04');
+      $cursorImg4.removeClass('active');
     }
   );
   $list5.hover(
     function() {
       $list5.addClass('active');
-      $backImg.addClass('brand-img-05');
+      $cursorImg5.addClass('active');
     }, function() {
       $list5.removeClass('active');
-      $backImg.removeClass('brand-img-05');
+      $cursorImg5.removeClass('active');
     }
   );
   $list6.hover(
     function() {
       $list6.addClass('active');
-      $backImg.addClass('brand-img-06');
+      $cursorImg6.addClass('active');
     }, function() {
       $list6.removeClass('active');
-      $backImg.removeClass('brand-img-06');
+      $cursorImg6.removeClass('active');
     }
   );
   $list7.hover(
     function() {
       $list7.addClass('active');
-      $backImg.addClass('brand-img-07');
+      $cursorImg7.addClass('active');
     }, function() {
       $list7.removeClass('active');
-      $backImg.removeClass('brand-img-07');
+      $cursorImg7.removeClass('active');
     }
   );
   $list8.hover(
     function() {
       $list8.addClass('active');
-      $backImg.addClass('brand-img-08');
+      $cursorImg8.addClass('active');
     }, function() {
       $list8.removeClass('active');
-      $backImg.removeClass('brand-img-08');
+      $cursorImg8.removeClass('active');
     }
   );
 }
 $(document).ready(function () {
   se5HoverEvent();
 });
+
+// $(document).ready(function(){
+    
+//   $list1.hover(function(e){
+//       var mouseX = e.pageX;
+//       var mouseY = e.pageY;
+//       console.log('test')
+
+//       $('.cursor').css({
+//           left: mouseX + "px",
+//           top : mouseY + "px"
+//       })
+//   })
+// })
