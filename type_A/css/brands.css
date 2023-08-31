@@ -50,7 +50,7 @@
     font-weight: 600;
     line-height: normal;
 }
-.sec2 .btn_wrap input[type="radio"]:checked + label{
+.sec2 .btn_wrap input:checked + label{
     color: #FFF;
     background: #131313;
 }
@@ -78,7 +78,7 @@
 }
 .sec2 .brand_item .brand{
     filter: grayscale(95%);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .sec2 .logo_wrap{
     position: absolute;

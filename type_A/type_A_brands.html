@@ -35,43 +35,43 @@
                 <form>
                     <fieldset>
                         <div class="btn_item">
-                            <input type="radio" id="brand1" name="brands" checked>
+                            <input type="checkbox" id="brand1" name="brands" checked>
                             <label for="brand1">전체</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand2" name="brands">
+                            <input type="checkbox" id="brand2" name="brands">
                             <label for="brand2">화장품</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand3" name="brands">
+                            <input type="checkbox" id="brand3" name="brands">
                             <label for="brand3">향수</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand4" name="brands">
+                            <input type="checkbox" id="brand4" name="brands">
                             <label for="brand4">메디컬뷰티</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand5" name="brands">
+                            <input type="checkbox" id="brand5" name="brands">
                             <label for="brand5">뷰티 디바이스</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand6" name="brands">
+                            <input type="checkbox" id="brand6" name="brands">
                             <label for="brand6">이너뷰티</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand7" name="brands">
+                            <input type="checkbox" id="brand7" name="brands">
                             <label for="brand7">헤어케어</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand8" name="brands">
+                            <input type="checkbox" id="brand8" name="brands">
                             <label for="brand8">바디케어</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand9" name="brands">
+                            <input type="checkbox" id="brand9" name="brands">
                             <label for="brand9">덴탄케어</label>
                         </div>
                         <div class="btn_item">
-                            <input type="radio" id="brand10" name="brands">
+                            <input type="checkbox" id="brand10" name="brands">
                             <label for="brand10">티컬쳐</label>
                         </div>
                     </fieldset>
@@ -113,8 +113,7 @@
         let item_list = document.querySelectorAll('.brand_item')
         item_list.forEach((el, index) =>{
             setTimeout(function(){
-                console.log(el)
-                el.style.animation = 'brand ease-in-out forwards .8s'
+                el.style.animation = 'brand ease-in-out forwards .5s'
             }, 300 * index)
         })
         item_list.forEach((el) => {
@@ -130,21 +129,15 @@
             })
         })
 
-        document.querySelector('form').addEventListener("change",function(){
-            if(document.querySelector('#brand1').checked){
-                let text = ''
-                for(i=1;i<=16;i++){
-                    text += `<div class="brand_item">
-                            <img class="brand" src="./img/brands/img${i}.svg">
-                            <div class="logo_wrap">
-                                <img class=logo_w src="./img/brands/logo${i}.svg">
-                                <img class=logo_b src="./img/brands/logo${i}_b.svg">
-                            </div>
-                        </div>`
+        document.querySelector('form').addEventListener("change",function(e){
+            if(e.target.id != 'brand1'){
+                document.querySelector('#brand1').checked = false;
+            } else{
+                for(i=2;i<=10;i++){
+                    document.querySelector(`#brand${i}`).checked = false;
                 }
-                document.querySelector('.brand_wrap').innerHTML = text
             }
-            else if(document.querySelector('#brand2').checked){
+            if(document.querySelector('#brand2').checked){
                 let text = ''
                 for(i=1;i<=16;i+=2){
                     text += `<div class="brand_item">
@@ -183,6 +176,19 @@
                 }
                 document.querySelector('.brand_wrap').innerHTML = text
             }
+            else if(document.querySelector('#brand1').checked){
+                let text = ''
+                for(i=1;i<=16;i++){
+                    text += `<div class="brand_item">
+                            <img class="brand" src="./img/brands/img${i}.svg">
+                            <div class="logo_wrap">
+                                <img class=logo_w src="./img/brands/logo${i}.svg">
+                                <img class=logo_b src="./img/brands/logo${i}_b.svg">
+                            </div>
+                        </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
             else {
                 document.querySelector('.brand_wrap').innerHTML = ''
             }
@@ -191,8 +197,7 @@
             item_list.forEach((el, index) =>{
                 el.style.animation = ''
                 setTimeout(function(){
-                    console.log(el)
-                    el.style.animation = 'brand ease-in-out forwards .8s'
+                    el.style.animation = 'brand ease-in-out forwards .5s'
                 }, 300 * index)
             })
             
