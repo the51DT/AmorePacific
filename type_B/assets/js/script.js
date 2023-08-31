@@ -15,20 +15,13 @@ const mainSwiper = new Swiper('.main-swiper', {
 });
 
 var mainSwiper2 = new Swiper(".main-swiper2", {
-  slidesPerView: 5,
-  spaceBetween: 32,
+  slidesPerView: "auto",
   grabCursor: true,
-  loop:true,
-  loopAdditionalSlides: 1,
 });
 
 var mainSwiper3 = new Swiper(".main-swiper3", {
-  slidesPerView: 2.2,
-  spaceBetween: 32,
   slidesPerView: "auto",
   grabCursor: true,
-  loop:true,
-  loopAdditionalSlides: 1,
 });
 
 
