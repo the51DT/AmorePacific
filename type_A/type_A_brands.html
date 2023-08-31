@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>type_A_About_Us</title>
+    <title>type_A_Brands</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/brands.css">
@@ -167,22 +167,24 @@
             else {
                 document.querySelector('.brand_wrap').innerHTML = ''
             }
+
+            const item_list = document.querySelectorAll('.brand_item')
+            item_list.forEach((el) => {
+                el.addEventListener('mouseover', () =>{
+                    el.querySelector('.logo_b').style.display = 'block';
+                    el.querySelector('.brand').style.filter = 'none';
+                    el.querySelector('.brand').style.transform = 'scale(110%)';
+                })
+                el.addEventListener('mouseleave', () =>{
+                    el.querySelector('.logo_b').style.display = 'none';
+                    el.querySelector('.brand').style.filter = 'grayscale(95%)';
+                    el.querySelector('.brand').style.transform = 'scale(100%)';
+                })
+            })
         })
 
 
-        const item_list = document.querySelectorAll('.brand_item')
-        item_list.forEach((el) => {
-            el.addEventListener('mouseover', () =>{
-                el.querySelector('.logo_b').style.display = 'block';
-                el.querySelector('.brand').style.filter = 'none';
-                el.querySelector('.brand').style.transform = 'scale(110%)';
-            })
-            el.addEventListener('mouseleave', () =>{
-                el.querySelector('.logo_b').style.display = 'none';
-                el.querySelector('.brand').style.filter = 'grayscale(95%)';
-                el.querySelector('.brand').style.transform = 'scale(100%)';
-            })
-        })
+        
             
         
     </script>
