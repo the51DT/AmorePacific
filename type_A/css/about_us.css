@@ -12,7 +12,12 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: 42px;
+    letter-spacing: 84px;
+    animation: text_spacing 1s forwards ease-in-out;
+}
+@keyframes text_spacing{
+    0%{letter-spacing: 84px;}
+    100%{letter-spacing: 42px;}
 }
 .sec2{
     width: 100%;
@@ -29,7 +34,7 @@
 }
 .sec3 .swiper1{
     margin: 0 160px;
-    width: fit-content;
+    width: max-content;
     position: relative;
 }
 .swiper1 .img_slide{
@@ -50,14 +55,12 @@
     opacity: 0;
 }
 .swiper1 .swiper-slide-active p{
-    animation: text_ani 6s ease-in-out forwards;
+    animation: text_ani 1.5s ease-in-out forwards;
     animation-delay: 1500ms;
 }
 @keyframes text_ani {
     0%{padding-left: 200px; opacity: 0;}
-    25%{padding-left: 0px; opacity: 1;}
-    90%{padding-left: 0px; opacity: 1;}
-    100%{padding-left: 0px; opacity: 0;}
+    100%{padding-left: 0px; opacity: 1;}
 }
 .swiper1 .text_wrap{
     position: absolute;
