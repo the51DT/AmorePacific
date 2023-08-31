@@ -1,40 +1,3 @@
-body{
-    font-family: 'AritaBuri';
-    scroll-behavior: smooth;
-}
-.wrap{
-    max-width: 1920px;
-    margin: 0 auto;
-    overflow-x: hidden;
-}
-header{
-    max-width: 1600px;
-    width: 100%;
-    height: 24.4px;
-    padding: 24px 160px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background: #FFF;
-    z-index: 99;
-}
-header.logo_wrap img{
-    width: 250px;
-}
-nav{
-    max-width: 996px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
-}
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    width: 996px;
-}
 .sec1{
     position: relative;
     width: 1800px;
@@ -68,12 +31,14 @@ nav ul{
     margin-top: 27px;
 }
 .sec1 .text1{
+    color: #131313;
     letter-spacing: 42px;
     animation: text1 1s ease-in-out forwards;
     animation-delay: 1.5s;
     opacity: 0;
 }
 .sec1 .text2{
+    color: #1C2544;
     letter-spacing: 30px;
     animation: text2 1s ease-in-out forwards;
     animation-delay: 1.5s;
@@ -214,6 +179,7 @@ nav ul{
     padding: 64px 0;
 }
 .sec3 h2{
+    color: #131313;
     margin-left: 100px;
     font-size: 84px;
     font-weight: 500;
@@ -445,6 +411,7 @@ nav ul{
     padding: 64px 0;
 }
 .sec5 h2{
+    color: #131313;
     margin-left: 100px;
     font-size: 84px;
     font-weight: 500;
@@ -527,23 +494,4 @@ nav ul{
 }
 .sec5 .btn_more img{
     width: 205px;
-}
-footer{
-    margin-top: 64px;
-    color: #FFF;
-    background: #000;
-    padding: 86px 160px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 24px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: normal;
-}
-footer ul{
-    display: flex;
-    justify-content: space-between;
-    width: 859px;
-    margin: 0 auto;
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type_A_About_Us</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/about_us.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo_wrap">
+                <h1><img src="./img/logo.svg"></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Our culture</a></li>
+                    <li><a href="#">Commitments</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="sec1">
+            <h2>About Us</h2>
+        </section>
+        <section class="sec2">
+            <img src="./img/about_us/sec2_back.svg">
+        </section>
+        <section class="sec3">
+            <div class="swiper1">
+                <div class="swiper-wrapper">
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/about_us/sec3_img1.svg">
+                        <p>최초, 최고의 제품을 전 세계에 전하기 위한 혁신적인 연구개발과 좋은 원료,<br>첨단기술을 토대로 세계가 주목하는 아름다움을 만들어 냅니다.</p>
+                        <div class="text_wrap">
+                            <h2>Research<br>
+                                & Innovation</h2>
+                            <img src="./img/about_us/sec3_btn.svg">
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/about_us/sec3_img2.svg">
+                        <p>최초, 최고의 제품을 전 세계에 전하기 위한 혁신적인 연구개발과 좋은 원료,<br>첨단기술을 토대로 세계가 주목하는 아름다움을 만들어 냅니다.</p>
+                        <div class="text_wrap">
+                            <h2>Visual<br>
+                                Identity</h2>
+                            <img src="./img/about_us/sec3_btn.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li>윤리경영</li>
+                <li>인재채용</li>
+                <li>고객서비스</li>
+                <li>글로벌 네트워크</li>
+                <li>매거진</li>
+                <li>사이트맵</li>
+                <li>관련사이트</li>
+                <li>법적고지</li>
+                <li>개인정보 처리방침</li>
+            </ul>
+            <div><img src="./img/footer.svg"></div>
+            <p>© Since 1945 Amorepacific, All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                const $target = document.querySelectorAll('.sec2');
+
+                // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
+                if (e.isIntersecting) {
+                    for(i=0; i<3;i++){
+                        $target[i].style.padding = "0 0"  
+                    }
+                }
+            });
+            
+        }, {threshold: [1]});
+
+        // 옵저버할 대상을 선택하여 관찰 시작
+        const $items = document.querySelectorAll(".sec2");
+        $items.forEach((item) => {
+            io.observe(item);
+        });
+
+        const swiper1 = new Swiper('.swiper1', {
+            width:1980,
+            // Optional parameters
+            slidesPerView: 1.1,
+            spaceBetween: 60,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            autoplay: {
+                delay:6000,
+                disableOnInteraction: false,
+            },
+            speed: 2000,
+        });
+    </script>
+</body>
+</html>
