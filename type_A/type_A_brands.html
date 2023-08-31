@@ -110,6 +110,25 @@
         }
         document.querySelector('.brand_wrap').innerHTML = text
 
+        let item_list = document.querySelectorAll('.brand_item')
+        item_list.forEach((el, index) =>{
+            setTimeout(function(){
+                console.log(el)
+                el.style.animation = 'brand ease-in-out forwards .8s'
+            }, 300 * index)
+        })
+        item_list.forEach((el) => {
+            el.addEventListener('mouseover', () =>{
+                el.querySelector('.logo_b').style.display = 'block';
+                el.querySelector('.brand').style.filter = 'none';
+                el.querySelector('.brand').style.transform = 'scale(110%)';
+            })
+            el.addEventListener('mouseleave', () =>{
+                el.querySelector('.logo_b').style.display = 'none';
+                el.querySelector('.brand').style.filter = 'grayscale(95%)';
+                el.querySelector('.brand').style.transform = 'scale(100%)';
+            })
+        })
 
         document.querySelector('form').addEventListener("change",function(){
             if(document.querySelector('#brand1').checked){
@@ -168,7 +187,15 @@
                 document.querySelector('.brand_wrap').innerHTML = ''
             }
 
-            const item_list = document.querySelectorAll('.brand_item')
+            let item_list = document.querySelectorAll('.brand_item')
+            item_list.forEach((el, index) =>{
+                el.style.animation = ''
+                setTimeout(function(){
+                    console.log(el)
+                    el.style.animation = 'brand ease-in-out forwards .8s'
+                }, 300 * index)
+            })
+            
             item_list.forEach((el) => {
                 el.addEventListener('mouseover', () =>{
                     el.querySelector('.logo_b').style.display = 'block';

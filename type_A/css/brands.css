@@ -63,6 +63,18 @@
     height: calc(100vw / 4);
     position: relative;
     overflow: hidden;
+    transform: scale(0%);
+    opacity: 0;
+}
+@keyframes brand{
+    0%{
+        transform: scale(0%);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+    }
 }
 .sec2 .brand_item .brand{
     filter: grayscale(95%);
