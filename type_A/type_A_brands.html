@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type_A_About_Us</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brands.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo_wrap">
+                <h1><img src="./img/logo.svg"></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Our culture</a></li>
+                    <li><a href="#">Commitments</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="sec1">
+            <h2>Brands</h2>
+        </section>
+        <section class="sec2">
+            <div class="btn_wrap">
+                <form>
+                    <fieldset>
+                        <div class="btn_item">
+                            <input type="radio" id="brand1" name="brands" checked>
+                            <label for="brand1">전체</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand2" name="brands">
+                            <label for="brand2">화장품</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand3" name="brands">
+                            <label for="brand3">향수</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand4" name="brands">
+                            <label for="brand4">메디컬뷰티</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand5" name="brands">
+                            <label for="brand5">뷰티 디바이스</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand6" name="brands">
+                            <label for="brand6">이너뷰티</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand7" name="brands">
+                            <label for="brand7">헤어케어</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand8" name="brands">
+                            <label for="brand8">바디케어</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand9" name="brands">
+                            <label for="brand9">덴탄케어</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="radio" id="brand10" name="brands">
+                            <label for="brand10">티컬쳐</label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="brand_wrap">
+
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li>윤리경영</li>
+                <li>인재채용</li>
+                <li>고객서비스</li>
+                <li>글로벌 네트워크</li>
+                <li>매거진</li>
+                <li>사이트맵</li>
+                <li>관련사이트</li>
+                <li>법적고지</li>
+                <li>개인정보 처리방침</li>
+            </ul>
+            <div><img src="./img/footer.svg"></div>
+            <p>© Since 1945 Amorepacific, All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>
+        let text = ''
+        for(i=1;i<=16;i++){
+            text += `<div class="brand_item">
+                    <img class="brand" src="./img/brands/img${i}.svg">
+                    <div class="logo_wrap">
+                        <img class=logo_w src="./img/brands/logo${i}.svg">
+                        <img class=logo_b src="./img/brands/logo${i}_b.svg">
+                    </div>
+                </div>`
+        }
+        document.querySelector('.brand_wrap').innerHTML = text
+
+
+        document.querySelector('form').addEventListener("change",function(){
+            if(document.querySelector('#brand1').checked){
+                let text = ''
+                for(i=1;i<=16;i++){
+                    text += `<div class="brand_item">
+                            <img class="brand" src="./img/brands/img${i}.svg">
+                            <div class="logo_wrap">
+                                <img class=logo_w src="./img/brands/logo${i}.svg">
+                                <img class=logo_b src="./img/brands/logo${i}_b.svg">
+                            </div>
+                        </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else if(document.querySelector('#brand2').checked){
+                let text = ''
+                for(i=1;i<=16;i+=2){
+                    text += `<div class="brand_item">
+                            <img class="brand" src="./img/brands/img${i}.svg">
+                            <div class="logo_wrap">
+                                <img class=logo_w src="./img/brands/logo${i}.svg">
+                                <img class=logo_b src="./img/brands/logo${i}_b.svg">
+                            </div>
+                        </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else if(document.querySelector('#brand3').checked){
+                let text = ''
+                for(i=1;i<=16;i+=3){
+                    text += `<div class="brand_item">
+                            <img class="brand" src="./img/brands/img${i}.svg">
+                            <div class="logo_wrap">
+                                <img class=logo_w src="./img/brands/logo${i}.svg">
+                                <img class=logo_b src="./img/brands/logo${i}_b.svg">
+                            </div>
+                        </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else if(document.querySelector('#brand4').checked){
+                let text = ''
+                for(i=1;i<=16;i+=4){
+                    text += `<div class="brand_item">
+                            <img class="brand" src="./img/brands/img${i}.svg">
+                            <div class="logo_wrap">
+                                <img class=logo_w src="./img/brands/logo${i}.svg">
+                                <img class=logo_b src="./img/brands/logo${i}_b.svg">
+                            </div>
+                        </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else {
+                document.querySelector('.brand_wrap').innerHTML = ''
+            }
+        })
+
+
+        const item_list = document.querySelectorAll('.brand_item')
+        item_list.forEach((el) => {
+            el.addEventListener('mouseover', () =>{
+                el.querySelector('.logo_b').style.display = 'block';
+                el.querySelector('.brand').style.filter = 'none';
+                el.querySelector('.brand').style.transform = 'scale(110%)';
+            })
+            el.addEventListener('mouseleave', () =>{
+                el.querySelector('.logo_b').style.display = 'none';
+                el.querySelector('.brand').style.filter = 'grayscale(95%)';
+                el.querySelector('.brand').style.transform = 'scale(100%)';
+            })
+        })
+            
+        
+    </script>
+</body>
+</html>

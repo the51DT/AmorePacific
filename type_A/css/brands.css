@@ -1,0 +1,88 @@
+.sec1{
+    width: 100%;
+    margin-top: 96.39px;
+    display: flex;
+    justify-content: center;
+    padding: 120px 0 64px;
+}
+.sec1 h2{
+    color: #131313;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 84px;
+    animation: text_spacing 1s forwards ease-in-out;
+}
+@keyframes text_spacing{
+    0%{letter-spacing: 84px;}
+    100%{letter-spacing: 42px;}
+}
+.sec2 .btn_wrap fieldset{
+    margin-bottom: 120px;
+    padding: 0 360px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.sec2 .btn_wrap .btn_item{
+    height: fit-content;
+}
+.sec2 .btn_wrap input{
+    -webkit-appearance : none;
+    -moz-appearance:none;
+    appearance:none;
+    display: none;
+}
+.sec2 .btn_wrap label{
+    width: max-content;
+    display: flex;
+    margin: 0;
+    padding: 18px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 125px;
+    border: 1px solid #131313;
+    color: #131313;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+}
+.sec2 .btn_wrap input[type="radio"]:checked + label{
+    color: #FFF;
+    background: #131313;
+}
+.sec2 .brand_wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sec2 .brand_item{
+    width: 25%;
+    height: calc(100vw / 4);
+    position: relative;
+    overflow: hidden;
+}
+.sec2 .brand_item .brand{
+    filter: grayscale(95%);
+    transition: all 0.5s ease-in-out;
+}
+.sec2 .logo_wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sec2 .logo_wrap img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sec2 .logo_wrap .logo_b{
+    display: none;
+}
+footer{
+    margin-top: 0;
+}
