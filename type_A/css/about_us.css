@@ -58,6 +58,10 @@
     animation: text_ani 1.5s ease-in-out forwards;
     animation-delay: 1500ms;
 }
+.swiper1 .swiper-slide-active .text_wrap{
+    animation: text_ani 0.8s ease-in-out forwards;
+    animation-delay: 1000ms;
+}
 @keyframes text_ani {
     0%{padding-left: 200px; opacity: 0;}
     100%{padding-left: 0px; opacity: 1;}
@@ -66,6 +70,8 @@
     position: absolute;
     top: 630px;
     left: 60px;
+    padding-left: 200px;
+    opacity: 0;
 }
 .swiper1 .text_wrap h2{
     text-align: center;
