@@ -5,7 +5,9 @@ history.scrollRestoration = "auto"
 const mainSwiper = new Swiper('.main-swiper', {
   autoplay: {
     delay: 4000,
+    disableOnInteraction: false,
   },
+  effect: "fade",
   loop:true,
   loopAdditionalSlides: 1,	
   pagination : { // 페이징 설정
@@ -14,15 +16,40 @@ const mainSwiper = new Swiper('.main-swiper', {
 	},
 });
 
+
 var mainSwiper2 = new Swiper(".main-swiper2", {
+  // direction: "horizontal",
   slidesPerView: "auto",
   grabCursor: true,
 });
 
-var mainSwiper3 = new Swiper(".main-swiper3", {
+const progressLine = document.querySelector('.autoplay-progress svg')
+const mainSwiper3 = new Swiper('.main-swiper3', {
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  effect: "fade",
+  loop:true,
+  loopAdditionalSlides: 1,	
+  pagination : { // 페이징 설정
+		el : '.swiper-pagination',
+		clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+	},
+  on: {
+    autoplayTimeLeft(s, time, progress) {
+      progressLine.style.setProperty("--progress", 1 - progress)
+      console.log(progressLine);
+    }
+  }
+});
+
+
+var mainSwiper4 = new Swiper(".main-swiper4", {
   slidesPerView: "auto",
   grabCursor: true,
 });
+
 
 
 /* ---- gnb ---- */  
@@ -92,93 +119,50 @@ $(window).scroll(function () {
 /* ---- section3 ---- */  
 /* ---- click ---- */
 function se3ClickEvent() {
-  let $list1 = $('#section3 .list__wrap .main-list .list-01');
-  let $list2 = $('#section3 .list__wrap .main-list .list-02');
-  let $list1sub = $('#section3 .list__wrap .sub-list .list-01');
-  let $list2sub = $('#section3 .list__wrap .sub-list .list-02');
-  let $list1data1 = $('#section3 .text__wrap .title_list .title-01');
-  let $list1data2 = $('#section3 .text__wrap .content_list .content-01');
-  let $list2data1 = $('#section3 .text__wrap .title_list .title-02');
-  let $list2data2 = $('#section3 .text__wrap .content_list .content-02');
-  let $list1_1 = $('#section3 .list__wrap .sub-list .list-01 li:nth-child(1)');
-  let $list1_2 = $('#section3 .list__wrap .sub-list .list-01 li:nth-child(2)');
-  let $list1_3 = $('#section3 .list__wrap .sub-list .list-01 li:nth-child(3)');
-  let $list1_4 = $('#section3 .list__wrap .sub-list .list-01 li:nth-child(4)');
-  let $list2_1 = $('#section3 .list__wrap .sub-list .list-02 li:nth-child(1)');
-  let $list2_2 = $('#section3 .list__wrap .sub-list .list-02 li:nth-child(2)');
-  let $list2_3 = $('#section3 .list__wrap .sub-list .list-02 li:nth-child(3)');
-  let $list2_4 = $('#section3 .list__wrap .sub-list .list-02 li:nth-child(4)');
-  let $list1Img = $('#section3 .img__wrap .list1');
-  let $list2Img = $('#section3 .img__wrap .list2');
-  let $list1_1Img = $('#section3 .img__wrap .list1-1');
-  let $list1_2Img = $('#section3 .img__wrap .list1-2');
-  let $list1_3Img = $('#section3 .img__wrap .list1-3');
-  let $list1_4Img = $('#section3 .img__wrap .list1-4');
-  let $list2_1Img = $('#section3 .img__wrap .list2-1');
-  let $list2_2Img = $('#section3 .img__wrap .list2-2');
-  let $list2_3Img = $('#section3 .img__wrap .list2-3');
-  let $list2_4Img = $('#section3 .img__wrap .list2-4');
+  let $swipe1 = $('#section3 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-1');
+  let $swipe2 = $('#section3 .main-swiper3 .swiper-wrapper .swiper-slide .Swiper-2');
+  let $list1_1 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(2)');
+  let $list1_2 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(3)');
+  let $list1_3 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(4)');
+  let $list1_4 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(5)');
+  let $list2_1 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(7)');
+  let $list2_2 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(8)');
+  let $list2_3 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(9)');
+  let $list2_4 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(10)');
 
-  $list1.click(
+  $swipe1.hover(
     function() {
-      $list1.addClass('active');$list1Img.addClass('active');$list1data1.addClass('active');$list1data2.addClass('active');$list1sub.addClass('active'); 
-      $list2.removeClass('active');$list2Img.removeClass('active');$list2data1.removeClass('active');$list2data2.removeClass('active');$list2sub.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
+      $list2_1.addClass('active')
+      $list2_2.addClass('active')
+      $list2_3.addClass('active')
+      $list2_4.addClass('active')
+      $list1_1.removeClass('active')
+      $list1_2.removeClass('active')
+      $list1_3.removeClass('active')
+      $list1_4.removeClass('active')
     }
   );
-  $list2.click(
+  $swipe2.hover(
     function() {
-      $list2.addClass('active');$list2Img.addClass('active');$list2data1.addClass('active');$list2data2.addClass('active');$list2sub.addClass('active'); 
-      $list1.removeClass('active');$list1Img.removeClass('active');$list1data1.removeClass('active');$list1data2.removeClass('active');$list1sub.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
+      console.log('test')
+      $list1_1.addClass('active')
+      $list1_2.addClass('active')
+      $list1_3.addClass('active')
+      $list1_4.addClass('active')
+      $list2_1.removeClass('active')
+      $list2_2.removeClass('active')
+      $list2_3.removeClass('active')
+      $list2_4.removeClass('active')
     }
   );
-  $list1_1.hover(
-    function() {
-      $list1_1Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list1_2.hover(
-    function() {
-      $list1_2Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list1_3.hover(
-    function() {
-      $list1_3Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list1_4.hover(
-    function() {
-      $list1_4Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list2_1.hover(
-    function() {
-      $list2_1Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list2_2.hover(
-    function() {
-      $list2_2Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_3Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list2_3.hover(
-    function() {
-      $list2_3Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_4Img.removeClass('active');
-    }
-  );
-  $list2_4.hover(
-    function() {
-      $list2_4Img.addClass('active');
-      $list1Img.removeClass('active');$list2Img.removeClass('active');$list1_1Img.removeClass('active');$list1_2Img.removeClass('active');$list1_3Img.removeClass('active');$list1_4Img.removeClass('active');$list2_1Img.removeClass('active');$list2_2Img.removeClass('active');$list2_3Img.removeClass('active');
-    }
-  );
+  $list1_1.hover(function() { $( this ).trigger( "click" );}); 
+  $list1_2.hover(function() { $( this ).trigger( "click" );}); 
+  $list1_3.hover(function() { $( this ).trigger( "click" );}); 
+  $list1_4.hover(function() { $( this ).trigger( "click" );}); 
+  $list2_1.hover(function() { $( this ).trigger( "click" );}); 
+  $list2_2.hover(function() { $( this ).trigger( "click" );}); 
+  $list2_3.hover(function() { $( this ).trigger( "click" );}); 
+  $list2_4.hover(function() { $( this ).trigger( "click" );}); 
 }
 $(document).ready(function () {
   se3ClickEvent();
