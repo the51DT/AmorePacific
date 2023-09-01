@@ -67,6 +67,12 @@
 .swiper1 .img_slide:nth-of-type(2)>img{
     filter: brightness(70%)
 }
+.swiper1 .img_slide:nth-of-type(3)>img{
+    filter: brightness(70%)
+}
+.swiper1 .img_slide:nth-of-type(4)>img{
+    filter: brightness(70%)
+}
 .swiper1 p{
     width: 100%;
     position: absolute;
