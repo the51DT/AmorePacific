@@ -130,6 +130,10 @@ function se3ClickEvent() {
   let $list2_3 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(9)');
   let $list2_4 = $('#section3 .swiper-pagination .swiper-pagination-bullet:nth-child(10)');
 
+  $list2_1.addClass('active')
+  $list2_2.addClass('active')
+  $list2_3.addClass('active')
+  $list2_4.addClass('active')
   $swipe1.hover(
     function() {
       $list2_1.addClass('active')

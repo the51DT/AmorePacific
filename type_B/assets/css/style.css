@@ -68,7 +68,7 @@ footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 950
 .main-wrap #section2 .main-swiper2 .swiper-wrapper {gap: calc(100vw * 32 /1920);}
 .main-wrap #section2 .main-swiper2 .swiper-wrapper .swiper-slide {width: calc(100vw * 400 /1920);}
 .main-wrap #section2 .main-swiper2 .swiper-wrapper .swiper-slide .text__wrap {padding-top: calc(100vw * 40 /1920);}
-.main-wrap #section2 .main-swiper2 .swiper-wrapper .swiper-slide .text__wrap .title {color: #000; font-family: 'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 600; line-height: calc(100vw * 36 /1920);}
+.main-wrap #section2 .main-swiper2 .swiper-wrapper .swiper-slide .text__wrap .title {color: #000; font-family: 'Arita-dotum'; font-size: calc(100vw * 24 /1920); font-style: normal; font-weight: 500; line-height: calc(100vw * 36 /1920);}
 .main-wrap #section2 .main-swiper2 .swiper-wrapper .swiper-slide .text__wrap .content {padding-top: calc(100vw * 8 /1920); color: #666; font-family: 'Arita-dotum'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 300; line-height: calc(100vw * 25 /1920);}
 .main-wrap #section2 .main-swiper2 .swiper-wrapper .swiper-slide .text__wrap .data {padding-top: calc(100vw * 16 /1920); color: #b3b3b3; font-family: 'Avenir'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 400; line-height: calc(100vw * 25 /1920);}
 
@@ -81,7 +81,7 @@ footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 950
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active,
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(6).swiper-pagination-bullet-active {border-bottom: 0;}
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(6) {margin-top: calc(100vw * 46 /1920);}
-.main-wrap #section3 .swiper-pagination .swiper-pagination-bullet-active {border-bottom: 2px solid #fff; opacity: 0.4; transition: all; background-color:transparent;}
+.main-wrap #section3 .swiper-pagination .swiper-pagination-bullet-active {border-bottom: 1px solid #fff; transition: all; background-color:transparent;}
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet.active {display: none;}
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(2) {width: calc(100vw * 36 /1920);}
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(3) {width: calc(100vw * 139 /1920);}
@@ -91,8 +91,8 @@ footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 950
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(8) {width: calc(100vw * 134 /1920);}
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(9) {width: calc(100vw * 147 /1920);}
 .main-wrap #section3 .swiper-pagination .swiper-pagination-bullet:nth-child(10) {width: calc(100vw * 113 /1920);}
-.autoplay-progress {position: absolute;left: calc(100vw * 1208 /1920);top: calc(100vw * 439 /1920);z-index: 10;width: calc(100vw * 680 /1920);height: calc(100vw * 2 /1920);background-color: #D9D9D9;opacity: 0.4;}
-.autoplay-progress svg {--progress: 0;position: absolute;left: 0;top: calc(100vw * -0.5 /1920);z-index: 10;width: 100%;stroke-width: calc(100vw * 1 /1920);stroke: #fff;opacity: 1;stroke-dashoffset: calc(100 * (1 - var(--progress)));stroke-dasharray: 100;}
+.main-wrap #section3 .autoplay-progress {position: absolute;left: calc(100vw * 1208 /1920);top: calc(100vw * 439 /1920);z-index: 10;width: calc(100vw * 680 /1920);height: calc(100vw * 2 /1920); background-color: #aaa;}
+.main-wrap #section3 .autoplay-progress svg {--progress: 0;position: absolute;left: 0;top: calc(100vw * -0 /1920);z-index: 10;width: 100%; stroke-width: calc(100vw * 0.2 /1920); stroke: #fff;opacity: 1;stroke-dashoffset: calc(100 * (1 - var(--progress)));stroke-dasharray: 100;}
 .main-wrap #section3 .list__wrap {cursor: pointer; position: absolute; top: 0; z-index: 10; margin: calc(100vw * 480 /1920) 0 0 calc(100vw * 1208 /1920); display: flex; gap: calc(100vw * 180 /1920);}
 .main-wrap #section3 .list__wrap .main-list {display: inline-flex; flex-direction: column; align-items: flex-start; gap: calc(100vw * 24 /1920);}
 .main-wrap #section3 .list__wrap .main-list .list .icon-check {margin-top: calc(100vw * 4 /1920); width: calc(100vw * 16 /1920); height: calc(100vw * 16 /1920); background-image: url('../images/icon-check.png');}
