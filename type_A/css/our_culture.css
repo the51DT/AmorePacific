@@ -41,9 +41,6 @@
 .swiper1 .img_slide{
     width: 1600px !important;
 }
-.swiper1 .img_slide>img{
-    filter: brightness(60%);
-}
 .swiper1 p{
     width: 100%;
     position: absolute;
