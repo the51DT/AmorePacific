@@ -1,5 +1,5 @@
-// history.scrollRestoration = "manual"
-history.scrollRestoration = "auto"
+history.scrollRestoration = "manual"
+// history.scrollRestoration = "auto"
 
 /* ---- swiper ---- */  
 const mainSwiper = new Swiper('.main-swiper', {
@@ -327,3 +327,48 @@ $(document).ready(function () {
 //       })
 //   })
 // })
+
+
+
+/* ---- sub ---- */  
+/* ---- scroll ---- */  
+gsap.registerPlugin(ScrollTrigger);
+
+let $scroll1 = $('.scrollus-wrap #section2 .scroll__wrap .scroll-left.scroll1');
+let $scroll2 = $('.scrollus-wrap #section2 .scroll__wrap .scroll-left.scroll2');
+let $scroll3 = $('.scrollus-wrap #section2 .scroll__wrap .scroll-left.scroll3');
+
+// scroll1에 대한 ScrollTrigger 설정
+gsap.to($scroll1, {
+  scrollTrigger: {
+    trigger: ".scroll1",
+    start: "top top",
+    endTrigger: ".scroll1",
+    end: "bottom top",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
+
+// scroll2에 대한 ScrollTrigger 설정
+gsap.to($scroll2, {
+  scrollTrigger: {
+    trigger: ".scroll2",
+    start: "top top",
+    endTrigger: ".scroll2",
+    end: "bottom top",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
+
+// scroll3에 대한 ScrollTrigger 설정
+gsap.to($scroll3, {
+  scrollTrigger: {
+    trigger: ".scroll3",
+    start: "top top",
+    end: "bottom top",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
