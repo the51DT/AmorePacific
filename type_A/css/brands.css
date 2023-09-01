@@ -49,6 +49,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: normal;
+    cursor: pointer;
 }
 .sec2 .btn_wrap input:checked + label{
     color: #FFF;
