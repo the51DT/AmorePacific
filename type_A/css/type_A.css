@@ -112,7 +112,7 @@
     left: 160px;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_prev_w.svg);
+    background-image: url(../img/btn_prev_w.svg);
 }
 .swiper1 .swiper-button-next{
     position: absolute;
@@ -120,7 +120,7 @@
     left: 248px;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_next_w.svg);
+    background-image: url(../img/btn_next_w.svg);
 }
 .swiper1 .swiper-button-prev::after,
 .swiper1 .swiper-button-next::after{
@@ -199,13 +199,13 @@
     position: static;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_prev_b.svg);
+    background-image: url(../img/btn_prev_b.svg);
 }
 .swiper2 .swiper-button-next{
     position: static;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_next_b.svg);
+    background-image: url(../img/btn_next_b.svg);
 }
 .swiper2 .swiper-button-prev::after,
 .swiper2 .swiper-button-next::after{
@@ -307,7 +307,7 @@
     left: 160px;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_prev_w.svg);
+    background-image: url(../img/btn_prev_w.svg);
 }
 .swiper3 .swiper-button-next{
     position: absolute;
@@ -315,7 +315,7 @@
     left: 248px;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_next_w.svg);
+    background-image: url(../img/btn_next_w.svg);
 }
 .swiper3 .swiper-button-prev::after,
 .swiper3 .swiper-button-next::after{
@@ -431,13 +431,13 @@
     position: static;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_prev_b.svg);
+    background-image: url(../img/btn_prev_b.svg);
 }
 .swiper4 .swiper-button-next{
     position: static;
     width: 64px;
     height: 64px;
-    background-image: url(./img/btn_next_b.svg);
+    background-image: url(../img/btn_next_b.svg);
 }
 .swiper4 .swiper-button-prev::after,
 .swiper4 .swiper-button-next::after{
