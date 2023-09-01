@@ -45,9 +45,10 @@ footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 653
 .main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .swipe-list ul li .active {margin-left: calc(100vw * -14 /1920);}
 .main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap {position: absolute; top: calc(100vw * 569 /1920);}
 .main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap .main-title {display: flex;}
-.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap .main-title .title {display: flex; color: #FFF; font-family: 'Avenir'; font-size: calc(100vw * 290 /1920); font-style: normal; font-weight: 500; line-height: calc(100vw * 260 /1920); text-transform: uppercase;}
-.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap .main-title .title span {letter-spacing: calc(100vw * 12.3 /1920);}
-.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap .main-title .title img {    margin: calc(100vw * 20 /1920) calc(100vw * 0 /1920); padding-bottom: calc(100vw * 20 /1920); width: calc(100vw * 240 /1920); height: calc(100vw * 240 /1920);}
+.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap .main-title img {height: calc(100vw * 260 /1920);}
+.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .Swiper-1 .text__wrap .main-title img {width: calc(100vw * 4451 /1920);}
+.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .Swiper-2 .text__wrap .main-title img {width: calc(100vw * 5142 /1920);}
+.main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .Swiper-3 .text__wrap .main-title img {width: calc(100vw * 4393 /1920);}
 .main-wrap #section1 .main-swiper .swiper-wrapper .swiper-slide .text__wrap .main-content {margin-top: calc(100vw * -12 /1920); padding-left: calc(100vw * 32 /1920); color: #FFF; font-family: 'Arita-dotum'; font-size: calc(100vw * 16 /1920); font-style: normal; font-weight: 300; line-height: calc(100vw * 24 /1920); }
 .main-wrap #section1 .swiper-pagination {height: 0px; position: absolute; top: 0; padding: calc(100vw * 440 /1920) calc(100vw * 25 /1920) 0; display: flex; justify-content: space-between;}
 .main-wrap #section1 .swiper-pagination .swiper-pagination-bullet {width: calc(100vw * 130 /1920); height: calc(100vw * 33 /1920); border-radius: 0px; background-color:transparent;}
