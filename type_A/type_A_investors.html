@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>type_A_Commitments</title>
+    <title>type_A_About_Us</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/commitments.css">
+    <link rel="stylesheet" href="./css/investors.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
@@ -30,52 +30,33 @@
             </div>
         </header>
         <section class="sec1">
-            <h2>Commitments</h2>
+            <h2>Investors</h2>
         </section>
         <section class="sec2">
-            <img src="./img/commitments/sec1_img.png">
-            <p>Amore<br>Beautiful World</p>
+            <img src="./img/investors/sec2_back.png">
+            <p>Live Your New Beauty</p>
         </section>
         <section class="sec3">
+            <img src="./img/investors/sec3_back.png">
+        </section>
+        <section class="sec4">
             <div class="swiper1">
                 <div class="swiper-wrapper">
                     <div class="img_slide swiper-slide">
-                        <img src="./img/commitments/sec2_img1.png">
-                        <p>아모레퍼시픽은 더 나은 사회와 환경을 위한 도전 의지를 담아,<br>지속가능경영 목표 ‘2030 A MORE Beautiful Promise’ 다섯 가지를 수립했습니다.</p>
+                        <img src="./img/about_us/sec3_img1.png">
+                        <p>최초, 최고의 제품을 전 세계에 전하기 위한 혁신적인 연구개발과 좋은 원료,<br>첨단기술을 토대로 세계가 주목하는 아름다움을 만들어 냅니다.</p>
                         <div class="text_wrap">
-                            <h2>지속가능경영</h2>
+                            <h2>Research<br>
+                                & Innovation</h2>
                             <img src="./img/about_us/sec3_btn.svg">
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img src="./img/commitments/sec2_img2.png">
-                        <p>아모레퍼시픽은 제품의 기능적 품질을 넘어서 고객의 관점에서<br>고객을 만족시키기 위한 품질이 중요하다고 생각합니다.</p>
+                        <img src="./img/about_us/sec3_img2.png">
+                        <p>기업 및 브랜드의 철학과 가치를 담아 소통하고 있습니다.<br>특히, 아리따 글꼴은 아름다운 문화를 사회와 공유하는 문화나눔의 일환으로써<br>누구에게나 무료로 배포되는 아리따운 서체입니다.</p>
                         <div class="text_wrap">
-                            <h2>고객안심품질</h2>
-                            <img src="./img/about_us/sec3_btn.svg">
-                        </div>
-                    </div>
-                    <div class="img_slide swiper-slide">
-                        <img src="./img/commitments/sec2_img3.png">
-                        <p>아모레퍼시픽은 생명 존중의 원칙을 바탕으로 과학 기술의 혁신을<br>끊임없이 추구하며모두에게 가치 있는 아름다움을 전하고자 노력합니다.</p>
-                        <div class="text_wrap">
-                            <h2>생명존중원칙</h2>
-                            <img src="./img/about_us/sec3_btn.svg">
-                        </div>
-                    </div>
-                    <div class="img_slide swiper-slide">
-                        <img src="./img/commitments/sec2_img4.png">
-                        <p>아모레퍼시픽그룹은 1945년 창립 이래 ‘사람을 아름답게, 세상을 아름답게’ 하고자 하는<br>소명을 새기며 한국의 뷰티 산업을 이끌었습니다.</p>
-                        <div class="text_wrap">
-                            <h2>지속가능성 보고서</h2>
-                            <img src="./img/about_us/sec3_btn.svg">
-                        </div>
-                    </div>
-                    <div class="img_slide swiper-slide">
-                        <img src="./img/commitments/sec2_img5.png">
-                        <p>아모레퍼시픽은 2007년 11월 UN Global Compact에 가입하고<br>기업시민으로 역할과 책임을 다하기 위해 인권 노동, 환경,<br>반부패에 대한 UNGC 10대 원칙을 지지하고 성실한 이행을 위해 노력하고 있습니다.</p>
-                        <div class="text_wrap">
-                            <h2>UN Global Compact</h2>
+                            <h2>Visual<br>
+                                Identity</h2>
                             <img src="./img/about_us/sec3_btn.svg">
                         </div>
                     </div>
@@ -99,7 +80,7 @@
         </footer>
     </div>
     <script>
-        const io = new IntersectionObserver((entries) => {
+        const io1 = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
                 const $target = document.querySelectorAll('.sec2');
 
@@ -114,13 +95,33 @@
         }, {threshold: [1]});
 
         // 옵저버할 대상을 선택하여 관찰 시작
-        const $items = document.querySelectorAll(".sec2");
-        $items.forEach((item) => {
-            io.observe(item);
+        const sec2 = document.querySelectorAll(".sec2");
+        sec2.forEach((item) => {
+            io1.observe(item);
+        });
+
+        const io2 = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                const $target = document.querySelectorAll('.sec3');
+
+                // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
+                if (e.isIntersecting) {
+                    for(i=0; i<3;i++){
+                        $target[i].style.padding = "0"  
+                    }
+                }
+            });
+            
+        }, {threshold: [1]});
+
+        // 옵저버할 대상을 선택하여 관찰 시작
+        const sec3 = document.querySelectorAll(".sec3");
+        sec3.forEach((item) => {
+            io2.observe(item);
         });
 
         const swiper1 = new Swiper('.swiper1', {
-            width:1810,
+            width:1980,
             // Optional parameters
             slidesPerView: 1.1,
             spaceBetween: 60,

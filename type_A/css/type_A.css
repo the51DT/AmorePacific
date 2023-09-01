@@ -64,6 +64,7 @@
 }
 .sec2{
     padding: 64px 0;
+    margin: 0 auto;
 }
 .sec2 .swiper1{
     position: relative;
@@ -176,7 +177,9 @@
 }
 .sec3{
     position: relative;
+    max-width: 1920px;
     padding: 64px 0;
+    margin: 0 auto;
 }
 .sec3 h2{
     color: #131313;
@@ -256,6 +259,8 @@
     width: 205px;
 }
 .sec4{
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 64px 0;
 }
 .swiper3{
@@ -407,6 +412,8 @@
     width: 24px;
 }
 .sec5{
+    max-width: 1920px;
+    margin: 0 auto;
     position: relative;
     padding: 64px 0;
 }
