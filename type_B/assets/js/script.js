@@ -39,7 +39,7 @@ const mainSwiper3 = new Swiper('.main-swiper3', {
   on: {
     autoplayTimeLeft(s, time, progress) {
       progressLine.style.setProperty("--progress", 1 - progress)
-      console.log(progressLine);
+      // console.log(progressLine);
     }
   }
 });
