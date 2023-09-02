@@ -213,3 +213,56 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
+.header1 {
+  animation: header1 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+.header2 {
+  animation: header2 0.5s ease-in-out forwards;
+}
+.header3 {
+  animation: header3 0.3s ease-in-out forwards;
+}
+.header4 {
+  animation: header4 0.3s ease-in-out forwards;
+}
+@keyframes header1 {
+  from {
+    opacity: 0%;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+@keyframes header2 {
+  from {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0%;
+    transform: translateY(-100px);
+  }
+}
+@keyframes header3 {
+  from {
+    background-color: transparent;
+    height: calc(100vw * 100 /1920);
+  }
+  to {
+    background-color: #fff;
+    height: auto;
+  }  
+}
+@keyframes header4 {
+  from {
+    background-color: #fff;
+    height: auto;
+  }
+  to {
+    background-color: #fff 0.4;
+    height: calc(100vw * 100 /1920);
+  }  
+}

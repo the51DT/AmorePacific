@@ -16,7 +16,6 @@ const mainSwiper = new Swiper('.main-swiper', {
 	},
 });
 
-
 var mainSwiper2 = new Swiper(".main-swiper2", {
   // direction: "horizontal",
   slidesPerView: "auto",
@@ -44,12 +43,10 @@ const mainSwiper3 = new Swiper('.main-swiper3', {
   }
 });
 
-
 var mainSwiper4 = new Swiper(".main-swiper4", {
   slidesPerView: "auto",
   grabCursor: true,
 });
-
 
 
 /* ---- gnb ---- */  
@@ -60,9 +57,35 @@ function gnbScrollEvent() {
   let section2Top = jQuery('#section2').offset().top;
   let section4Top = jQuery('#section4').offset().top;
   let $gnb = $('#gnb .gnb__wrap li a');
-  let $logo = $('#gnb .gnb__wrap');
+  let $header = $('header');
+  let $gnb2 = $('#gnb .gnb__wrap .gnb__2d-wrap');
+  let $language = $('#gnb .gnb__wrap .gnb__language');
+  let $logo = $('#gnb .gnb__wrap .gnb__1d-wrap');
   let $right = $('#gnb .gnb__wrap .right');
   let $left = $('#gnb .gnb__wrap .left');
+
+
+  $header.hover(
+    function() {
+      $gnb2.addClass('header1');
+      $gnb2.removeClass('header2');
+      $header.addClass('header3');
+      $header.removeClass('header4');
+      $gnb.addClass('color1');
+      $gnb.removeClass('color2');
+      $language.addClass('color1');
+      $language.removeClass('color2');
+    }, function() {
+      $gnb2.addClass('header2');
+      $gnb2.removeClass('header1');
+      $header.addClass('header4');
+      $header.removeClass('header3');
+      $gnb.addClass('color2');
+      $gnb.removeClass('color1');
+      $language.addClass('color2');
+      $language.removeClass('color1');
+    }
+  );
 
   // console.log(documentHeight, section1Top);
   if (documentHeight >= section1Top+300) {
@@ -70,7 +93,9 @@ function gnbScrollEvent() {
     $left.removeClass('left2');
     $right.addClass('right1');
     $left.addClass('left1');
-    $logo.hover(
+    $gnb2.addClass('header2');
+    $header.addClass('header4');
+    $header.hover(
       function() {
         $right.removeClass('right1');
         $left.removeClass('left1');    
@@ -95,25 +120,32 @@ function gnbScrollEvent() {
       }
     );
   }
-  if (documentHeight >= section2Top) {
+  if (documentHeight >= section2Top-40) {
     $gnb.addClass('color1');
     $gnb.removeClass('color2');
-  } else if (documentHeight >= section4Top) {
-    $gnb.addClass('color2');
-    $gnb.removeClass('color1');
+    $language.addClass('color1');
+    $language.removeClass('color2');
   } else {
     $gnb.addClass('color2');
     $gnb.removeClass('color1');
+    $language.addClass('color2');
+    $language.removeClass('color1');
   }
-  if (documentHeight >= section4Top) {
+  if (documentHeight >= section4Top-40) {
     $gnb.addClass('color2');
     $gnb.removeClass('color1');
+    $language.addClass('color2');
+    $language.removeClass('color1');
   }
 } 
 
 $(window).scroll(function () {
   gnbScrollEvent();
 })
+
+$(document).ready(function () {
+  gnbScrollEvent();
+});
 
 
 /* ---- section3 ---- */  
@@ -327,48 +359,3 @@ $(document).ready(function () {
 //       })
 //   })
 // })
-
-
-
-/* ---- sub ---- */  
-/* ---- scroll ---- */  
-gsap.registerPlugin(ScrollTrigger);
-
-let $scroll1 = $('.scrollus-wrap #section2 .scroll__wrap .scroll-left.scroll1');
-let $scroll2 = $('.scrollus-wrap #section2 .scroll__wrap .scroll-left.scroll2');
-let $scroll3 = $('.scrollus-wrap #section2 .scroll__wrap .scroll-left.scroll3');
-
-// scroll1에 대한 ScrollTrigger 설정
-gsap.to($scroll1, {
-  scrollTrigger: {
-    trigger: ".scroll1",
-    start: "top top",
-    endTrigger: ".scroll1",
-    end: "bottom top",
-    pin: true, // left 클래스 고정
-    scrub: true, // 스크롤에 따라 부드럽게 이동
-  },
-});
-
-// scroll2에 대한 ScrollTrigger 설정
-gsap.to($scroll2, {
-  scrollTrigger: {
-    trigger: ".scroll2",
-    start: "top top",
-    endTrigger: ".scroll2",
-    end: "bottom top",
-    pin: true, // left 클래스 고정
-    scrub: true, // 스크롤에 따라 부드럽게 이동
-  },
-});
-
-// scroll3에 대한 ScrollTrigger 설정
-gsap.to($scroll3, {
-  scrollTrigger: {
-    trigger: ".scroll3",
-    start: "top top",
-    end: "bottom top",
-    pin: true, // left 클래스 고정
-    scrub: true, // 스크롤에 따라 부드럽게 이동
-  },
-});
