@@ -71,19 +71,11 @@ function gnbScrollEvent() {
       $gnb2.removeClass('header2');
       $header.addClass('header3');
       $header.removeClass('header4');
-      $gnb.addClass('color1');
-      $gnb.removeClass('color2');
-      $language.addClass('color1');
-      $language.removeClass('color2');
     }, function() {
       $gnb2.addClass('header2');
       $gnb2.removeClass('header1');
       $header.addClass('header4');
       $header.removeClass('header3');
-      $gnb.addClass('color2');
-      $gnb.removeClass('color1');
-      $language.addClass('color2');
-      $language.removeClass('color1');
     }
   );
 
@@ -125,17 +117,56 @@ function gnbScrollEvent() {
     $gnb.removeClass('color2');
     $language.addClass('color1');
     $language.removeClass('color2');
+    $header.hover(
+      function() {
+        $gnb.addClass('color1');
+        $gnb.removeClass('color2');
+        $language.addClass('color1');
+        $language.removeClass('color2');
+      }, function() {
+        $gnb.addClass('color1');
+        $gnb.removeClass('color2');
+        $language.addClass('color1');
+        $language.removeClass('color2');
+      }
+    );
   } else {
     $gnb.addClass('color2');
     $gnb.removeClass('color1');
     $language.addClass('color2');
     $language.removeClass('color1');
+    $header.hover(
+      function() {
+        $gnb.addClass('color1');
+        $gnb.removeClass('color2');
+        $language.addClass('color1');
+        $language.removeClass('color2');
+      }, function() {
+        $gnb.addClass('color2');
+        $gnb.removeClass('color1');
+        $language.addClass('color2');
+        $language.removeClass('color1');
+      }
+    );
   }
   if (documentHeight >= section4Top-40) {
     $gnb.addClass('color2');
     $gnb.removeClass('color1');
     $language.addClass('color2');
     $language.removeClass('color1');
+    $header.hover(
+      function() {
+        $gnb.addClass('color1');
+        $gnb.removeClass('color2');
+        $language.addClass('color1');
+        $language.removeClass('color2');
+      }, function() {
+        $gnb.addClass('color2');
+        $gnb.removeClass('color1');
+        $language.addClass('color2');
+        $language.removeClass('color1');
+      }
+    );
   }
 } 
 
