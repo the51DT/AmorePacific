@@ -218,7 +218,7 @@
   animation-delay: 0.3s;
 }
 .header2 {
-  animation: header2 0.5s ease-in-out forwards;
+  animation: header2 0.3s ease-in-out forwards;
 }
 .header3 {
   animation: header3 0.3s ease-in-out forwards;
@@ -229,7 +229,7 @@
 @keyframes header1 {
   from {
     opacity: 0%;
-    transform: translateY(-100px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 100%;
@@ -243,7 +243,7 @@
   }
   to {
     opacity: 0%;
-    transform: translateY(-100px);
+    transform: translateY(-20px);
   }
 }
 @keyframes header3 {

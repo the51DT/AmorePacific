@@ -46,53 +46,113 @@ gsap.to($scroll3, {
 });
 
 /* ---- swiper ---- */ 
+var about1menu = ['our story', 'our history', 'our values']
 var aboutSwiper1 = new Swiper(".about-swiper1", {
   effect: "fade",
   pagination : { // 페이징 설정
 		el : '.swiper-pagination',
 		clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (about1menu[index]) + '</span>';
+    },
 	},
 });
+var about2menu = ['연구개발', '생산물류(SCM)']
 var aboutSwiper2 = new Swiper(".about-swiper2", {
   effect: "fade",
   pagination : { // 페이징 설정
 		el : '.swiper-pagination',
 		clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (about2menu[index]) + '</span>';
+    },
 	},
 });
-var aboutSwiper1 = new Swiper(".about-swiper3", {
+var about3menu = ['Amore pacific ci', '아리따 글꼴']
+var aboutSwiper3 = new Swiper(".about-swiper3", {
   effect: "fade",
   pagination : { // 페이징 설정
 		el : '.swiper-pagination',
 		clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (about3menu[index]) + '</span>';
+    },
 	},
 });
 
 /* ---- gnb ---- */  
 /* ---- scroll ---- */  
 function gnbScrollEvent() {
-    let $header = $('header');
-    let $gnb2 = $('#gnb .gnb__wrap .gnb__2d-wrap');
-  
+  let documentHeight = $(document).scrollTop();
+  let section1Top = jQuery('#section1').offset().top;
+  let $header = $('header');
+  let $gnb2 = $('#gnb .gnb__wrap .gnb__2d-wrap');
+  let $logo = $('#gnb .gnb__wrap .gnb__1d-wrap');
+  let $right = $('#gnb .gnb__wrap .right');
+  let $left = $('#gnb .gnb__wrap .left');
+
+
+  $header.hover(
+    function() {
+      $gnb2.addClass('header1');
+      $gnb2.removeClass('header2');
+      $header.addClass('header3');
+      $header.removeClass('header4');
+      $right.removeClass('right1');
+      $left.removeClass('left1');    
+      $right.addClass('right2');
+      $left.addClass('left2');
+    }, function() {
+      $gnb2.addClass('header2');
+      $gnb2.removeClass('header1');
+      $header.addClass('header4');
+      $header.removeClass('header3');
+      $right.removeClass('right2');
+      $left.removeClass('left2');
+      $right.addClass('right1');
+      $left.addClass('left1');
+    }
+  );
+
+  // console.log(documentHeight, section1Top);
+  if (documentHeight >= section1Top+300) {
+    $right.removeClass('right2');
+    $left.removeClass('left2');
+    $right.addClass('right1');
+    $left.addClass('left1');
+    $gnb2.addClass('header2');
+    $header.addClass('header4');
     $header.hover(
       function() {
-        $gnb2.addClass('header1');
-        $gnb2.removeClass('header2');
-        $header.addClass('header3');
-        $header.removeClass('header4');
+        $right.removeClass('right1');
+        $left.removeClass('left1');    
+        $right.addClass('right2');
+        $left.addClass('left2');
       }, function() {
-        $gnb2.addClass('header2');
-        $gnb2.removeClass('header1');
-        $header.addClass('header4');
-        $header.removeClass('header3');
+        $right.removeClass('right2');
+        $left.removeClass('left2');
+        $right.addClass('right1');
+        $left.addClass('left1');
       }
     );
-  } 
-  
-  $(window).scroll(function () {
-    gnbScrollEvent();
-  })
-  
-  $(document).ready(function () {
-    gnbScrollEvent();
-  });
+  } else {
+    $right.removeClass('right1');
+    $left.removeClass('left1');
+    $right.addClass('right2');
+    $left.addClass('left2');
+    $logo.hover(
+      function() {
+        $right.removeClass('right1');
+        $left.removeClass('left1');
+      }
+    );
+  }
+} 
+
+$(window).scroll(function () {
+  gnbScrollEvent();
+})
+
+$(document).ready(function () {
+  gnbScrollEvent();
+});
