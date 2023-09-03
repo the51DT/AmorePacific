@@ -206,3 +206,44 @@ function investorsScrollEvent() {
 $(window).scroll(function () {
   investorsScrollEvent();
 });
+
+/* ---- hover:gif ---- */  
+function careersHoverEvent() {
+  let $list2 = $('.careers-wrap #section3 .scroll__wrap .scroll-right .list__wrap ul .list2');
+  let $list3 = $('.careers-wrap #section3 .scroll__wrap .scroll-right .list__wrap ul .list3');
+  let $list4 = $('.careers-wrap #section3 .scroll__wrap .scroll-right .list__wrap ul .list4');
+  let $list5 = $('.careers-wrap #section3 .scroll__wrap .scroll-right .list__wrap ul .list5');
+  let $gif = $('.careers-wrap #section3 .scroll__wrap .scroll-left .gif__wrap');
+
+  $list2.hover(
+    function() {
+      $gif.addClass('gif2');
+    }, function() {
+      $gif.removeClass('gif2');
+    }
+  );
+  $list3.hover(
+    function() {
+      $gif.addClass('gif3');
+    }, function() {
+      $gif.removeClass('gif3');
+    }
+  );
+  $list4.hover(
+    function() {
+      $gif.addClass('gif4');
+    }, function() {
+      $gif.removeClass('gif4');
+    }
+  );
+  $list5.hover(
+    function() {
+      $gif.addClass('gif5');
+    }, function() {
+      $gif.removeClass('gif5');
+    }
+  );
+}
+$(document).ready(function () {
+  careersHoverEvent();
+});
