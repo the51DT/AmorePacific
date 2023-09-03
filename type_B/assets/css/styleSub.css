@@ -143,7 +143,7 @@ footer .footer__wrap .text__wrap .bottom__wrap p {padding-left: calc(100vw * 980
 .careers-wrap #section5 .title__wrap {display: flex; justify-content: space-between; align-items: center;}
 .careers-wrap #section5 .title__wrap .title {color: #000; font-family: 'Arita-dotum'; font-size: calc(100vw * 40/1920); font-style: normal; font-weight: 400; line-height: normal; text-transform: uppercase;}
 .careers-wrap #section5 .title__wrap .site img {width: calc(100vw * 32/1920); height:calc(100vw * 32/1920);}
-.careers-wrap #section5 .careers-swiper1 {padding: calc(100vw * 40 /1920) calc(100vw * 195 /1920) 0 0;}
+.careers-wrap #section5 .careers-swiper1 {margin: 0 calc(100vw * -63 /1920); padding: calc(100vw * 40 /1920) calc(100vw * 258 /1920) 0 calc(100vw * 63 /1920);}
 .careers-wrap #section5 .careers-swiper1 .swiper-wrapper {gap: calc(100vw * 32/1920);}
 .careers-wrap #section5 .careers-swiper1 .swiper-wrapper,
 .careers-wrap #section5 .careers-swiper1 .swiper-wrapper .swiper-slide {cursor: url("../images/drag_cursor.png"), grab; gap: calc(100vw * 32/1920);}

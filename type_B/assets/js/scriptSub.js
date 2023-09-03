@@ -169,7 +169,7 @@ gsap.to($scroll4, {
     trigger: ".scroll4",
     start: "top 100px",
     endTrigger: ".scroll4",
-    end: "bottom 0px",
+    end: "bottom 100px",
     pin: true, // left 클래스 고정
     scrub: true, // 스크롤에 따라 부드럽게 이동
   },
