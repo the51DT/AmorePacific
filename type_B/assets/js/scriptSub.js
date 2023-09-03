@@ -1,49 +1,5 @@
-/* ---- sub ---- */  
 history.scrollRestoration = "manual"
 // history.scrollRestoration = "auto"
-
-/* ---- scroll ---- */  
-gsap.registerPlugin(ScrollTrigger);
-
-let $scroll1 = $('.sub-wrap #section2 .scroll__wrap .scroll-left.scroll1');
-let $scroll2 = $('.sub-wrap #section2 .scroll__wrap.scroll-left.scroll2');
-let $scroll3 = $('.sub-wrap #section2 .scroll__wrap .scroll-left.scroll3');
-
-// scroll1에 대한 ScrollTrigger 설정
-gsap.to($scroll1, {
-  scrollTrigger: {
-    trigger: ".scroll1",
-    start: "top 100px",
-    endTrigger: ".scroll1",
-    end: "bottom 196px",
-    pin: true, // left 클래스 고정
-    scrub: true, // 스크롤에 따라 부드럽게 이동
-  },
-});
-
-// scroll2에 대한 ScrollTrigger 설정
-gsap.to($scroll2, {
-  scrollTrigger: {
-    trigger: ".scroll2",
-    start: "top 100px",
-    endTrigger: ".scroll2",
-    end: "bottom 160px",
-    pin: true, // left 클래스 고정
-    scrub: true, // 스크롤에 따라 부드럽게 이동
-  },
-});
-
-// scroll3에 대한 ScrollTrigger 설정
-gsap.to($scroll3, {
-  scrollTrigger: {
-    trigger: ".scroll3",
-    start: "top 100px",
-    endTrigger: ".scroll3",
-    end: "bottom 160px",
-    pin: true, // left 클래스 고정
-    scrub: true, // 스크롤에 따라 부드럽게 이동
-  },
-});
 
 /* ---- swiper ---- */ 
 var about1menu = ['our story', 'our history', 'our values']
@@ -78,6 +34,11 @@ var aboutSwiper3 = new Swiper(".about-swiper3", {
       return '<span class="' + className + '">' + (about3menu[index]) + '</span>';
     },
 	},
+});
+
+var careersSwiper4 = new Swiper(".careers-swiper1", {
+  slidesPerView: "auto",
+  grabCursor: true,
 });
 
 /* ---- gnb ---- */  
@@ -155,4 +116,93 @@ $(window).scroll(function () {
 
 $(document).ready(function () {
   gnbScrollEvent();
+});
+
+/* ---- sub ---- */  
+/* ---- scroll ---- */  
+gsap.registerPlugin(ScrollTrigger);
+
+let $scroll1 = $('.sub-wrap #section2 .scroll__wrap .scroll-left.scroll1');
+let $scroll2 = $('.sub-wrap #section2 .scroll__wrap .scroll-left.scroll2');
+let $scroll3 = $('.sub-wrap #section2 .scroll__wrap .scroll-left.scroll3');
+let $scroll4 = $('.careers-wrap section3 .scroll__wrap .scroll-left.scroll4');
+
+// scroll1에 대한 ScrollTrigger 설정
+gsap.to($scroll1, {
+  scrollTrigger: {
+    trigger: ".scroll1",
+    start: "top 100px",
+    endTrigger: ".scroll1",
+    end: "bottom 196px",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
+
+// scroll2에 대한 ScrollTrigger 설정
+gsap.to($scroll2, {
+  scrollTrigger: {
+    trigger: ".scroll2",
+    start: "top 100px",
+    endTrigger: ".scroll2",
+    end: "bottom 160px",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
+
+// scroll3에 대한 ScrollTrigger 설정
+gsap.to($scroll3, {
+  scrollTrigger: {
+    trigger: ".scroll3",
+    start: "top 100px",
+    endTrigger: ".scroll3",
+    end: "bottom 160px",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
+
+// scroll4에 대한 ScrollTrigger 설정
+gsap.to($scroll4, {
+  scrollTrigger: {
+    trigger: ".scroll4",
+    start: "top 100px",
+    endTrigger: ".scroll4",
+    end: "bottom 0px",
+    pin: true, // left 클래스 고정
+    scrub: true, // 스크롤에 따라 부드럽게 이동
+  },
+});
+  
+/* ---- scroll ---- */  
+function investorsScrollEvent() {
+  // let documentHeight = $(document).scrollHeight();
+  var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+  let section2Top = jQuery('.investors-wrap #section2').offset().top;
+  let $img1 = $('.investors-wrap #section2 .grid__wrap .img1');
+  let $img2 = $('.investors-wrap #section2 .grid__wrap .img2');
+  let $img3 = $('.investors-wrap #section2 .grid__wrap .img3');
+  let $img4 = $('.investors-wrap #section2 .grid__wrap .img4');
+  let $img5 = $('.investors-wrap #section2 .grid__wrap .img5');
+
+  console.log(scrollBottom, section2Top+100);
+  if (scrollBottom >= section2Top+100) {
+    $img1.addClass('up-img1');
+    $img2.addClass('up-img2');
+    $img3.addClass('up-img3');
+    $img4.addClass('up-img4');
+    $img5.addClass('up-img5');
+  }
+  else {
+    $img1.addClass('up-img1');
+    $img2.addClass('up-img2');
+    $img3.addClass('up-img3');
+    $img4.addClass('up-img4');
+    $img5.addClass('up-img5');
+  }
+} 
+
+$(window).scroll(function () {
+  investorsScrollEvent();
 });
