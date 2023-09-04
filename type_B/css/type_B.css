@@ -1058,6 +1058,7 @@ footer img {
 .bg-video--title span {
   display: block;
   animation: startTitle 0.6s;
+  transition-delay: 1s;
 }
 @keyframes startTitle {
   0% {
