@@ -6,344 +6,201 @@
     <title>Amore Pacific</title>
     <style>
       @font-face {
-        font-family: "AritaBuri";
-        font-weight: 100;
+        font-family: "Arita-dotum";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Regular.woff")
+          format("woff");
+        font-weight: 200;
         font-style: normal;
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Thin.eot");
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Thin.eot?#iefix")
-            format("embedded-opentype"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Thin.woff2")
-            format("woff2"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Thin.woff")
-            format("woff"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Thin.ttf")
-            format("truetype");
-        font-display: swap;
       }
       @font-face {
-        font-family: "AritaBuri";
-        font-weight: 300;
+        font-family: "Arita-dotum";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff")
+          format("woff");
+        font-weight: normal;
         font-style: normal;
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Light.eot");
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Light.eot?#iefix")
-            format("embedded-opentype"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Light.woff2")
-            format("woff2"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Light.woff")
-            format("woff"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Light.ttf")
-            format("truetype");
-        font-display: swap;
       }
       @font-face {
-        font-family: "AritaBuri";
-        font-weight: 500;
+        font-family: "Arita-dotum";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Bold.woff")
+          format("woff");
+        font-weight: bold;
         font-style: normal;
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.eot");
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.eot?#iefix")
-            format("embedded-opentype"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff2")
-            format("woff2"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff")
-            format("woff"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.ttf")
-            format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "AritaBuri";
-        font-weight: 600;
-        font-style: normal;
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.eot");
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.eot?#iefix")
-            format("embedded-opentype"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.woff2")
-            format("woff2"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.woff")
-            format("woff"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-SemiBold.ttf")
-            format("truetype");
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "AritaBuri";
-        font-weight: 700;
-        font-style: normal;
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Bold.eot");
-        src: url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Bold.eot?#iefix")
-            format("embedded-opentype"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Bold.woff2")
-            format("woff2"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Bold.woff")
-            format("woff"),
-          url("https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Bold.ttf")
-            format("truetype");
-        font-display: swap;
       }
       * {
         box-sizing: border-box;
         text-transform: uppercase;
-        font-family: "AritaBuri";
-      }
-      h1,
-      h2 {
-        margin: 0;
-        text-align: center;
-        color: white;
-        padding: 24px 0;
-      }
-      html {
-        /* background-image: url("./type_A/img/sec4_back1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center; */
-        height: 100%;
-        overflow: hidden;
+        font-family: "Arita-dotum";
       }
       body {
-        height: 100%;
-        overflow-y: auto;
         margin: 0;
-        padding: 40px 0;
-        text-transform: uppercase;
-        font-family: "AritaBuri";
-        scroll-behavior: smooth;
       }
-      .wrap {
-        margin: 0 auto;
-        position: relative;
-        max-width: 768px;
-        padding: 0 24px;
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0;
+        line-height: initial;
       }
-      details {
-        /* border: 1px solid black; */
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.8);
+      h1 img {
+        width: auto;
+        height: 20px;
+        display: block;
       }
-      details:nth-child(n + 2) {
-        margin-top: 8px;
+      h2 {
+        margin-top: 80px;
+        font-size: 72px;
+        line-height: 72px;
+        font-weight: 100;
       }
-      details summary {
-        cursor: pointer;
-        padding: 16px;
-        outline: none;
-        font-size: 24px;
-        font-weight: bold;
-        color: #384a5f;
-        /* Hides marker on Chrome */
-        list-style: none;
-      }
-      details summary::marker {
-        display: none;
-        content: "";
-      }
-      details summary::-webkit-details-marker {
-        display: none;
+      .summary {
+        margin-top: 24px;
+        font-size: 20px;
+        padding: 0 40px;
       }
       ul {
-        margin: 0;
-        padding: 0 16px 16px;
-      }
-      li {
         list-style: none;
-        padding: 4px 8px;
+        padding: 0;
       }
-      li:nth-child(n + 2) {
-        margin-top: 8px;
+      .wrap {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 80px;
       }
-      li:nth-child(odd) {
-        background-color: rgba(255, 255, 255, 0.5);
+      .wrap h1,
+      .wrap h2 {
+        padding: 0 40px;
+        letter-spacing: -0.02em;
+      }
+      .type_list {
+        margin: 100px 0 0;
+      }
+      .type_list li {
+        border-top: 1px solid #000;
+        display: flex;
+        flex-direction: row;
+        padding: 30px 40px;
+        justify-content: space-between;
+      }
+      .type_list li > div {
+        align-self: center;
+      }
+      .type_list h4 {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 600;
+      }
+      .type_list p {
+        margin-top: 16px;
+        line-height: 20px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .copyright {
+        color: #999;
+        padding: 30px 40px 44px;
       }
       a,
-      a:active {
+      a:active,
+      a[href] {
+        border: 1px solid #000;
+        border-radius: 999px;
+        text-align: center;
         display: block;
-        color: #333;
+        width: 148px;
         font-size: 20px;
+        line-height: 52px;
         text-decoration: none;
-        color: #384a5f;
+        color: #000;
       }
-      .bg-video {
+      a[href] strong {
+        padding-right: 14px;
+        background-image: url(./type_B/img/img_blank.png);
+        background-repeat: no-repeat;
+        background-position: right 8px;
       }
-      .bg-video__content {
-        object-fit: cover;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
+      .link_area {
+        display: flex;
+        flex-direction: column;
+        gap: 8px 0;
       }
     </style>
   </head>
   <body>
-    <div class="bg-video">
-      <video class="bg-video__content" autoplay preload muted loop playsinline>
-        <source src="./type_B/img/cType_KV_01.mp4" type="video/mp4" />
-        <source src="./type_B/img/cType_KV_01.webm" type="video/webm" />
-        <!-- Your browser is not supported! -->
-      </video>
-    </div>
     <div class="wrap">
-      <h1>Amore Pacific</h1>
-      <h2>Gate Way</h2>
-      <details>
-        <summary>Type A</summary>
-        <ul>
+      <h1>
+        <img src="./type_B/img/logo_index.png" alt="" />
+      </h1>
+
+      <h2>Amore Pacific <br /><strong>UIUX Proposal</strong></h2>
+      <p class="summary">● 아모레퍼시픽 UIUX 제안</p>
+
+      <div>
+        <ul class="type_list">
           <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Main</a
-            >
+            <div>
+              <h4>Type A</h4>
+              <p>아모레의 기본 구성 요소를 유지한 개선</p>
+            </div>
+            <div class="link_area">
+              <a
+                href="./type_A/type_A.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong>PC</strong></a
+              >
+              <a
+                href="./type_A/mo_type_A.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong>Mobile</strong></a
+              >
+            </div>
           </li>
           <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A_about_us.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >About_us</a
-            >
+            <div>
+              <h4>Type B</h4>
+              <p>상징적인 셰이프를 더한 아이덴티티 구축</p>
+            </div>
+            <div class="link_area">
+              <a
+                href="./type_B/type_B.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong>PC</strong></a
+              >
+              <a
+                href="./type_B/type_B_mo.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong>Mobile</strong></a
+              >
+            </div>
           </li>
           <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A_brands.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >brands</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A_our_culture.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Our_culture</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A_commitments.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >commitments</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A_investors.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >investors</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_A/type_A_careers.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >careers</a
-            >
-          </li>
-        </ul>
-      </details>
-      <details>
-        <summary>Type B</summary>
-        <ul>
-          <li>
-            <a
-              href="./type_B/type_B.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Main</a
-            >
-          </li>
-          <li>
-            <a
-              href="./type_B/aboutUs.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >About Us</a
-            >
-          </li>
-          <li>
-            <a
-              href="./type_B/aboutUs_mo.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >About Us | (mobile)</a
-            >
-          </li>
-          <li>
-            <a
-              href="./type_B/ourCulture.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Our Culture</a
-            >
-          </li>
-          <li>
-            <a
-              href="./type_B/ourCulture_mo.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Our Culture | mobile</a
-            >
+            <div>
+              <h4>Type C</h4>
+              <p>폰트, 구성 등을 전면적으로 새롭게</p>
+            </div>
+            <div class="link_area">
+              <a
+                href="./type_C/html/main.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong>PC</strong></a
+              >
+              <a
+                href="./type_C/html/main_mo.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><strong>Mobile</strong></a
+              >
+            </div>
           </li>
         </ul>
-      </details>
-      <details>
-        <summary>Type C</summary>
-        <ul>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_C/html/main.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Main</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_C/html/aboutus.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >About us</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_C/html/brands.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Brands</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_C/html/ourculture.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Our_culture</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_C/html/investors.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >investors</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://the51dx.github.io/AmorePacific/type_C/html/careers.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >careers</a
-            >
-          </li>
-        </ul>
-      </details>
+      </div>
+      <p class="copyright">(c)2023.09, Amore pacific UiUx Proposal</p>
     </div>
   </body>
 </html>
