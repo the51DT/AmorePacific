@@ -44,7 +44,6 @@ header .header_menu{
     box-sizing: border-box;
     padding: 46px 0 ;
     text-align: center;
-    transition: all 0.5s;
     overflow: hidden;
     display: none;
 }
@@ -72,8 +71,6 @@ nav ul{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 996px;
-    width: calc(100vw * 1100 / 1920);
 }
 nav ul button{
     margin: 0 auto;
