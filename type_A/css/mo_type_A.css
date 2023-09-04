@@ -201,7 +201,6 @@
 }
 .sec3{
     position: relative;
-    max-width: 360px;
     padding: 60px 0;
     margin: 0 auto;
 }
@@ -468,7 +467,6 @@
     width: 24px;
 }
 .sec5{
-    max-width: 360px;
     margin: 0 auto;
     position: relative;
     padding: 64px 0;
@@ -482,7 +480,6 @@
 }
 .sec5 .swiper4{
     overflow: hidden;
-    margin: 0 16px;
 }
 .swiper4 .swiper-wrapper{
     margin-top: 42px !important;
