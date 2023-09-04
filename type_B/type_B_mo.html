@@ -45,8 +45,8 @@
                     <div class="img_slide swiper-slide">
                         <div class="bg-video">
                             <video class="bg-video__content" autoplay muted loop>
-                                <source src="./img/cType_KV_01.mp4" type="video/mp4" />
-                                <source src="./img/cType_KV_01.webm" type="video/webm" />
+                                <source src="./img/cType_KV_01_mo.mp4" type="video/mp4" />
+                                <!-- <source src="./img/cType_KV_01.webm" type="video/webm" /> -->
                                 <!-- Your browser is not supported! -->
                             </video>
                         </div>
@@ -54,8 +54,8 @@
                     <div class="img_slide swiper-slide">
                         <div class="bg-video">
                             <video class="bg-video__content" autoplay muted loop>
-                            <source src="./img/cType_KV_02.mp4" type="video/mp4" />
-                            <source src="./img/cType_KV_02.webm" type="video/webm" />
+                            <source src="./img/cType_KV_02_mo.mp4" type="video/mp4" />
+                            <!-- <source src="./img/cType_KV_02.webm" type="video/webm" /> -->
                             <!-- Your browser is not supported! -->
                             </video>
                         </div>
@@ -63,32 +63,13 @@
                     <div class="img_slide swiper-slide">
                         <div class="bg-video">
                             <video class="bg-video__content" autoplay muted loop>
-                            <source src="./img/cType_KV_03.mp4" type="video/mp4" />
-                            <source src="./img/cType_KV_03.webm" type="video/webm" />
+                            <source src="./img/cType_KV_03_mo.mp4" type="video/mp4" />
+                            <!-- <source src="./img/cType_KV_03.webm" type="video/webm" /> -->
                             <!-- Your browser is not supported! -->
                             </video>
                         </div>
                     </div>
-                    <!-- <div class="img_slide swiper-slide">
-                    <div class="slide-bg"></div>
-                    </div>
-                    <div class="img_slide swiper-slide">
-                    <div class="slide-bg"></div>
-                    </div>
-                    <div class="img_slide swiper-slide">
-                    <div class="slide-bg"></div>
-                    </div>
-                    <div class="img_slide swiper-slide">
-                    <div class="slide-bg"></div>
-                    </div> -->
                 </div>
-            <!-- <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div> -->
-            <!-- Progressbar -->
-            <!-- <div class="swiper-progress-bar">
-                <span class="slide_progress-bar"></span>
-            </div> -->
-            <!-- <div class="swiper-pagination"></div> -->
 
                 <div class="scroll_wrap">
                     <div class="swiper-pagination">
@@ -106,7 +87,7 @@
         </section>
         <section class="sec2">
             <div class="text_wrap">
-                <img src="./img/se2_text.svg" />
+                <img src="./img/se2_text_mo.png" />
                 </div>
             <div class="swiper1">
                 <div class="swiper-wrapper">
@@ -476,19 +457,12 @@
 
             const swiper1 = new Swiper(".swiper1", {
                 // Optional parameters
+                slidesPerView: 1,
                 loop: true,
+                centeredSlides:true, 
                 autoplay: {
                     delay:10000,
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: false,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-
             });
             
             const swiper2 = new Swiper(".swiper2", {
