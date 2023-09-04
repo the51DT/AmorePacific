@@ -1,6 +1,7 @@
 history.scrollRestoration = "manual"
 // history.scrollRestoration = "auto"
 
+
 /* ---- swiper ---- */  
 const mainSwiper = new Swiper('.main-swiper', {
   autoplay: {

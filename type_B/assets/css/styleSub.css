@@ -1,5 +1,5 @@
 /* ---- Body ---- */
-body {margin: 0 auto; height: 100%; width:100%; -ms-overflow-style: none; cursor: auto; transition: 0.3s ease-out; overflow-x: hidden; max-width: 100%; width: 100%; overscroll-behavior: none;}
+body {scroll-behavior: smooth; margin: 0 auto; height: 100%; width:100%; -ms-overflow-style: none; cursor: auto; transition: 0.3s ease-out; overflow-x: hidden; max-width: 100%; width: 100%; overscroll-behavior: none;}
 .blind {display: none;}
 ::-webkit-scrollbar {
   display: none;
