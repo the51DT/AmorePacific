@@ -177,7 +177,7 @@ let observer = new IntersectionObserver(
   },
   {
     root: document.getElementById("my-viewport"),
-    threshold: [0.2],
+    threshold: [0.25, 0.5],
   }
 );
 
@@ -196,7 +196,7 @@ const menu = document.querySelector('.header_menu')
 const ham_menu = document.querySelectorAll('.ham_menu')
 const header = document.querySelector('header')
 const dim = document.querySelector('.header_dim')
-btn_toggle.addEventListener("click", ()=>{
+btn_toggle?.addEventListener("click", ()=>{
     if(btn_toggle.classList.contains('on')){
         btn_toggle.classList.remove('on')
         menu.classList.remove('on')
