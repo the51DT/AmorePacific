@@ -20,16 +20,15 @@
     100%{letter-spacing: 4.8px;}
 }
 .sec2{
-    max-width: 360px;
     margin: 0 auto;
 }
 .sec2 .btn_wrap fieldset{
-    margin-bottom: 600px;
-    padding: 0 360px;
+    margin-bottom: 60px;
+    padding: 0 16px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px;
 }
 .sec2 .btn_wrap .btn_item{
     height: fit-content;
@@ -44,14 +43,14 @@
     width: max-content;
     display: flex;
     margin: 0;
-    padding: 18px 32px;
+    padding: 18px 20px;
     justify-content: center;
     align-items: center;
     border-radius: 125px;
     border: 1px solid #131313;
     color: #131313;
     text-align: center;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 600;
     line-height: normal;
     cursor: pointer;
@@ -65,12 +64,15 @@
     flex-wrap: wrap;
 }
 .sec2 .brand_item{
-    width: 25%;
+    width: 100%;
     aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
     transform: scale(0%);
     opacity: 0;
+}
+.sec2 .brand_item>img{
+    width: 100%;
 }
 @keyframes brand{
     0%{

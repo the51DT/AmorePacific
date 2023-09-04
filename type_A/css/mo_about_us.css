@@ -26,6 +26,7 @@
     box-sizing: border-box;
     transition: padding 0.8s ease-in-out;
     position: relative;
+    text-align: center;
 }
 .sec2 img{
     height: 100%;
