@@ -7,6 +7,7 @@ body{
     overflow-x: hidden;
 }
 header{
+    position: relative;
     box-sizing: border-box;
     width: 100%;
     background: #FFF;
@@ -25,6 +26,7 @@ header .header_wrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 header .logo_wrap img{
     width: 145px;
@@ -34,20 +36,75 @@ header .menu_wrap{
     gap: 14px;
 }
 header .header_menu{
+    position: absolute;
+    z-index: 1;
+    background: #FFF;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 46px 0 ;
+    text-align: center;
+    transition: all 0.5s;
+    overflow: hidden;
     display: none;
 }
+header .header_menu>img{
+    margin-top: 32px;
+}
 nav{
-    max-width: 996px;
+    margin: 0 auto;
+    padding: 32px 0 25px;
+    width: 328px;
     font-size: 18px;
     font-weight: 600;
     line-height: normal;
-    text-transform: uppercase;
+    border-bottom: 1px solid #EEE;
+}
+nav .line{
+    width: 30px;
+    border-bottom: 4px #131313 solid;
+    margin: 0 auto;
+    margin-bottom: 32px;
 }
 nav ul{
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     max-width: 996px;
     width: calc(100vw * 1100 / 1920);
+}
+nav ul button{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'AritaBuri';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+nav .menu{
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+}
+nav .menu li{
+    margin: 12px 0;
+}
+nav ul .menu_list+.menu_list{
+    margin-top: 24px;
+}
+nav::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #C0CEF1;
 }
 footer{
     display: flex;

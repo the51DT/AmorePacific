@@ -19,20 +19,62 @@
                 </div>
                 <div class="menu_wrap">
                     <img src="./img/btn_search.svg">
-                    <img src="./img/btn_menu.svg">
+                    <img class="btn_ham" src="./img/btn_menu.svg">
                 </div>
             </div>
             <div class="header_menu">
                 <nav>
+                    <div class="line"></div>
                     <ul>
-                        <li><a href="./mo_type_A_about_us.html">About us</a></li>
-                        <li><a href="./mo_type_A_brands.html">Brands</a></li>
-                        <li><a href="./mo_type_A_our_culture.html">Our culture</a></li>
-                        <li><a href="./mo_type_A_commitments.html">Commitments</a></li>
-                        <li><a href="./mo_type_A_investors.html">Investors</a></li>
-                        <li><a href="./mo_type_A_careers.html">Careers</a></li>
+                        <li class="menu_list">
+                            <button class="ham_menu">ABOUT US<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./mo_type_A_about_us.html">Amorepacific</a></li>
+                                <li><a href="./mo_type_A_about_us.html">Research & Innovation</a></li>
+                                <li><a href="./mo_type_A_about_us.html">Visual Identity</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">BRANDS<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./mo_type_A_brands.html">화장품</a></li>
+                                <li><a href="./mo_type_A_brands.html">향수</a></li>
+                                <li><a href="./mo_type_A_brands.html">메디컬 뷰티</a></li>
+                                <li><a href="./mo_type_A_brands.html">뷰티 디바이스</a></li>
+                                <li><a href="./mo_type_A_brands.html">이너뷰티</a></li>
+                                <li><a href="./mo_type_A_brands.html">헤어케어</a></li>
+                                <li><a href="./mo_type_A_brands.html">바디케어</a></li>
+                                <li><a href="./mo_type_A_brands.html">덴탈케어</a></li>
+                                <li><a href="./mo_type_A_brands.html">티컬쳐</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">OUR CULTURE<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./mo_type_A_our_culture.html">건축</a></li>
+                                <li><a href="./mo_type_A_our_culture.html">공간</a></li>
+                                <li><a href="./mo_type_A_our_culture.html">문화경영</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">COMMITMENTS<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./mo_type_A_commitments.html">지속가능경영</a></li>
+                                <li><a href="./mo_type_A_commitments.html">고객안심품질</a></li>
+                                <li><a href="./mo_type_A_commitments.html">생명 존중의 원칙</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">INVESTORS<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./mo_type_A_investors.html">아모레퍼시픽</a></li>
+                                <li><a href="./mo_type_A_investors.html">아모레퍼시픽그룹</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list"><button><a href="./mo_type_A_careers.html">Careers</a></button></li>
                     </ul>
                 </nav>
+                <img src="./img/mo_header_bottom.svg">
             </div>
         </header>
         <section class="sec1">
@@ -255,6 +297,36 @@
     </div>
 
     <script>
+        const btn_toggle = document.querySelector('.btn_ham')
+        const menu = document.querySelector('.header_menu')
+        const ham_menu = document.querySelectorAll('.ham_menu')
+        btn_toggle.addEventListener("click", ()=>{
+            if(btn_toggle.classList.contains('on')){
+                btn_toggle.classList.remove('on')
+                menu.style.display = "none"
+                btn_toggle.src = './img/btn_menu.svg'
+            }
+            else{
+                btn_toggle.classList.add('on')
+                menu.style.display = "block"
+                btn_toggle.src = './img/btn_close.svg'
+            }
+        })
+        ham_menu.forEach((el)=>{
+            el.addEventListener("click", ()=>{
+                if(el.classList.contains('on')){
+                    el.classList.remove('on')
+                    el.closest('.menu_list').querySelector('.menu').style.display = "none"
+                    el.querySelector('.arrow').style.transform = 'rotate(0deg)'
+                }
+                else{
+                    el.classList.add('on')
+                    el.closest('.menu_list').querySelector('.menu').style.display = "block"
+                    el.querySelector('.arrow').style.transform = 'rotate(180deg)'
+                }
+            })
+        })
+
         const progressLine1 = document.querySelector('.swiper1 .bar svg')
         const swiper1 = new Swiper('.swiper1', {
             // Optional parameters
