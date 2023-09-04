@@ -1,7 +1,8 @@
 .sec1{
     position: relative;
-    width: 1800px;
-    height: 486px;
+    max-width: 1920px;
+    width: 100%;
+    height: calc(100vw * 486 / 1920);
     margin: 64px auto;
     margin-top: 160px;
 }
@@ -18,17 +19,17 @@
 }
 .sec1 .text{
     text-align: center;
-    font-size: 120px;
+    font-size: calc(100vw * 120 / 1920);
     font-weight: 500;
     line-height: normal;
     overflow: hidden;
-    height: 144px;
+    height: calc(100vw * 144/ 1920);
 }
 .sec1 .text p{
     transform-origin: left center;
 }
 .sec1 .text + .text{
-    margin-top: 27px;
+    margin-top: calc(100vw * 27 / 1920);
 }
 .sec1 .text1{
     color: #131313;
@@ -280,7 +281,7 @@
     width: 205px;
 }
 .sec4{
-    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     padding: 64px 0;
 }
