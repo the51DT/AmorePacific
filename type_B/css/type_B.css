@@ -443,18 +443,14 @@ nav ul li > a img {
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
   background: center 100% / contain no-repeat url(../img/sec1_pagenation02.png);
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+.swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
   background: center 100% / contain no-repeat
     url(../img/sec1_pagenation02_hover.png);
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
   background: center 100% / contain no-repeat url(../img/sec1_pagenation03.png);
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+.swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
   background: center 100% / contain no-repeat
     url(../img/sec1_pagenation03_hover.png);
 }
@@ -1135,12 +1131,6 @@ footer img {
   font-size: 24px;
   color: #000;
   font-family: "Arita-dotum";
-}
-.observerText .arrow{
-  width: 24px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 8px;
 }
 .ob_parts.bg-black {
   background-color: #131313;
