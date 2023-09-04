@@ -28,7 +28,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px;
 }
 .sec2 .btn_wrap .btn_item{
     height: fit-content;
@@ -43,7 +43,7 @@
     width: max-content;
     display: flex;
     margin: 0;
-    padding: 18px 32px;
+    padding: 18px 20px;
     justify-content: center;
     align-items: center;
     border-radius: 125px;
