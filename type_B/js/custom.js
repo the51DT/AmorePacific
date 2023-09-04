@@ -195,25 +195,30 @@ const btn_toggle = document.querySelector('.btn_ham')
 const menu = document.querySelector('.header_menu')
 const ham_menu = document.querySelectorAll('.ham_menu')
 const header = document.querySelector('header')
+const dim = document.querySelector('.header_dim')
 btn_toggle.addEventListener("click", ()=>{
     if(btn_toggle.classList.contains('on')){
         btn_toggle.classList.remove('on')
         menu.classList.remove('on')
         menu.style.opacity = "0"
+        dim.style.visibility = "hidden"
         btn_toggle.src = './img/moMenu.png'
         document.documentElement.style.setProperty('--height', '0');
         header.style.backgroundColor = "transparent"
         document.querySelector('html, body').style.overflow = "auto"
+        menu.style.transform = "translateY(-100%)"
       }
     else{
         btn_toggle.classList.add('on')
         menu.classList.add('on')
         menu.style.visibility = "visible"
         menu.style.opacity = "1"
+        dim.style.visibility = "visible"
         btn_toggle.src = './img/btn_close.svg'
         document.documentElement.style.setProperty('--height', '100vh');
         header.style.backgroundColor = "#131313"
         document.querySelector('html, body').style.overflow = "hidden"
+        menu.style.transform = "translateY(0%)"
       }
 })
 ham_menu.forEach((el)=>{
