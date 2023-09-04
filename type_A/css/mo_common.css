@@ -1,3 +1,6 @@
+:root{
+    --height: 0;
+}
 body{
     font-family: 'AritaBuri';
     scroll-behavior: smooth;
@@ -40,12 +43,21 @@ header .header_menu{
     z-index: 1;
     background: #FFF;
     width: 100vw;
-    height: 100vh;
+    height: var(--height);
     box-sizing: border-box;
     padding: 46px 0 ;
     text-align: center;
     overflow: hidden;
-    display: none;
+    visibility: hidden;
+    transition: height 0.5s ease-in-out;
+    transition-delay: 0.4s;
+}
+header .header_dim{
+    position: absolute;
+    width: 100%;
+    height: var(--height);
+    background: #C0CEF1;
+    transition: height 0.6s ease-in-out;
 }
 header .header_menu>img{
     margin-top: 32px;
@@ -84,7 +96,8 @@ nav ul button{
     text-transform: uppercase;
 }
 nav .menu{
-    display: none;
+    visibility: hidden;
+    height: 0;
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
@@ -96,17 +109,9 @@ nav .menu li{
 nav ul .menu_list+.menu_list{
     margin-top: 24px;
 }
-nav::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #C0CEF1;
-}
 footer{
     display: flex;
     justify-content: center;
-    
     width: 100%;
     background: #131313;
 }

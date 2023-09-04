@@ -22,6 +22,7 @@
                     <img class="btn_ham" src="./img/btn_menu.svg">
                 </div>
             </div>
+            <div class="header_dim"></div>
             <div class="header_menu">
                 <nav>
                     <div class="line"></div>
@@ -122,28 +123,38 @@
         const btn_toggle = document.querySelector('.btn_ham')
         const menu = document.querySelector('.header_menu')
         const ham_menu = document.querySelectorAll('.ham_menu')
+        const dim = document.querySelector('.header_dim')
         btn_toggle.addEventListener("click", ()=>{
             if(btn_toggle.classList.contains('on')){
                 btn_toggle.classList.remove('on')
-                menu.style.display = "none"
+                menu.classList.remove('on')
+                dim.style.visibility = "hidden"
+                menu.style.opacity = "0"
                 btn_toggle.src = './img/btn_menu.svg'
+                document.documentElement.style.setProperty('--height', '0');
             }
             else{
                 btn_toggle.classList.add('on')
-                menu.style.display = "block"
+                menu.classList.add('on')
+                dim.style.visibility = "visible"
+                menu.style.visibility = "visible"
+                menu.style.opacity = "1"
                 btn_toggle.src = './img/btn_close.svg'
+                document.documentElement.style.setProperty('--height', '100vh');
             }
         })
         ham_menu.forEach((el)=>{
             el.addEventListener("click", ()=>{
                 if(el.classList.contains('on')){
                     el.classList.remove('on')
-                    el.closest('.menu_list').querySelector('.menu').style.display = "none"
+                    el.closest('.menu_list').querySelector('.menu').style.visibility = "hidden"
+                    el.closest('.menu_list').querySelector('.menu').style.height = "0"
                     el.querySelector('.arrow').style.transform = 'rotate(0deg)'
                 }
                 else{
                     el.classList.add('on')
-                    el.closest('.menu_list').querySelector('.menu').style.display = "block"
+                    el.closest('.menu_list').querySelector('.menu').style.visibility = "visible"
+                    el.closest('.menu_list').querySelector('.menu').style.height = "100%"
                     el.querySelector('.arrow').style.transform = 'rotate(180deg)'
                 }
             })
