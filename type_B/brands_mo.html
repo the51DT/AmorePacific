@@ -12,259 +12,325 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        body {
+            background: #131313;
+        }
+        .brand_sec1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 60px 0 24px;
+        }
+        .brand_sec1 h2 {
+            color: #ffffff;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 84px;
+            animation: text_spacing 1s forwards ease-in-out;
+        }
+        @keyframes text_spacing {
+            0% {
+                letter-spacing: 30px;
+            }
+            100% {
+                letter-spacing: 5px;
+            }
+        }
+        .brand_sec2 {
+            padding: 0 16px;
+        }
+        .brand_sec2 .btn_wrap fieldset {
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .brand_sec2 .btn_wrap .btn_item {
+            height: fit-content;
+        }
+        .brand_sec2 .btn_wrap input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: none;
+        }
+        .brand_sec2 .btn_wrap label {
+            width: max-content;
+            display: flex;
+            margin: 0;
+            padding: 17px 21px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 125px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-family: "Arita-dotum";
+            text-align: center;
+            font-size: 14px;
+            line-height: normal;
+            cursor: pointer;
+        }
+        .brand_sec2 .btn_wrap input:checked + label {
+            color: #131313;
+            background: #ffffff;
+        }
+        .brand_wrap {
+            padding-bottom:42px;
+        }
+        .brand_wrap img {
+            width:100%;
+            vertical-align: middle;
+        }
+        .brand_wrap .brand_list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            flex: 1;
+        }
+        .brand_wrap .brand_list li:nth-child(even) {
+            padding: 0 34px;
+        }
+        .brand_wrap .brand_list li .list_inner {
+            position: relative;
+            border-radius: 310px;
+            overflow: hidden;
+        }
+        .brand_wrap .brand_list li .list_inner:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: #f0bea3;
+            opacity: 0.8;
+            transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .brand_wrap .brand_list li .list_inner:hover:before {
+            height: 100%;
+            transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .brand_wrap .brand_list li.color02 .list_inner:before {
+            background: #000000;
+        }
+        .brand_wrap .brand_list li.color03 .list_inner:before {
+            background: #638cb8;
+        }
+        .brand_wrap .brand_list li.color04 .list_inner:before {
+            background: #02c46d;
+        }
+        .brand_wrap .brand_list li.color05 .list_inner:before {
+            background: #eeaba2;
+        }
+        .brand_wrap .brand_list li.color06 .list_inner:before {
+            background: #e77556;
+        }
+        .brand_wrap .brand_list li.color07 .list_inner:before {
+            background: #965142;
+        }
+        .brand_wrap .brand_list li.color08 .list_inner:before {
+            background: #439549;
+        }
+        .brand_wrap .brand_list li.color09 .list_inner:before {
+            background: #cea089;
+        }
+        .brand_wrap .brand_list li.color10 .list_inner:before {
+            background: #494638;
+        }
+        .brand_wrap .brand_list li.color11 .list_inner:before {
+            background: #bd8b76;
+        }
+        .brand_wrap .brand_list li.color12 .list_inner:before {
+            background: #35b2aa;
+        }
+        .brand_wrap .brand_list li .list_inner .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 60px 0;
+            text-align: center;
+            box-sizing:border-box;
+        }
+        .brand_wrap
+            .brand_list
+            li:nth-child(even)
+            .list_inner
+            .info {
+            padding: 80px 0;
+        }
+        .brand_wrap .brand_list li .list_inner .info .info_top .brand_img {
+            max-width: 70%;
+            margin: auto;
+            opacity: 0;
+            transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition-delay: 0s;
+            transform: translateY(20px);
+        }
+        .brand_wrap
+            .brand_list
+            li
+            .list_inner:hover
+            .info
+            .info_top
+            .brand_img {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.57s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition-delay: 0.6s;
+        }
+        .brand_wrap .brand_list li .list_inner .info .info_top .sns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 19px;
+            opacity: 0;
+            transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition-delay: 0s;
+            transform: translateY(20px);
+        }
+        .brand_wrap .brand_list li .list_inner:hover .info .info_top .sns {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.57s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition-delay: 0.7s;
+        }
+        .brand_wrap .brand_list li .list_inner .info .info_top .sns a {
+            width: 36px;
+            height: 36px;
+        }
+        .brand_wrap .brand_list li .list_inner .info .brand_more {
+            margin-top: 80px;
+            text-align: center;
+        }
+        .brand_wrap .brand_list li .list_inner .info .brand_more .btn {
+            display: inline-block;
+            padding: 8px 14px 11px;
+            font-size: 16px;
+            font-family: "Arita-dotum";
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 100px;
+            vertical-align: middle;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition-delay: 0s;
+        }
+        .brand_wrap
+            .brand_list
+            li
+            .list_inner:hover
+            .info
+            .brand_more
+            .btn {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.57s cubic-bezier(0.39, 0.575, 0.565, 1),
+                transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
+            transition-delay: 0.8s;
+        }
+        .brand_wrap
+            .brand_list
+            li
+            .list_inner
+            .info
+            .brand_more
+            .btn:after {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-left: 16px;
+            margin-bottom: -7px;
+            background: url("./img/brands_more_btn.png")
+                no-repeat center center;
+        }
+    </style>
   </head>
 <body>
 <body>
   <div class="wrap mobile">
-    
-        <style>
-            body {
-                background: #131313;
-            }
-            .brand_sec1 {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                padding: 60px 0 24px;
-            }
-            .brand_sec1 h2 {
-                color: #ffffff;
-                font-size: 48px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                letter-spacing: 84px;
-                animation: text_spacing 1s forwards ease-in-out;
-            }
-            @keyframes text_spacing {
-                0% {
-                    letter-spacing: 30px;
-                }
-                100% {
-                    letter-spacing: 5px;
-                }
-            }
-            .brand_sec2 {
-                padding: 0 16px;
-            }
-            .brand_sec2 .btn_wrap fieldset {
-                margin-bottom: 100px;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .brand_sec2 .btn_wrap .btn_item {
-                height: fit-content;
-            }
-            .brand_sec2 .btn_wrap input {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                display: none;
-            }
-            .brand_sec2 .btn_wrap label {
-                width: max-content;
-                display: flex;
-                margin: 0;
-                padding: 17px 21px;
-                justify-content: center;
-                align-items: center;
-                border-radius: 125px;
-                border: 1px solid #ffffff;
-                color: #ffffff;
-                font-family: "Arita-dotum";
-                text-align: center;
-                font-size: 14px;
-                line-height: normal;
-                cursor: pointer;
-            }
-            .brand_sec2 .btn_wrap input:checked + label {
-                color: #131313;
-                background: #ffffff;
-            }
-            .brand_wrap {
-                padding-bottom:42px;
-            }
-            .brand_wrap img {
-                width:100%;
-                vertical-align: middle;
-            }
-            .brand_wrap .brand_list {
-                display: flex;
-                flex-direction: column;
-                gap: 32px;
-                flex: 1;
-            }
-            .brand_wrap .brand_list li:nth-child(even) {
-                padding: 0 34px;
-            }
-            .brand_wrap .brand_list li .list_inner {
-                position: relative;
-                border-radius: 310px;
-                overflow: hidden;
-            }
-            .brand_wrap .brand_list li .list_inner:before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 0;
-                background: #f0bea3;
-                opacity: 0.8;
-                transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-            }
-            .brand_wrap .brand_list li .list_inner:hover:before {
-                height: 100%;
-                transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-            }
-            .brand_wrap .brand_list li.color02 .list_inner:before {
-                background: #000000;
-            }
-            .brand_wrap .brand_list li.color03 .list_inner:before {
-                background: #638cb8;
-            }
-            .brand_wrap .brand_list li.color04 .list_inner:before {
-                background: #02c46d;
-            }
-            .brand_wrap .brand_list li.color05 .list_inner:before {
-                background: #eeaba2;
-            }
-            .brand_wrap .brand_list li.color06 .list_inner:before {
-                background: #e77556;
-            }
-            .brand_wrap .brand_list li.color07 .list_inner:before {
-                background: #965142;
-            }
-            .brand_wrap .brand_list li.color08 .list_inner:before {
-                background: #439549;
-            }
-            .brand_wrap .brand_list li.color09 .list_inner:before {
-                background: #cea089;
-            }
-            .brand_wrap .brand_list li.color10 .list_inner:before {
-                background: #494638;
-            }
-            .brand_wrap .brand_list li.color11 .list_inner:before {
-                background: #bd8b76;
-            }
-            .brand_wrap .brand_list li.color12 .list_inner:before {
-                background: #35b2aa;
-            }
-            .brand_wrap .brand_list li .list_inner .info {
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                padding: 60px 0;
-                text-align: center;
-                box-sizing:border-box;
-            }
-            .brand_wrap
-                .brand_list
-                li:nth-child(even)
-                .list_inner
-                .info {
-                padding: 80px 0;
-            }
-            .brand_wrap .brand_list li .list_inner .info .info_top .brand_img {
-                max-width: 70%;
-                margin: auto;
-                opacity: 0;
-                transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
-                    transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
-                transition-delay: 0s;
-                transform: translateY(20px);
-            }
-            .brand_wrap
-                .brand_list
-                li
-                .list_inner:hover
-                .info
-                .info_top
-                .brand_img {
-                opacity: 1;
-                transform: translateY(0);
-                transition: opacity 0.57s cubic-bezier(0.39, 0.575, 0.565, 1),
-                    transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
-                transition-delay: 0.6s;
-            }
-            .brand_wrap .brand_list li .list_inner .info .info_top .sns {
-                display: flex;
-                justify-content: center;
-                gap: 12px;
-                margin-top: 19px;
-                opacity: 0;
-                transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
-                    transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
-                transition-delay: 0s;
-                transform: translateY(20px);
-            }
-            .brand_wrap .brand_list li .list_inner:hover .info .info_top .sns {
-                opacity: 1;
-                transform: translateY(0);
-                transition: opacity 0.57s cubic-bezier(0.39, 0.575, 0.565, 1),
-                    transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
-                transition-delay: 0.7s;
-            }
-            .brand_wrap .brand_list li .list_inner .info .info_top .sns a {
-                width: 36px;
-                height: 36px;
-            }
-            .brand_wrap .brand_list li .list_inner .info .brand_more {
-                margin-top: 80px;
-                text-align: center;
-            }
-            .brand_wrap .brand_list li .list_inner .info .brand_more .btn {
-                display: inline-block;
-                padding: 8px 14px 11px;
-                font-size: 16px;
-                font-family: "Arita-dotum";
-                color: #fff;
-                border: 1px solid #fff;
-                border-radius: 100px;
-                vertical-align: middle;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
-                    transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
-                transition-delay: 0s;
-            }
-            .brand_wrap
-                .brand_list
-                li
-                .list_inner:hover
-                .info
-                .brand_more
-                .btn {
-                opacity: 1;
-                transform: translateY(0);
-                transition: opacity 0.57s cubic-bezier(0.39, 0.575, 0.565, 1),
-                    transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
-                transition-delay: 0.8s;
-            }
-            .brand_wrap
-                .brand_list
-                li
-                .list_inner
-                .info
-                .brand_more
-                .btn:after {
-                content: "";
-                display: inline-block;
-                width: 24px;
-                height: 24px;
-                margin-left: 16px;
-                margin-bottom: -7px;
-                background: url("./img/brands_more_btn.png")
-                    no-repeat center center;
-            }
-        </style>
+
+        
+        <header>
+            <div class="logo_wrap">
+                <h1><img src="./img/logoMo.png" /></h1>
+            </div>
+            <div class="util">
+                <a href="#">
+                    <img src="./img/search.png" alt="">
+                </a>
+                <a href="#">
+                    <img class="btn_ham" src="./img/moMenu.png" alt="">
+                </a>
+            </div>
+            <div class="header_menu">
+                <nav>
+                    <ul>
+                        <li class="menu_list">
+                            <button class="ham_menu">ABOUT US<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./aboutUs_mo.html">Amorepacific</a></li>
+                                <li><a href="./aboutUs_mo.html">Research & Innovation</a></li>
+                                <li><a href="./aboutUs_mo.html">Visual Identity</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">BRANDS<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./brands_mo.html">화장품</a></li>
+                                <li><a href="./brands_mo.html">향수</a></li>
+                                <li><a href="./brands_mo.html">메디컬 뷰티</a></li>
+                                <li><a href="./brands_mo.html">뷰티 디바이스</a></li>
+                                <li><a href="./brands_mo.html">이너뷰티</a></li>
+                                <li><a href="./brands_mo.html">헤어케어</a></li>
+                                <li><a href="./brands_mo.html">바디케어</a></li>
+                                <li><a href="./brands_mo.html">덴탈케어</a></li>
+                                <li><a href="./brands_mo.html">티컬쳐</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">OUR CULTURE<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./ourCulture_mo.html">건축</a></li>
+                                <li><a href="./ourCulture_mo.html">공간</a></li>
+                                <li><a href="./ourCulture_mo.html">문화경영</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">COMMITMENTS<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./commitments_mo.html">지속가능경영</a></li>
+                                <li><a href="./commitments_mo.html">고객안심품질</a></li>
+                                <li><a href="./commitments_mo.html">생명 존중의 원칙</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list">
+                            <button class="ham_menu">INVESTORS<img class="arrow" src="./img/mo_header_arrow.svg"></button>
+                            <ul class="menu">
+                                <li><a href="./investors_mo.html">아모레퍼시픽</a></li>
+                                <li><a href="./investors_mo.html">아모레퍼시픽그룹</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_list"><button><a href="./careers_mo.html">Careers</a></button></li>
+                    </ul>
+                </nav>
+                <img src="./img/footer_bottom.png">
+        </header>
         <!-------- brands-wrap -------->
         <div class="brands-wrap">
             <section class="brand_sec1">
@@ -905,7 +971,7 @@
             </section>
         </div>
   </div>
-  
+        <script src="./js/custom.js"></script>
         <script>
             document
                 .querySelector("form")
