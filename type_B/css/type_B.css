@@ -1245,17 +1245,18 @@ footer img {
   background: #f2f2f2;
   padding: 150px 160px;
   position: relative;
+  box-sizing: border-box;
 }
 .swiperCareers > img {
   margin-bottom: 92px;
 }
-.swiperCareers .swiper-wrapper{
+/* .swiperCareers .swiper-wrapper {
   height: 220px !important;
 }
-.swiperCareers .swiper-slide{
+.swiperCareers .swiper-slide {
   width: 476px !important;
   height: 220px !important;
-}
+} */
 .swiperCareers .button {
   position: absolute;
   top: 150px;
@@ -1394,17 +1395,18 @@ footer img {
   padding: 67.5px 16px;
   position: relative;
   text-align: center;
+  box-sizing: border-box;
 }
 .mobile .swiperCareers > img {
   margin-bottom: 57px;
 }
-.mobile .swiperCareers .swiper-wrapper{
+/* .mobile .swiperCareers .swiper-wrapper{
   height: 139px !important;
-}
-.mobile .swiperCareers .swiper-slide{
-  width: 275px !important;
-  height: 139px !important;
-}
+} */
+/* .mobile .swiperCareers .swiper-slide {
+  width: inherit !important;
+  height: inherit !important;
+} */
 .mobile .swiperCareers .swiper-slide img {
   width: 100%;
 }
