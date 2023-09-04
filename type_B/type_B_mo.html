@@ -595,85 +595,19 @@
             
             const swiper2 = new Swiper(".swiper2", {
                 // Optional parameters
-                slidesPerView: 1,
+                slidesPerView: 1.5,
                 spaceBetween: 16,
             });
-
-            // const swiper22 = new Swiper(".swiper22", {
-            //     // Optional parameters
-            //     slidesPerView: 4,
-            //     spaceBetween: 20,
-            //     loopAdditionalSlides: 3,
-            //     loop: true,
-            //     loopedSlides: 1,
-
-            //     // Navigation arrows
-            //     navigation: {
-            //         nextEl: ".swiper-button-next",
-            //         prevEl: ".swiper-button-prev",
-            //     },
-
-            // });
 
             const swiper3 = new Swiper(".swiper3", {
                 // Optional parameters
                 slidesPerView: 1,
                 spaceBetween: 16,
-                // autoplay: {
-                //   delay: 0,
-                //   disableOnInteraction: true,
-                // },
-                // speed: 5000,
-                // If we need pagination
-                /* pagination: {
-                            el: '.swiper-pagination',
-                        }, */
-
                 // Navigation arrows
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
-
-                // And if we need scrollbar
-                /* scrollbar: {
-                            el: '.swiper-scrollbar',
-                        }, */
-            });
-
-            const img_list = document.querySelectorAll(".img");
-            img_list.forEach((el) => {
-                el.addEventListener("mouseover", () => {
-                el.closest(".img_slide").querySelector(".img_dim").style.display =
-                    "flex";
-                //   swiper2.speed = 0;
-                //   swiper2.autoplay.stop();
-                //   document.querySelector(".swiper2 .swiper-wrapper").style.transition =
-                //     "ease-in-out";
-                });
-                el.addEventListener("mouseleave", () => {
-                el.closest(".img_slide").querySelector(".img_dim").style.display =
-                    "none";
-                });
-            });
-
-            const img_cont = document.querySelectorAll(".img_item");
-            img_cont.forEach((el) => {
-                el.addEventListener("mouseover", () => {
-                el.querySelector(".img_dim").style.display = "flex";
-                });
-                el.addEventListener("mouseleave", () => {
-                el.querySelector(".img_dim").style.display = "none";
-                });
-            });
-
-            const cont_list = document.querySelectorAll(".cont_wrap");
-            cont_list.forEach((el) => {
-                el.addEventListener("mouseover", () => {
-                swiper4.autoplay.stop();
-                document.querySelector(".swiper-wrapper").style.transition =
-                    "ease-in-out";
-                });
             });
         </script>
 </body>

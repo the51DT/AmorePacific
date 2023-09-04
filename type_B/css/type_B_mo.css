@@ -186,6 +186,7 @@ header .util a img {
   overflow: hidden;
   /* height: 144px; */
   color: #fff;
+  transition-delay: .2s;
 }
 .sec1 .text span {
   padding-top: 0px;
@@ -406,7 +407,7 @@ header .util a img {
 .sec3 .swiper2 {
   position: relative;
   /* overflow: hidden; */
-  width:calc(100% - 84px)
+  /* width:calc(100% - 84px) */
 }
 
 .swiper2 .button {
