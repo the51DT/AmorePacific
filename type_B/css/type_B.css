@@ -222,12 +222,12 @@ nav ul li > a img {
   font-size: 36px;
   /* padding-top: 350px; */
   font-family: PPHattonUltralight;
-  transition-delay: .1s;
+  transition-delay: 0.1s;
 }
 .sec1 .text2 {
   letter-spacing: 30px;
   font-family: PPHattonMedium;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
 .sec1 .text3 {
@@ -257,7 +257,6 @@ nav ul li > a img {
 .sec2 {
   width: 100%;
   /* height: 100vh; */
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -266,6 +265,12 @@ nav ul li > a img {
   box-sizing: border-box;
   /* background: url(../img/Brands.png) no-repeat; */
   /* padding: 64px 60px; */
+}
+.sec2 > .max-area {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .sec2 .swiper1 {
   width: 530px;
@@ -316,7 +321,7 @@ nav ul li > a img {
   display: flex;
   gap: 24px;
   top: 480px;
-  left: 160px;
+  left: 0;
 }
 .sec2 .swiper-button-prev {
   position: static;
@@ -367,7 +372,12 @@ nav ul li > a img {
   position: absolute;
   top: 0;
 } */
-
+.max-area {
+  padding: 150px 0;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
 .swiper1 .img_dim {
   /* display: none; */
   flex-direction: column;
@@ -408,7 +418,7 @@ nav ul li > a img {
   position: absolute;
   top: inherit !important;
   bottom: 150px !important;
-  left: 160px !important;
+  /* left: 160px !important; */
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet {
   margin: 0 !important;
@@ -446,13 +456,17 @@ nav ul li > a img {
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
   background-position: -133px bottom;
 }
-.swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
+.swiper1
+  .swiper-pagination
+  .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
   background-position: -133px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
   background-position: -266px bottom;
 }
-.swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+.swiper1
+  .swiper-pagination
+  .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
   background-position: -266px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(4) {
@@ -474,7 +488,7 @@ nav ul li > a img {
   background-position: -665px bottom;
 }
 .sec3 {
-  padding: 150px 0 150px 160px;
+  padding: 150px 0 150px;
 }
 .sec3 h2 {
   margin-left: 100px;
@@ -557,7 +571,7 @@ nav ul li > a img {
   display: flex;
   gap: 24px;
   top: 64px;
-  right: 160px;
+  right: 0;
 }
 .swiper2 .swiper-button-prev {
   position: static;
@@ -721,7 +735,10 @@ nav ul li > a img {
   position: absolute;
   top: 150px;
   z-index: 2;
-  left: 160px;
+  max-width: 1600px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 .swiper3 {
   position: relative;
@@ -778,7 +795,12 @@ nav ul li > a img {
   display: flex;
   gap: 24px;
   top: 150px;
-  right: 160px;
+  right: 50%;
+  max-width: 1600px;
+  width: 100%;
+  transform: translateX(50%);
+  z-index: 2;
+  justify-content: flex-end;
 }
 .swiper3 .swiper-slide {
 }
@@ -1155,7 +1177,7 @@ footer img {
   padding: 150px 0;
   position: relative;
   margin: 0 auto;
-  max-width:1600px;
+  max-width: 1600px;
   background: #f2f2f2;
 }
 .swiperInvestors > img {
@@ -1445,7 +1467,7 @@ footer img {
   display: block;
 }
 
-.mobile header .header_menu{
+.mobile header .header_menu {
   top: 88px;
   left: 0;
   position: absolute;
@@ -1462,7 +1484,7 @@ footer img {
   transition: all 0.5s ease-in-out;
   transition-delay: 0.4s;
 }
-header .header_dim{
+header .header_dim {
   visibility: hidden;
   position: absolute;
   top: 88px;
@@ -1472,10 +1494,10 @@ header .header_dim{
   background: #27262b;
   transition: all 0.2s ease-in-out;
 }
-.mobile header .header_menu>img{
+.mobile header .header_menu > img {
   margin-top: 54px;
 }
-.mobile nav{
+.mobile nav {
   margin: 0 auto;
   width: 328px;
   font-size: 18px;
@@ -1483,19 +1505,19 @@ header .header_dim{
   line-height: normal;
   padding: 0;
 }
-.mobile nav .line{
+.mobile nav .line {
   width: 30px;
   margin: 0 auto;
   margin-bottom: 32px;
 }
-.mobile nav ul{
+.mobile nav ul {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
 }
-.mobile nav ul button{
+.mobile nav ul button {
   display: flex;
   align-items: start;
   gap: 4px;
@@ -1503,25 +1525,25 @@ header .header_dim{
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   font-family: "PPHattonMedium";
 }
-.mobile nav ul a{
+.mobile nav ul a {
   color: #999999;
 }
-.mobile nav ul button a{
-  color: #FFF;
+.mobile nav ul button a {
+  color: #fff;
 }
-.mobile nav .menu{
+.mobile nav .menu {
   visibility: hidden;
   height: 0;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
 }
-.mobile nav .menu li{
+.mobile nav .menu li {
   margin: 12px 0;
 }
-.mobile nav ul .menu_list+.menu_list{
+.mobile nav ul .menu_list + .menu_list {
   margin-top: 24px;
 }
