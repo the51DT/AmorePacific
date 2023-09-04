@@ -1049,6 +1049,20 @@ footer ul {
   font-size: 120px;
   line-height: 180px;
   color: #fff;
+  overflow: hidden;
+}
+.bg-video--title span {
+  display: block;
+  animation: startTitle 0.6s;
+}
+@keyframes startTitle {
+  0% {
+    transform: translateY(100%) rotate(20deg);
+    transform-origin: left;
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
 .ob_parts {
   /* height: 100vh; */
@@ -1061,6 +1075,7 @@ footer ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 6%;
 }
 .moving_part img {
   width: 100%;
