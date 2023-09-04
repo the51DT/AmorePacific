@@ -10,6 +10,10 @@
   to { transform: translateX(-50%); }
 }
 
+@keyframes marquee1 {
+  from { transform: translateX(0); }
+  to { transform: translateX(-500%); }
+}
 .color1 {
   animation: color1 0.3s forwards;
 }
