@@ -162,3 +162,31 @@ const swiper = new Swiper(".swiper7", {
     el: ".swiper-scrollbar",
   },
 });
+const observerFn = () => {
+  // let options = {
+  //   root: null,
+  //   threshold: [0.25],
+  // };
+  // options에 따라 인스턴스 생성
+};
+let observer = new IntersectionObserver(
+  function (entries, observer) {
+    console.log("entries", entries);
+    console.log("observer", observer);
+    entries[0].target.querySelector(".moving_part")?.classList.add("on");
+  },
+  {
+    root: document.getElementById("my-viewport"),
+    threshold: [0.5],
+  }
+);
+
+// 타겟 요소 관찰 시작
+let targets = document.querySelectorAll(".ob_parts");
+targets.forEach((taregt) => {
+  // console.log(taregt);
+  observer.observe(taregt);
+});
+// if (document.querySelectorAll(".ob_parts").length > 0) {
+//   observerFn();
+// }
