@@ -40,7 +40,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calc(100vw * 88 / 1920);
 }
 .sec2 .swiper2{
     max-width: 360px !important;
