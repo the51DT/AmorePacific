@@ -177,7 +177,7 @@ let observer = new IntersectionObserver(
   },
   {
     root: document.getElementById("my-viewport"),
-    threshold: [0.25],
+    threshold: [0.5],
   }
 );
 
