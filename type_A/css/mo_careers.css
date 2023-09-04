@@ -60,12 +60,12 @@
 .sec3{
     padding: 60px 0 139px;
     margin: 0 auto;
-    max-width: 1920px;
+    max-width: 360px;
 }
 .sec3 .swiper1{
     margin: 0 calc(100vw * 160 / 1920);
     width: 100vw;
-    max-width: 1920px;
+    max-width: 360px;
 }
 .swiper1 .img_slide{
     position: relative;
