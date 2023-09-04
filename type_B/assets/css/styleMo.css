@@ -1,0 +1,22 @@
+/* ---- Body ---- */
+body {margin: 0 auto; height: 100%; width:100%; -ms-overflow-style: none; cursor: auto; transition: 0.3s ease-out; overflow-x: hidden; max-width: 100%; width: 100%; overscroll-behavior: none;}
+.blind {display: none;}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.mo_wrap img {}
+
+
+.mo_wrap {position: absolute; top: 0; width: 100%; height: 100%; }
+.mo_wrap img {display: block; margin: 0 auto; width: calc(100vw* 360/1920); box-shadow: 0 1rem 3rem rgba(0,0,0,0.8);}
+.mo_wrap .mo_gnb {position: absolute; top: calc(100vw* 27/1920); left: calc(100vw* 1243/1920); width: calc(100vw* 60/1920); height: calc(100vw* 60/1920);}
+/* marquee */
+.mo_wrap .mo_main-title {white-space: nowrap;will-change: transform; animation: marquee 60s linear infinite; animation-delay: 1s;}
+
+
+@media screen and (max-width:720px) {
+  .mo_wrap {position: absolute; top: 0; width: 100%; height: 100%;}
+  .mo_wrap img {display: block; margin: 0 auto; width: calc(100vw* 720/720);}
+  .mo_gnb {position: absolute; top: calc(100vw* 32/720); left: calc(100vw* 647/720); width: calc(100vw* 50/720); height: calc(100vw* 50/720);}
+}
