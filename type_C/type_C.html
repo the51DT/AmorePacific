@@ -103,11 +103,6 @@
             <div class="swiper1">
                 <div class="swiper-wrapper">
                     <div class="img_slide swiper-slide">
-                        <div class="img_item">
-                            <div class="img_dim">
-                                <img src="./img/dim_img01.png" />
-                            </div>
-                        </div>
                         <div class="slide-bg"></div>
                     </div>
                     <div class="img_slide swiper-slide">
@@ -126,12 +121,13 @@
                         <div class="slide-bg"></div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class="button0">
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-pagination"></div>
+            
             <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
         </section>
@@ -141,58 +137,56 @@
             <img src="./img/se3_title.svg" />
             <div class="swiper-wrapper">
                 <div class="img_slide swiper-slide">
-                <div class="img">
-                    <div class="careers_img">
-
-                        <img src="./img/careers01.png" />
+                    <div class="img">
+                        <div class="careers_img">
+                            <img src="./img/careers01.png" />
+                        </div>
+                        <div class="careers_text">
+                            <img src="./img/careers01_text.png" />
+                        </div>
                     </div>
-                    <div class="careers_text">
-                    <img src="./img/careers01_text.png" />
-                    </div>
-                </div>
                 </div>
                 <div class="img_slide swiper-slide">
-                <div class="img">
-                    <div class="careers_img">
-                        <img src="./img/careers02.png" />
+                    <div class="img">
+                        <div class="careers_img">
+                            <img src="./img/careers02.png" />
+                        </div>
+                        <div class="careers_text">
+                            <img src="./img/careers02_text.png" />
+                        </div>
                     </div>
-                    <div class="careers_text">
-                        <img src="./img/careers02_text.png" />
-                    </div>
-                </div>
                 </div>
                 <div class="img_slide swiper-slide">
-                <div class="img">
-                    <div class="careers_img">
+                    <div class="img">
+                        <div class="careers_img">
 
-                        <img src="./img/careers03.png" />
+                            <img src="./img/careers03.png" />
+                        </div>
+                        <div class="careers_text">
+                            <img src="./img/careers03_text.png" />
+                        </div>
                     </div>
-                    <div class="careers_text">
-                    <img src="./img/careers03_text.png" />
-                    </div>
-                </div>
                 </div>
                 <div class="img_slide swiper-slide">
-                <div class="img">
-                    <div class="careers_img">
+                    <div class="img">
+                        <div class="careers_img">
 
-                        <img src="./img/careers04.png" />
+                            <img src="./img/careers04.png" />
+                        </div>
+                        <div class="careers_text">
+                            <img src="./img/careers04_text.png" />
+                        </div>
                     </div>
-                    <div class="careers_text">
-                    <img src="./img/careers04_text.png" />
-                    </div>
-                </div>
                 </div>
                 <div class="img_slide swiper-slide">
-                <div class="img">
-                    <div class="careers_img">
-
-                        <img src="./img/careers05.png" />
+                    <div class="img">
+                        <div class="careers_img">
+                            <img src="./img/careers05.png" />
+                        </div>
+                        <div class="careers_text">
+                            <img src="./img/careers05_text.png" />
+                        </div>
                     </div>
-                    <div class="careers_text">
-                    <img src="./img/careers05_text.png" />
-                    </div>
-                </div>
                 </div>
             </div>
             <div class="button">
@@ -440,150 +434,145 @@
         </div>
 
         <script>
-        const progressLine1 = document.querySelector(".swiper0 .bar svg");
+            const progressLine1 = document.querySelector(".swiper0 .bar svg");
 
-        const swiper0 = new Swiper(".swiper0", {
-            // Optional parameters
-            loop: true,
-            autoplay: {
-                delay:10000,
-                disableOnInteraction: false,
-            },
-            // If we need pagination
-            pagination: {
-            el: ".swiper-pagination",
-            },
+            const swiper0 = new Swiper(".swiper0", {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay:10000,
+                    disableOnInteraction: false,
+                },
+                // If we need pagination
+                pagination: {
+                el: ".swiper-pagination",
+                },
 
-            // Navigation arrows
-            // navigation: {
-            // nextEl: ".swiper-button-next",
-            // prevEl: ".swiper-button-prev",
-            // },
+                // Navigation arrows
+                // navigation: {
+                // nextEl: ".swiper-button-next",
+                // prevEl: ".swiper-button-prev",
+                // },
 
-            on: {
-                autoplayTimeLeft(s, time, progress) {
-                    progressLine1.style.setProperty("--progress", 1 - progress)
+                on: {
+                    autoplayTimeLeft(s, time, progress) {
+                        progressLine1.style.setProperty("--progress", 1 - progress)
+                    }
                 }
-            }
-        });
-
-        const swiper1 = new Swiper(".swiper1", {
-            // Optional parameters
-            loop: true,
-            // pagination: {
-            // el: ".swiper-pagination",
-            // clickable: false,
-            // },
-
-            // Navigation arrows
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            },
-
-        });
-        
-        const swiper2 = new Swiper(".swiper2", {
-            // Optional parameters
-            slidesPerView: 4.5,
-            loopAdditionalSlides: 3,
-            loop: true,
-            loopedSlides: 1,
-
-            // Navigation arrows
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            },
-
-        });
-
-        const swiper22 = new Swiper(".swiper22", {
-            // Optional parameters
-            slidesPerView: 4,
-            spaceBetween: 20,
-            loopAdditionalSlides: 3,
-            loop: true,
-            loopedSlides: 1,
-
-            // Navigation arrows
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            },
-
-        });
-
-        const swiper3 = new Swiper(".swiper3", {
-            // Optional parameters
-            slidesPerView: 1,
-            // spaceBetween: 20,
-            loopAdditionalSlides: 3,
-            // centeredSlides: true,
-            loop: true,
-            loopedSlides: 1,
-            // autoplay: {
-            //   delay: 0,
-            //   disableOnInteraction: true,
-            // },
-            // speed: 5000,
-            // If we need pagination
-            /* pagination: {
-                        el: '.swiper-pagination',
-                    }, */
-
-            // Navigation arrows
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            },
-
-            // And if we need scrollbar
-            /* scrollbar: {
-                        el: '.swiper-scrollbar',
-                    }, */
-        });
-
-        const img_list = document.querySelectorAll(".img");
-        img_list.forEach((el) => {
-            el.addEventListener("mouseover", () => {
-            el.closest(".img_slide").querySelector(".img_dim").style.display =
-                "flex";
-            //   swiper2.speed = 0;
-            //   swiper2.autoplay.stop();
-            //   document.querySelector(".swiper2 .swiper-wrapper").style.transition =
-            //     "ease-in-out";
             });
-            el.addEventListener("mouseleave", () => {
-            el.closest(".img_slide").querySelector(".img_dim").style.display =
-                "none";
-            });
-        });
 
-        const img_cont = document.querySelectorAll(".img_item");
-        img_cont.forEach((el) => {
-            el.addEventListener("mouseover", () => {
-            el.querySelector(".img_dim").style.display = "flex";
-            });
-            el.addEventListener("mouseleave", () => {
-            el.querySelector(".img_dim").style.display = "none";
-            });
-        });
+            const swiper1 = new Swiper(".swiper1", {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay:10000,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
 
-        const cont_list = document.querySelectorAll(".cont_wrap");
-        cont_list.forEach((el) => {
-            el.addEventListener("mouseover", () => {
-            swiper4.autoplay.stop();
-            document.querySelector(".swiper-wrapper").style.transition =
-                "ease-in-out";
             });
-        });
-
-
-        
             
+            const swiper2 = new Swiper(".swiper2", {
+                // Optional parameters
+                slidesPerView: 4.5,
+                loopAdditionalSlides: 3,
+                loop: true,
+                loopedSlides: 1,
 
+                // Navigation arrows
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
 
+            });
+
+            const swiper22 = new Swiper(".swiper22", {
+                // Optional parameters
+                slidesPerView: 4,
+                spaceBetween: 20,
+                loopAdditionalSlides: 3,
+                loop: true,
+                loopedSlides: 1,
+
+                // Navigation arrows
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+
+            });
+
+            const swiper3 = new Swiper(".swiper3", {
+                // Optional parameters
+                slidesPerView: 1,
+                // spaceBetween: 20,
+                loopAdditionalSlides: 3,
+                // centeredSlides: true,
+                loop: true,
+                loopedSlides: 1,
+                // autoplay: {
+                //   delay: 0,
+                //   disableOnInteraction: true,
+                // },
+                // speed: 5000,
+                // If we need pagination
+                /* pagination: {
+                            el: '.swiper-pagination',
+                        }, */
+
+                // Navigation arrows
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+
+                // And if we need scrollbar
+                /* scrollbar: {
+                            el: '.swiper-scrollbar',
+                        }, */
+            });
+
+            const img_list = document.querySelectorAll(".img");
+            img_list.forEach((el) => {
+                el.addEventListener("mouseover", () => {
+                el.closest(".img_slide").querySelector(".img_dim").style.display =
+                    "flex";
+                //   swiper2.speed = 0;
+                //   swiper2.autoplay.stop();
+                //   document.querySelector(".swiper2 .swiper-wrapper").style.transition =
+                //     "ease-in-out";
+                });
+                el.addEventListener("mouseleave", () => {
+                el.closest(".img_slide").querySelector(".img_dim").style.display =
+                    "none";
+                });
+            });
+
+            const img_cont = document.querySelectorAll(".img_item");
+            img_cont.forEach((el) => {
+                el.addEventListener("mouseover", () => {
+                el.querySelector(".img_dim").style.display = "flex";
+                });
+                el.addEventListener("mouseleave", () => {
+                el.querySelector(".img_dim").style.display = "none";
+                });
+            });
+
+            const cont_list = document.querySelectorAll(".cont_wrap");
+            cont_list.forEach((el) => {
+                el.addEventListener("mouseover", () => {
+                swiper4.autoplay.stop();
+                document.querySelector(".swiper-wrapper").style.transition =
+                    "ease-in-out";
+                });
+            });
         </script>
-    </body>
+</body>
 </html>
