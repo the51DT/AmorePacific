@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>type_B</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/font.css" />
+        <link rel="stylesheet" href="./css/type_B.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="logo_wrap">
+                    <h1><img src="./img/logo.png" /></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Our culture</a></li>
+                        <li><a href="#">Commitments</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <style>
+                body {
+                    background: #131313;
+                }
+                .brand_sec1 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 310px 0 64px;
+                }
+                .brand_sec1 h2 {
+                    color: #ffffff;
+                    font-size: 120px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: 84px;
+                    animation: text_spacing 1s forwards ease-in-out;
+                }
+                @keyframes text_spacing {
+                    0% {
+                        letter-spacing: 84px;
+                    }
+                    100% {
+                        letter-spacing: 42px;
+                    }
+                }
+                .brand_sec2 {
+                    max-width: 1920px;
+                    margin: 0 auto;
+                }
+                .brand_sec2 .btn_wrap fieldset {
+                    margin-bottom: 184px;
+                    padding: 0 360px;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+                }
+                .brand_sec2 .btn_wrap .btn_item {
+                    height: fit-content;
+                }
+                .brand_sec2 .btn_wrap input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    display: none;
+                }
+                .brand_sec2 .btn_wrap label {
+                    width: max-content;
+                    display: flex;
+                    margin: 0;
+                    padding: 18px 32px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 125px;
+                    border: 1px solid #ffffff;
+                    color: #ffffff;
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: normal;
+                    cursor: pointer;
+                }
+                .brand_sec2 .btn_wrap input:checked + label {
+                    color: #131313;
+                    background: #ffffff;
+                }
+                .brand_wrap {
+                    display: flex;
+                    gap: 60px;
+                    margin: auto;
+                    max-width: 1710px;
+                    padding-bottom: 120px;
+                }
+                .brand_wrap img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+                .brand_wrap .brand_list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                    flex: 1;
+                }
+                .brand_wrap .brand_list:nth-child(odd) li:nth-child(odd) {
+                    padding: 0 87px;
+                }
+                .brand_wrap .brand_list:nth-child(even) li:nth-child(even) {
+                    padding: 0 87px;
+                }
+                .brand_wrap .brand_list li .list_inner {
+                    position: relative;
+                    border-radius: 310px;
+                    overflow: hidden;
+                }
+                .brand_wrap .brand_list li .list_inner:before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    background: #f0bea3;
+                    opacity: 0.8;
+                    transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+                }
+                .brand_wrap .brand_list li .list_inner:hover:before {
+                    height: 100%;
+                    transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+                }
+                .brand_wrap .brand_list li.color02 .list_inner:before {
+                    background: #000000;
+                }
+                .brand_wrap .brand_list li.color03 .list_inner:before {
+                    background: #638cb8;
+                }
+                .brand_wrap .brand_list li.color04 .list_inner:before {
+                    background: #02c46d;
+                }
+                .brand_wrap .brand_list li.color05 .list_inner:before {
+                    background: #eeaba2;
+                }
+                .brand_wrap .brand_list li.color06 .list_inner:before {
+                    background: #e77556;
+                }
+                .brand_wrap .brand_list li.color07 .list_inner:before {
+                    background: #965142;
+                }
+                .brand_wrap .brand_list li.color08 .list_inner:before {
+                    background: #439549;
+                }
+                .brand_wrap .brand_list li.color09 .list_inner:before {
+                    background: #cea089;
+                }
+                .brand_wrap .brand_list li.color10 .list_inner:before {
+                    background: #494638;
+                }
+                .brand_wrap .brand_list li.color11 .list_inner:before {
+                    background: #bd8b76;
+                }
+                .brand_wrap .brand_list li.color12 .list_inner:before {
+                    background: #35b2aa;
+                }
+                .brand_wrap .brand_list li .list_inner .info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: 120px 0;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                .brand_wrap
+                    .brand_list:nth-child(odd)
+                    li:nth-child(odd)
+                    .list_inner
+                    .info {
+                    padding: 80px 0;
+                }
+                .brand_wrap
+                    .brand_list:nth-child(even)
+                    li:nth-child(even)
+                    .list_inner
+                    .info {
+                    padding: 80px 0;
+                }
+                .brand_wrap
+                    .brand_list
+                    li
+                    .list_inner
+                    .info
+                    .info_top
+                    .brand_img {
+                    max-width: 330px;
+                    margin: auto;
+                    opacity: 0;
+                    transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
+                        transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0s;
+                    transform: translateY(20px);
+                }
+                .brand_wrap
+                    .brand_list
+                    li
+                    .list_inner:hover
+                    .info
+                    .info_top
+                    .brand_img {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: opacity 0.57s
+                            cubic-bezier(0.39, 0.575, 0.565, 1),
+                        transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0.6s;
+                }
+                .brand_wrap .brand_list li .list_inner .info .info_top .sns {
+                    display: flex;
+                    justify-content: center;
+                    gap: 12px;
+                    margin-top: 44px;
+                    opacity: 0;
+                    transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
+                        transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0s;
+                    transform: translateY(20px);
+                }
+                .brand_wrap
+                    .brand_list
+                    li
+                    .list_inner:hover
+                    .info
+                    .info_top
+                    .sns {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: opacity 0.57s
+                            cubic-bezier(0.39, 0.575, 0.565, 1),
+                        transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0.7s;
+                }
+                .brand_wrap .brand_list li .list_inner .info .info_top .sns a {
+                    width: 36px;
+                    height: 36px;
+                }
+                .brand_wrap .brand_list li .list_inner .info .brand_more {
+                    margin-top: 120px;
+                    text-align: center;
+                }
+                .brand_wrap
+                    .brand_list:nth-child(odd)
+                    li:nth-child(odd)
+                    .list_inner
+                    .info
+                    .brand_more {
+                    margin-top: 80px;
+                }
+                .brand_wrap
+                    .brand_list:nth-child(even)
+                    li:nth-child(even)
+                    .list_inner
+                    .info
+                    .brand_more {
+                    margin-top: 80px;
+                }
+                .brand_wrap .brand_list li .list_inner .info .brand_more .btn {
+                    display: inline-block;
+                    padding: 20px 24px;
+                    font-size: 24px;
+                    font-family: "Arita-dotum";
+                    color: #fff;
+                    border: 1px solid #fff;
+                    border-radius: 100px;
+                    vertical-align: middle;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: opacity 0s cubic-bezier(0.39, 0.575, 0.565, 1),
+                        transform 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0s;
+                }
+                .brand_wrap
+                    .brand_list
+                    li
+                    .list_inner:hover
+                    .info
+                    .brand_more
+                    .btn {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: opacity 0.57s
+                            cubic-bezier(0.39, 0.575, 0.565, 1),
+                        transform 0.57s cubic-bezier(0.39, 0.575, 0.565, 1);
+                    transition-delay: 0.8s;
+                }
+                .brand_wrap
+                    .brand_list
+                    li
+                    .list_inner
+                    .info
+                    .brand_more
+                    .btn:after {
+                    content: "";
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 16px;
+                    margin-bottom: -4px;
+                    background: url("./img/brands_more_btn.png") no-repeat
+                        center center;
+                }
+                @media screen and (max-width: 1500px) {
+                    .brand_wrap
+                        .brand_list
+                        li
+                        .list_inner
+                        .info
+                        .brand_more
+                        .btn {
+                        padding: 10px 18px 15px;
+                        font-size: 18px;
+                    }
+                    .brand_wrap
+                        .brand_list
+                        li
+                        .list_inner
+                        .info
+                        .brand_more
+                        .btn:after {
+                        margin-bottom: -6px;
+                    }
+                }
+            </style>
+            <div class="brands-wrap">
+                <section class="brand_sec1">
+                    <h2>Brands</h2>
+                </section>
+                <section class="brand_sec2">
+                    <div class="btn_wrap">
+                        <form>
+                            <fieldset>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand1"
+                                        name="brands"
+                                        checked
+                                    />
+                                    <label for="brand1">전체</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand2"
+                                        name="brands"
+                                    />
+                                    <label for="brand2">화장품</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand3"
+                                        name="brands"
+                                    />
+                                    <label for="brand3">향수</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand4"
+                                        name="brands"
+                                    />
+                                    <label for="brand4">메디컬뷰티</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand5"
+                                        name="brands"
+                                    />
+                                    <label for="brand5">뷰티 디바이스</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand6"
+                                        name="brands"
+                                    />
+                                    <label for="brand6">이너뷰티</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand7"
+                                        name="brands"
+                                    />
+                                    <label for="brand7">헤어케어</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand8"
+                                        name="brands"
+                                    />
+                                    <label for="brand8">바디케어</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand9"
+                                        name="brands"
+                                    />
+                                    <label for="brand9">덴탄케어</label>
+                                </div>
+                                <div class="btn_item">
+                                    <input
+                                        type="checkbox"
+                                        id="brand10"
+                                        name="brands"
+                                    />
+                                    <label for="brand10">티컬쳐</label>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="brand_wrap">
+                        <ul class="brand_list">
+                            <li>
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img01.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title01.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color04">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img04.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title04.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color07">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img07.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title07.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color10">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img10.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title10.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="brand_list">
+                            <li class="color02">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img02.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title02.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color05">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img05.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title05.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color08">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img08.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title08.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color11">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img11.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title11.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="brand_list">
+                            <li class="color03">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img03.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title03.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color06">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img06.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title06.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color09">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img09.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title09.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="color12">
+                                <div class="list_inner">
+                                    <p class="img">
+                                        <img
+                                            src="./img/brands_img12.png"
+                                            alt=""
+                                        />
+                                    </p>
+                                    <div class="info">
+                                        <div class="info_top">
+                                            <p class="brand_img">
+                                                <img
+                                                    src="./img/brands_title12.png"
+                                                    alt=""
+                                                />
+                                            </p>
+                                            <div class="sns">
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns01.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns02.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                                <a href="javascript:;">
+                                                    <img
+                                                        src="./img/brands_sns03.png"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="brand_more">
+                                            <a href="javascript:;" class="btn"
+                                                >See More</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <div><img src="./img/footer_bottom.svg" /></div>
+            </footer>
+        </div>
+
+        <script>
+            document
+                .querySelector("form")
+                .addEventListener("change", function (e) {
+                    if (e.target.id != "brand1") {
+                        document.querySelector("#brand1").checked = false;
+                    } else {
+                        for (i = 2; i <= 10; i++) {
+                            document.querySelector(
+                                `#brand${i}`
+                            ).checked = false;
+                        }
+                    }
+                });
+        </script>
+    </body>
+</html>
