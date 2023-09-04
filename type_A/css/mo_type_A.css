@@ -213,6 +213,7 @@
 }
 .sec3 .swiper2{
     overflow: hidden;
+    margin: 0 16px;
 }
 .swiper2 .button{
     position: absolute;
@@ -480,6 +481,7 @@
 }
 .sec5 .swiper4{
     overflow: hidden;
+    margin: 0 16px;
 }
 .swiper4 .swiper-wrapper{
     margin-top: 42px !important;
