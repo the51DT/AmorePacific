@@ -26,7 +26,6 @@
     box-sizing: border-box;
     transition: padding 0.8s ease-in-out;
     position: relative;
-    margin-bottom: 120px;
 }
 .sec2>img{
     width: 100%;
@@ -43,12 +42,9 @@
     align-items: center;
     gap: calc(100vw * 88 / 1920);
 }
-.sec2 .text_wrap .title{
-    width: calc(100vw * 509 / 1920);
-}
 .sec2 .text_wrap .cont{
-    width: calc(100vw * 1251 / 1920);
-    height: calc(100vw * 136 / 1920);
+    width: calc(100vw * 1576 / 1920);
+    height: calc(100vw * 252 / 1920);
     overflow: hidden;
 }
 .sec2 .text_wrap .cont img{
@@ -57,8 +53,8 @@
     padding-top: 50px;
 }
 .sec2 .text_wrap .btn{
-    width: calc(100vw * 214 / 1920);
-    height: calc(100vw * 64 / 1920);
+    width: calc(100vw * 624 / 1920);
+    height: calc(100vw * 84 / 1920);
     overflow: hidden;
 }
 .sec2 .text_wrap .btn img{
@@ -72,58 +68,11 @@
     100%{padding-top: 0px; opacity: 1;}
 }
 .sec3{
-    width: 100%;
-    height: 100%;
-    padding: 0 60px;
-    box-sizing: border-box;
-    transition: padding 0.8s ease-in-out;
-    position: relative;
-}
-.sec3>img{
-    width: 100%;
-}
-.sec3 .text_wrap{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: calc(100vw * 88 / 1920);
-}
-.sec3 .text_wrap .title{
-    width: calc(100vw * 211 / 1920);
-    height: calc(100vw * 110 / 1920);
-}
-.sec3 .text_wrap .cont{
-    width: calc(100vw * 1330 / 1920);
-    height: calc(100vw * 220 / 1920);
-    overflow: hidden;
-}
-.sec3 .text_wrap .cont img{
-    width: 100%;
-    opacity: 0;
-    padding-top: 50px;
-}
-.sec3 .text_wrap .btn{
-    width: calc(100vw * 214 / 1920);
-    height: calc(100vw * 64 / 1920);
-    overflow: hidden;
-}
-.sec3 .text_wrap .btn img{
-    width: 100%;
-    opacity: 0;
-    padding-top: 50px;
-}
-.sec4{
     padding: 150px 0 250px;
     margin: 0 auto;
     max-width: 1920px;
 }
-.sec4 .swiper1{
+.sec3 .swiper1{
     margin: 0 calc(100vw * 160 / 1920);
     width: 100vw;
     max-width: 1920px;
@@ -170,15 +119,11 @@
     opacity: 0;
 }
 .swiper1 .text_wrap h2{
-    text-align: left;
+    text-align: center;
     font-size: 84px;
     font-weight: 600;
     line-height: 100%;
     margin-bottom: 32px;
-}
-.swiper1 .text_wrap .btn_wrap{
-    display: flex;
-    gap: 16px;
 }
 footer{
     margin-top: 0px;

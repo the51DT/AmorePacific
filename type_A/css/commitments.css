@@ -59,12 +59,17 @@
     padding: 150px 0 250px;
 }
 .sec3 .swiper1{
-    margin: 0 160px;
-    width: max-content;
-    position: relative;
+    margin: 0 calc(100vw * 160 / 1920);
+    width: 100vw;
+    max-width: 1920px;
 }
 .swiper1 .img_slide{
-    width: 1600px !important;
+    position: relative;
+    max-width: 1600px !important;
+    width: calc(100vw * 1600 / 1920) !important;
+}
+.swiper1 .img_slide>img{
+    width: 100%;
 }
 .swiper1 .img_slide:nth-of-type(2)>img{
     filter: brightness(70%)
@@ -103,7 +108,7 @@
 }
 .swiper1 .text_wrap{
     position: absolute;
-    top: 683px;
+    bottom: -143px;
     left: 60px;
     padding-left: 200px;
     opacity: 0;

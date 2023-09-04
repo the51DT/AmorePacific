@@ -39,7 +39,6 @@
             <div class="swiper1">
                 <div class="swiper-wrapper">
                     <div class="img_slide swiper-slide">
-                        <img src="./img/sec2_img1.png">
                         <div class="text_wrap">
                             <h2>New Beauty</h2>
                             <p>아모레퍼시픽은 고객 한 사람 한 사람이 뉴 뷰티로 영감받아 
@@ -49,7 +48,6 @@
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img src="./img/sec2_img2.png">
                         <div class="text_wrap">
                             <h2>Sustainability</h2>
                             <p>아모레퍼시픽은 자연과 사람, 사회가 조화롭게 공존하는
@@ -58,7 +56,6 @@
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img src="./img/sec2_img3.png">
                         <div class="text_wrap">
                             <h2>Innovation</h2>
                             <p>아모레퍼시픽은 끊임없는 도전과 변함없는 열정으로 기술 혁신을 지속해나갑니다. 첨단 기술력을 바탕으로 초개인화 뷰티 솔루션을 제공합니다.
@@ -163,7 +160,6 @@
                 <h2>Story of Amorepacific</h2>
                 <div class="swiper-wrapper">
                     <div class="img_slide swiper-slide">
-                        <img class="img_cont" src="./img/sec4_back1.png">
                         <div class="text_wrap">
                             <h3>건축</h3>
                             <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 
@@ -189,7 +185,6 @@
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img class="img_cont" src="./img/sec4_back2.png">
                         <div class="text_wrap">
                             <h3>지속가능경영</h3>
                             <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 
@@ -215,7 +210,6 @@
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img class="img_cont" src="./img/sec4_back3.png">
                         <div class="text_wrap">
                             <h3>고객안심품질</h3>
                             <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 
@@ -241,7 +235,6 @@
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img class="img_cont" src="./img/sec4_back4.png">
                         <div class="text_wrap">
                             <h3>혁신기술</h3>
                             <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 
@@ -267,7 +260,6 @@
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img class="img_cont" src="./img/sec4_back5.png">
                         <div class="text_wrap">
                             <h3>공간</h3>
                             <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 
@@ -428,12 +420,12 @@
 
         const io = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
-                const $target = document.querySelectorAll('.sec2 .swiper1 .img_slide img');
+                const $target = document.querySelectorAll('.sec2');
 
                 // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
                 if (e.isIntersecting) {
                     for(i=0; i<3;i++){
-                        $target[i].style.padding = "0 0"  
+                        $target[i].style.padding = "64px 0"  
                     }
                 }
             });
