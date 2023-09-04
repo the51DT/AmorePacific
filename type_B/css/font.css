@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "APHQ";
   font-weight: 400;
   src: url("../fonts/APHQHangeul.otf") format("opentype");
@@ -17,7 +17,7 @@
   font-family: "Avenir";
   font-weight: 700;
   src: url("../fonts/AvenirLTStd-Black.otf") format("opentype");
-}
+} */
 @font-face {
   font-family: "Arita-dotum";
   font-weight: 200;
@@ -43,7 +43,7 @@
   font-weight: 700;
   src: url("../fonts/Arita4.0_B.otf") format("opentype");
 }
-@font-face {
+/* @font-face {
   font-family: "PPHattonBold";
   src: url(../font/PPHatton-Bold.woff) format("woff");
 }
@@ -60,10 +60,16 @@
   src: url(../font/PPHatton-MediumItalic.woff) format("woff");
 }
 @font-face {
+  font-family: "PPHattonUltralightItalic";
+  src: url(../font/PPHatton-UltralightItalic.woff) format("woff");
+} 
+*/
+@font-face {
+  font-family: "PPHattonMedium";
+  src: url(../font/PPHatton-Medium.woff) format("woff");
+}
+@font-face {
   font-family: "PPHattonUltralight";
   src: url(../font/PPHatton-Ultralight.woff) format("woff");
 }
-@font-face {
-  font-family: "PPHattonUltralightItalic";
-  src: url(../font/PPHatton-UltralightItalic.woff) format("woff");
-}
+
