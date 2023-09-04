@@ -101,10 +101,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.sec2 .img_slide .text_wrap_max{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 250px;
+}
 .sec2 .img_slide .text_wrap{
-    position: absolute;
-    top: 249px;
-    left: 160px;
     color: #FFF;
     width: 602px;
     padding-left: 100px;
@@ -129,18 +132,25 @@
     font-weight: 300;
     line-height: 150%;
 }
-.swiper1 .swiper-button-prev{
+.swiper1 .btn_wrap{
+    max-width: 1600px;
+    width: 100%;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
     top: 501px;
-    left: 160px;
+    gap: 24px;
+}
+.swiper1 .swiper-button-prev{
+    position: static;
     width: 64px;
     height: 64px;
     background-image: url(../img/btn_prev_w.svg);
 }
 .swiper1 .swiper-button-next{
-    position: absolute;
-    top: 501px;
-    left: 248px;
+    position: static;
     width: 64px;
     height: 64px;
     background-image: url(../img/btn_next_w.svg);
@@ -155,12 +165,16 @@
     justify-content: space-between;
     gap: 10px;
     top: 178px;
-    left: 160px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #FFF;
     font-size: 24px;
     font-weight: 600;
     line-height: normal;
     height: 29px;
+    z-index: 10;
+    width: 100%;
+    max-width: 1600px;
 }
 .swiper1 .swiper-pagination{
     display: flex;
@@ -295,11 +309,14 @@
 .swiper3 h2{
     position: absolute;
     top: 120px;
-    left: 160px;
+    left: 50%;
     font-size: 84px;
     font-weight: 500;
     line-height: normal;
     z-index: 5;
+    max-width: 1600px;
+    width: 100%;
+    transform: translateX(-50%);
 }
 .swiper3 .img_slide img{
     height: 100%;
@@ -335,10 +352,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.swiper3 .text_wrap_max{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 250px;
+}
 .swiper3 .text_wrap{
     position: absolute;
     top: 438px;
-    left: 160px;
     width: 489px;
     z-index: 5;
     padding-left: 100px;
@@ -358,18 +380,25 @@
     font-weight: 400;
     line-height: 150%
 }
-.swiper3 .swiper-button-prev{
+.swiper3 .btn_wrap{
     position: absolute;
-    top: 648px;
-    left: 160px;
+    top: 658px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    gap: 24px;
+    z-index: 10;
+}
+.swiper3 .swiper-button-prev{
+    position: static;
     width: 64px;
     height: 64px;
     background-image: url(../img/btn_prev_w.svg);
 }
 .swiper3 .swiper-button-next{
-    position: absolute;
-    top: 648px;
-    left: 248px;
+    position: static;
     width: 64px;
     height: 64px;
     background-image: url(../img/btn_next_w.svg);
@@ -384,12 +413,16 @@
     justify-content: space-between;
     gap: 10px;
     top: 367px;
-    left: 160px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #FFF;
     font-size: 24px;
     font-weight: 600;
     line-height: normal;
     height: 29px;
+    z-index: 10;
+    max-width: 1600px;
+    width: 100%;
 }
 .swiper3 .swiper-pagination{
     display: flex;
