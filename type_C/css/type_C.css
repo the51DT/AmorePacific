@@ -202,6 +202,8 @@ nav ul li > a {
   stroke-dasharray: 100;
 }
 .sec1 .text {
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 120px;
   font-weight: 500;
@@ -210,12 +212,13 @@ nav ul li > a {
   /* height: 144px; */
   color: #fff;
 }
-.sec1 .text p {
+.sec1 .text span {
   padding-top: 0px;
   transform: rotate(0deg);
   transform-origin: left center;
   animation: text_rotate 1s ease-in-out;
 }
+
 .sec1 .text + .text {
   margin-top: 27px;
 }
@@ -229,9 +232,21 @@ nav ul li > a {
   letter-spacing: 30px;
   font-family: PPHattonMedium;
 }
+
 .sec1 .text3 {
   letter-spacing: 18px;
 }
+
+.sec1 .text .text-box_text1_space {
+  display:inline-block;
+  width:8px;
+}
+
+.sec1 .text .text-box_text2_space {
+  display:inline-block;
+  width:10px;
+}
+
 @keyframes text_rotate {
   0% {
     padding-top: 100px;
@@ -474,6 +489,10 @@ nav ul li > a {
   position: relative;
   overflow: hidden;
 }
+.swiper2 .swiper-slide {
+  max-width: 380px;
+}
+
 .swiper2 .button {
   position: absolute;
   display: flex;
@@ -503,8 +522,8 @@ nav ul li > a {
 }
 .swiper2 .img {
   position: relative;
-  width: 460px;
-  height: 505px;
+  /* width: 460px;
+  height: 505px; */
 }
 .swiper2 .img:hover {
   overflow: hidden;
@@ -565,15 +584,31 @@ nav ul li > a {
 }
 .swiper2 .careers_img {
   position: relative;
-  width: 460px;
-  /* height: 505px; */
-  object-fit: cover;
-  transform: scale(0.9);
-  transition: transform 0.5s;
-}
-.swiper2 .careers_img:hover {
+  width: 100%; 
+  max-width:380px;
+  height: 380px;
   overflow: hidden;
-  transform: scale(1);
+}
+.swiper2 .swiper-slide {
+  margin-right:32px
+}
+.swiper2 .swiper-slide:last-child {
+  margin-right: 0;
+}
+  .swiper2 .swiper-slide:nth-child(2n-1) .careers_img{
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+}
+.swiper2 .swiper-slide:nth-child(2n) .careers_img{
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+.swiper2 .swiper-slide:hover .careers_img img{
+  transform: scale(1.2);
   transition: transform 0.5s;
 }
 .swiper2 .careers_text {
