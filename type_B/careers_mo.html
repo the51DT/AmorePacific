@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Commitments</title>
+    <title>Careers</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/type_B.css" />
@@ -27,7 +27,7 @@
                 <img src="./img/moMenu.png" alt="">
             </a>
         </div>
-    </header>
+      </header>
       <div class="bg-video--area ob_parts">
         <video
           class="bg-video--area__content"
@@ -40,52 +40,64 @@
           <source src="./img/cType_KV_01.mp4" type="video/mp4" />
           <source src="./img/cType_KV_01.webm" type="video/webm" />
         </video>
-        <p class="bg-video--title"><span>Commitments</span></p>
+        <p class="bg-video--title"><span>Careers</span></p>
+      </div>
+      <div class="swiperCareers">
+        <img src="./img/careers_slide_title_mo.png">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/careers_slide_img1.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/careers_slide_img2.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/careers_slide_img3.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/careers_slide_img3.png">
+          </div>
+        </div>
       </div>
       <div class="ob_parts">
         <div class="moving_part">
           <div class="observerText">
-            <h3 class="sft-Arita">지속가능경영</h3>
+            <h3>AP HR<br>PHILOSOPHY</h3>
             <p>
-              아모레퍼시픽은 지속가능경영 목표 <br />
-              ‘2030 A MORE Beautiful Promise’ 다섯 가지를 <br />
-              수립했습니다.
+              오늘의 주인공은 아미, 그림, 워킹맘 등<br>다양한 일상을 만들어가는 브랜드사이언스 Lab<br>송민정 님입니다.
             </p>
-            <a href="#">View More</a>
+            <a href="#">Lean More<img class="arrow" src="./img/btn_arrow_right.svg"></a>
           </div>
           <div class="observerImg">
-            <img class="" src="./img/commitments01.png" alt="" />
+            <img class="" src="./img/careers1.png" alt="" />
           </div>
         </div>
       </div>
       <div class="ob_parts bg-black">
         <div class="moving_part">
           <div class="observerText">
-            <h3 class="sft-Arita">고객안심품질</h3>
+            <h3>JOB Explore</h3>
             <p>
-              아모레퍼시픽은 제품의 기능적 품질을 넘어서 <br />
-              고객의 관점에서 고객을 만족시키기 위한 품질이 <br />
-              중요하다고 생각합니다.
+              안녕하세요,<br>아모레퍼시픽 데일리 뷰티 마케팅 부문장<br>노병권입니다.
             </p>
-            <a href="#">View More</a>
+            <a href="#">Lean More<img class="arrow" src="./img/btn_arrow_right_w.svg"></a>
           </div>
           <div class="observerImg">
-            <img class="" src="./img/commitments02.png" alt="" />
+            <img class="" src="./img/careers2.png" alt="" />
           </div>
         </div>
       </div>
       <div class="ob_parts">
         <div class="moving_part">
           <div class="observerText">
-            <h3 class="sft-Arita">생명 존중의 원칙</h3>
+            <h3>AP Pepple</h3>
             <p>
-              아모레퍼시픽이 지향하는 아름다움은사람을 <br />
-              넘어 세상을 향합니다
+              저는 입사 후 지금까지 줄곧 아모레퍼시픽의<br>티 브랜드를 담당해왔습니다.
             </p>
-            <a href="#">View More</a>
+            <a href="#">Lean More<img class="arrow" src="./img/btn_arrow_right.svg"></a>
           </div>
           <div class="observerImg">
-            <img class="" src="./img/commitments03.png" alt="" />
+            <img class="" src="./img/careers3.png" alt="" />
           </div>
         </div>
       </div>
@@ -99,5 +111,18 @@
     </footer>
     </div>
     <script src="./js/custom.js"></script>
+    <script>
+      const swiperCareers = new Swiper(".swiperCareers", {
+        // Optional parameters
+        slidesPerView: 1.2,
+        spaceBetween: 26,
+        // Navigation arrows
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+      });
+    </script>
   </body>
 </html>

@@ -1135,6 +1135,7 @@ footer img {
   font-size: 24px;
   color: #000;
   font-family: "Arita-dotum";
+  margin-right: 16px;
 }
 .observerText .arrow{
   width: 24px;
@@ -1154,6 +1155,126 @@ footer img {
 .ob_parts.bg-black .observerText a[href] {
   border: 1px solid #fff;
   color: #fff;
+}
+.swiperInvestors{
+  width: 100%;
+  background: #F2F2F2;
+  padding: 150px 160px;
+  position: relative;
+}
+.swiperInvestors>img{
+  margin-bottom: 92px;
+}
+.swiperInvestors .swiper-wrapper{
+  height: 220px !important;
+}
+.swiperInvestors .swiper-slide{
+  width: 620px !important;
+  height: 220px !important;
+}
+.swiperInvestors .button{
+  position: absolute;
+  top: 150px;
+  left: 1608px;
+  display: flex;
+  gap: 24px;
+}
+.swiperInvestors .swiper-button-prev {
+  position: static;
+  width: 64px;
+  height: 64px;
+  background-image: url(../img/btn_prev_b.svg);
+}
+.swiperInvestors .swiper-button-next {
+  position: static;
+  width: 64px;
+  height: 64px;
+  background-image: url(../img/btn_next_b.svg);
+}
+.swiperInvestors .swiper-button-prev::after,
+.swiperInvestors .swiper-button-next::after{
+  display: none;
+}
+.investors{
+  position: relative;
+  padding: 150px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.investors .back{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  background-image: url(../img/investors.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.investors img:nth-of-type(2){
+  width: 642px;
+}
+.investors .cont{
+  height: 136px;
+  overflow: hidden;
+}
+.investors .cont img{
+  animation: text_up 0.5s ease-in-out forwards;
+
+}
+.investors .btn{
+  width: 208px;
+  height: 64px;
+  overflow: hidden;
+}
+.investors .btn img{
+  animation: text_up 0.5s ease-in-out forwards;
+}
+@keyframes text_up {
+  0%{padding-top: 100px;}
+  100%{padding-top: 0px;}
+}
+.swiperCareers{
+  width: 100%;
+  background: #F2F2F2;
+  padding: 150px 160px;
+  position: relative;
+}
+.swiperCareers>img{
+  margin-bottom: 92px;
+}
+.swiperCareers .swiper-wrapper{
+  height: 220px !important;
+}
+.swiperCareers .swiper-slide{
+  width: 476px !important;
+  height: 220px !important;
+}
+.swiperCareers .button{
+  position: absolute;
+  top: 150px;
+  left: 1608px;
+  display: flex;
+  gap: 24px;
+}
+.swiperCareers .swiper-button-prev {
+  position: static;
+  width: 64px;
+  height: 64px;
+  background-image: url(../img/btn_prev_b.svg);
+}
+.swiperCareers .swiper-button-next {
+  position: static;
+  width: 64px;
+  height: 64px;
+  background-image: url(../img/btn_next_b.svg);
+}
+.swiperCareers .swiper-button-prev::after,
+.swiperCareers .swiper-button-next::after{
+  display: none;
 }
 /* mobile verstion */
 .mobile .bg-video--title {
@@ -1192,9 +1313,130 @@ footer img {
   padding: 0 8px;
   font-size: 16px;
 }
+.mobile .observerText .arrow{
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+}
 .mobile .observerImg {
   padding: 42px 16px 0;
 }
 .mobile .ob_parts.bg-black .moving_part {
   flex-direction: column;
+}
+.mobile .swiperInvestors{
+  width: 100%;
+  background: #F2F2F2;
+  padding: 67.5px 16px;
+  position: relative;
+  text-align: center;
+}
+.mobile .swiperInvestors>img{
+  margin-bottom: 57px;
+}
+.mobile .swiperInvestors .swiper-wrapper{
+  height: 139px !important;
+}
+.mobile .swiperInvestors .swiper-slide{
+  width: 275px !important;
+  height: 139px !important;
+}
+.mobile .swiperInvestors .swiper-slide img{
+  width: 100%;
+}
+.mobile .investors{
+  position: relative;
+  padding: 51px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+}
+.mobile .investors .back{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  background-image: url(../img/investors.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mobile .investors img:nth-of-type(2){
+  width: 245px;
+}
+.mobile .investors .cont{
+  height: 204px;
+  overflow: hidden;
+}
+.mobile .investors .cont img{
+  animation: text_up 0.5s ease-in-out forwards;
+}
+.mobile .investors .btn{
+  width: 150px;
+  height: 42px;
+  overflow: hidden;
+}
+.mobile .investors .btn img{
+  height: 100%;
+  animation: text_up 0.5s ease-in-out forwards;
+}
+.mobile .swiperCareers{
+  width: 100%;
+  background: #F2F2F2;
+  padding: 67.5px 16px;
+  position: relative;
+  text-align: center;
+}
+.mobile .swiperCareers>img{
+  margin-bottom: 57px;
+}
+.mobile .swiperCareers .swiper-wrapper{
+  height: 139px !important;
+}
+.mobile .swiperCareers .swiper-slide{
+  width: 275px !important;
+  height: 139px !important;
+}
+.mobile .swiperCareers .swiper-slide img{
+  width: 100%;
+}
+.mobile header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:42px 16px 22px;
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  /* background: #000; */
+  color: #fff;
+  z-index: 99;
+  width: 100%;
+  box-sizing: border-box;
+}
+.mobile .logo_wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+.mobile .logo_wrap img {
+  display: block;
+}
+
+.mobile header .util {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:14px;
+}
+
+.mobile header .util a,
+.mobile header .util a img {
+  display: block;
 }
