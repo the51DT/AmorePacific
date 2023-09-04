@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mo_type_A_About_Us</title>
+    <title>mo_type_A_Careers</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/mo_common.css">
-    <link rel="stylesheet" href="./css/mo_about_us.css">
+    <link rel="stylesheet" href="./css/mo_careers.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
@@ -36,31 +36,49 @@
             </div>
         </header>
         <section class="sec1">
-            <h2>About Us</h2>
+            <h2>Careers</h2>
         </section>
         <section class="sec2">
-            <img src="./img/about_us/sec2_back.png">
-            <p>Live Your<br>New Beauty</p>
+            <img src="./img/careers/sec2_back.png">
+            <div class="text_wrap">
+                <img class="title" src="./img/careers/mo_sec2_title.png">
+                <div class="swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/careers/mo_sec2_cont.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/careers/mo_sec2_cont.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <img src="./img/careers/mo_sec2_input.png">
+                </div>
+            </div>
         </section>
         <section class="sec3">
             <div class="swiper1">
                 <div class="swiper-wrapper">
                     <div class="img_slide swiper-slide">
-                        <img src="./img/about_us/mo_sec3_img1.png">
+                        <img src="./img/careers/mo_sec3_img1.png">
                         <div class="text_wrap">
-                            <h2>Research<br>
-                                & Innovation</h2>
-                            <p>첨단기술을 토대로 세계가 주목하는<br>아름다움을 만들어 냅니다.</p>
-                            <img src="./img/mo_btn_more.svg">
+                            <h2>AP HR PHILOSOPHY</h2>
+                            <img src="./img/careers/btn_play.png">
                         </div>
                     </div>
                     <div class="img_slide swiper-slide">
-                        <img src="./img/about_us/mo_sec3_img2.png">
+                        <img src="./img/careers/mo_sec3_img2.png">
                         <div class="text_wrap">
-                            <h2>Visual<br>
-                                Identity</h2>
-                            <p>첨단기술을 토대로 세계가 주목하는<br>아름다움을 만들어 냅니다.</p>
-                            <img src="./img/mo_btn_more.svg">
+                            <h2>JOB Explore</h2>
+                            <img src="./img/careers/btn_play.png">
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/careers/mo_sec3_img3.png">
+                        <div class="text_wrap">
+                            <h2>AP PEOPLE</h2>
+                            <img src="./img/careers/btn_play.png">
                         </div>
                     </div>
                 </div>
@@ -71,7 +89,7 @@
         </footer>
     </div>
     <script>
-        /* const io = new IntersectionObserver((entries) => {
+        const io1 = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
                 const $target = document.querySelectorAll('.sec2');
 
@@ -79,6 +97,8 @@
                 if (e.isIntersecting) {
                     for(i=0; i<3;i++){
                         $target[i].style.padding = "0"  
+                        $target[i].querySelector('.text_wrap .swiper2').style.animation = "text_up ease-in-out 1s 0.5s forwards"
+                        $target[i].querySelector('.text_wrap .btn img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
                     }
                 }
             });
@@ -86,15 +106,27 @@
         }, {threshold: [1]});
 
         // 옵저버할 대상을 선택하여 관찰 시작
-        const $items = document.querySelectorAll(".sec2");
-        $items.forEach((item) => {
-            io.observe(item);
-        }); */
+        const sec2 = document.querySelectorAll(".sec2");
+        sec2.forEach((item) => {
+            io1.observe(item);
+        });
 
         const swiper1 = new Swiper('.swiper1', {
             // Optional parameters
-            slidesPerView: 1.1,
+            slidesPerView: 1.12,
             spaceBetween: 16,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            /* autoplay: {
+                delay:6000,
+                disableOnInteraction: false,
+            }, */
+            speed: 2000,
+        });
+        const swiper2 = new Swiper('.swiper2', {
+            // Optional parameters
+            slidesPerView: 1.15,
+            spaceBetween: 26,
             centeredSlides: true,
             centeredSlidesBounds: true,
             /* autoplay: {

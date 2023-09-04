@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type_A_Investors</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/mo_common.css">
+    <link rel="stylesheet" href="./css/mo_investors.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_wrap">
+                <div class="logo_wrap">
+                    <h1><a href="./mo_type_A.html"><img src="./img/logo.svg"></a></h1>
+                </div>
+                <div class="menu_wrap">
+                    <img src="./img/btn_search.svg">
+                    <img src="./img/btn_menu.svg">
+                </div>
+            </div>
+            <div class="header_menu">
+                <nav>
+                    <ul>
+                        <li><a href="./mo_type_A_about_us.html">About us</a></li>
+                        <li><a href="./mo_type_A_brands.html">Brands</a></li>
+                        <li><a href="./mo_type_A_our_culture.html">Our culture</a></li>
+                        <li><a href="./mo_type_A_commitments.html">Commitments</a></li>
+                        <li><a href="./mo_type_A_investors.html">Investors</a></li>
+                        <li><a href="./mo_type_A_careers.html">Careers</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec1">
+            <h2>Investors</h2>
+        </section>
+        <section class="sec2">
+            <img src="./img/investors/sec2_back.png">
+            <div class="text_wrap">
+                <img class="title" src="./img/investors/mo_sec2_title.png">
+                <div class="cont">
+                    <img src="./img/investors/mo_sec2_cont.png">
+                </div>
+                <div class="btn">
+                    <img src="./img/investors/btn_more.png">
+                </div>
+            </div>
+        </section>
+        <section class="sec4">
+            <div class="swiper1">
+                <div class="swiper-wrapper">
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/investors/mo_sec4_img1.png">
+                        <div class="text_wrap">
+                            <h2>IR 자료</h2>
+                            <div class="btn_wrap">
+                                <img src="./img/Investors/mo_btn.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/investors/mo_sec4_img2.png">
+                        <div class="text_wrap">
+                            <h2>재무정보</h2>
+                            <div class="btn_wrap">
+                                <img src="./img/Investors/mo_btn.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/investors/mo_sec4_img3.png">
+                        <div class="text_wrap">
+                            <h2>공시정보</h2>
+                            <div class="btn_wrap">
+                                <img src="./img/Investors/mo_btn.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/investors/mo_sec4_img4.png">
+                        <div class="text_wrap">
+                            <h2>주식정보</h2>
+                            <div class="btn_wrap">
+                                <img src="./img/Investors/mo_btn.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img_slide swiper-slide">
+                        <img src="./img/investors/mo_sec4_img5.png">
+                        <div class="text_wrap">
+                            <h2>기업재배구조</h2>
+                            <div class="btn_wrap">
+                                <img src="./img/Investors/mo_btn.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec3">
+            <img src="./img/investors/sec3_back.png">
+            <div class="text_wrap">
+                <img class="title" src="./img/investors/sec3_title.png">
+                <div class="swiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/investors/mo_sec3_cont1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/investors/mo_sec3_cont1.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <img src="./img/investors/btn_more.png">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <img src="./img/mo_footer.png">
+        </footer>
+    </div>
+    <script>
+        const io1 = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                const $target = document.querySelectorAll('.sec2');
+
+                // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
+                if (e.isIntersecting) {
+                    for(i=0; i<3;i++){
+                        $target[i].querySelector('.text_wrap .cont img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
+                        $target[i].querySelector('.text_wrap .btn img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
+                    }
+                }
+            });
+            
+        }, {threshold: [1]});
+
+        // 옵저버할 대상을 선택하여 관찰 시작
+        const sec2 = document.querySelectorAll(".sec2");
+        sec2.forEach((item) => {
+            io1.observe(item);
+        });
+
+        const io2 = new IntersectionObserver((entries) => {
+            entries.forEach((e) => {
+                const $target = document.querySelectorAll('.sec3');
+
+                // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
+                if (e.isIntersecting) {
+                    for(i=0; i<3;i++){
+                        $target[i].querySelector('.text_wrap .swiper2').style.animation = "text_up ease-in-out 1s 0.5s forwards"
+                        $target[i].querySelector('.text_wrap .btn img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
+                    }
+                }
+            });
+            
+        }, {threshold: [1]});
+
+        // 옵저버할 대상을 선택하여 관찰 시작
+        const sec3 = document.querySelectorAll(".sec3");
+        sec3.forEach((item) => {
+            io2.observe(item);
+        });
+
+        const swiper1 = new Swiper('.swiper1', {
+            // Optional parameters
+            slidesPerView: 1.15,
+            spaceBetween: 16,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            /* autoplay: {
+                delay:6000,
+                disableOnInteraction: false,
+            }, */
+            speed: 2000,
+        });
+        const swiper2 = new Swiper('.swiper2', {
+            // Optional parameters
+            slidesPerView: 1.15,
+            spaceBetween: 24,
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            /* autoplay: {
+                delay:6000,
+                disableOnInteraction: false,
+            }, */
+            speed: 2000,
+        });
+    </script>
+</body>
+</html>
