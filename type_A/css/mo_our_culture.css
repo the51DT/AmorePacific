@@ -1,0 +1,120 @@
+.sec1{
+    width: 100%;
+    height: 178px;
+    padding: 60px 0 36px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec1 h2{
+    text-align: center;
+    color: #131313;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 15px;
+    animation: text_spacing 1s forwards ease-in-out;
+}
+@keyframes text_spacing{
+    0%{letter-spacing: 15px;}
+    100%{letter-spacing: 4.8px;}
+}
+.sec2{
+    width: 100%;
+    height: 480px;
+    box-sizing: border-box;
+    transition: padding 0.8s ease-in-out;
+    position: relative;
+    text-align: center;
+}
+.sec2 img{
+    height: 100%;
+}
+.sec2 p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFF;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: normal;
+    animation: text_sort 0.5s ease-in-out forwards;
+    padding-bottom: 100px;
+    opacity: 0;
+    letter-spacing: 4.8px;
+}
+@keyframes text_sort {
+    0%{padding-bottom: 100px; opacity: 0;}
+    100%{padding-bottom: 0px; opacity: 1;}
+}
+.sec3{
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 60px 0 234px;
+}
+.sec3 .swiper1{
+    margin: 0 16px;
+    width: 100vw;
+    max-width: 360px;
+}
+.swiper1 .img_slide{
+    position: relative;
+    max-width: 300px !important;
+    width: 300px !important;
+    height: 420px !important;
+}
+.swiper1 .img_slide>img{
+    width: 300px;
+    height: 420px;
+}
+.swiper1 .img_slide:nth-of-type(2)>img{
+    filter: brightness(70%);
+}
+.swiper1 p{
+    width: 244px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    padding-left: 200px;
+    opacity: 0;
+}
+.swiper1 .swiper-slide-active p{
+    animation: text_ani 1.5s ease-in-out forwards;
+    animation-delay: 1500ms;
+}
+.swiper1 .swiper-slide-active .text_wrap{
+    animation: text_ani 0.8s ease-in-out forwards;
+    animation-delay: 1000ms;
+}
+@keyframes text_ani {
+    0%{padding-left: 200px; opacity: 0;}
+    100%{padding-left: 0px; opacity: 1;}
+}
+.swiper1 .text_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    bottom: -172px;
+    left: 16px;
+    padding-left: 200px;
+    opacity: 0;
+}
+.swiper1 .text_wrap h2{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 100%;
+}
+.swiper1 .text_wrap img{
+    width: 131px;
+}
+footer{
+    margin-top: 0px;
+}
