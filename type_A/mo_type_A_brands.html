@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mo_type_A_Brands</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/mo_common.css">
+    <link rel="stylesheet" href="./css/mo_brands.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_wrap">
+                <div class="logo_wrap">
+                    <h1><a href="./mo_type_A.html"><img src="./img/logo.svg"></a></h1>
+                </div>
+                <div class="menu_wrap">
+                    <img src="./img/btn_search.svg">
+                    <img src="./img/btn_menu.svg">
+                </div>
+            </div>
+            <div class="header_menu">
+                <nav>
+                    <ul>
+                        <li><a href="./mo_type_A_about_us.html">About us</a></li>
+                        <li><a href="./mo_type_A_brands.html">Brands</a></li>
+                        <li><a href="./mo_type_A_our_culture.html">Our culture</a></li>
+                        <li><a href="./mo_type_A_commitments.html">Commitments</a></li>
+                        <li><a href="./mo_type_A_investors.html">Investors</a></li>
+                        <li><a href="./mo_type_A_careers.html">Careers</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="sec1">
+            <h2>Brands</h2>
+        </section>
+        <section class="sec2">
+            <div class="btn_wrap">
+                <form>
+                    <fieldset>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand1" name="brands" checked>
+                            <label for="brand1">전체</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand2" name="brands">
+                            <label for="brand2">화장품</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand3" name="brands">
+                            <label for="brand3">향수</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand4" name="brands">
+                            <label for="brand4">메디컬뷰티</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand5" name="brands">
+                            <label for="brand5">뷰티 디바이스</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand6" name="brands">
+                            <label for="brand6">이너뷰티</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand7" name="brands">
+                            <label for="brand7">헤어케어</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand8" name="brands">
+                            <label for="brand8">바디케어</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand9" name="brands">
+                            <label for="brand9">덴탄케어</label>
+                        </div>
+                        <div class="btn_item">
+                            <input type="checkbox" id="brand10" name="brands">
+                            <label for="brand10">티컬쳐</label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="brand_wrap">
+
+            </div>
+        </section>
+        <footer>
+            <img src="./img/mo_footer.png">
+        </footer>
+    </div>
+    <script>
+        let text = ''
+        for(i=1;i<=16;i++){
+            text += `<div class="brand_item">
+                    <img class="brand" src="./img/brands/img${i}.png">
+                    <div class="logo_wrap">
+                        <img class=logo_w src="./img/brands/logo${i}.png">
+                        <img class=logo_b src="./img/brands/logo_b_${i}.png">
+                    </div>
+                </div>`
+        }
+        document.querySelector('.brand_wrap').innerHTML = text
+
+        let item_list = document.querySelectorAll('.brand_item')
+        item_list.forEach((el, index) =>{
+            setTimeout(function(){
+                el.style.animation = 'brand ease-in-out forwards .5s'
+            }, 300 * index)
+        })
+        item_list.forEach((el) => {
+            el.addEventListener('mouseover', () =>{
+                el.querySelector('.logo_b').style.display = 'block';
+                el.querySelector('.brand').style.filter = 'none';
+                el.querySelector('.brand').style.transform = 'scale(110%)';
+            })
+            el.addEventListener('mouseleave', () =>{
+                el.querySelector('.logo_b').style.display = 'none';
+                el.querySelector('.brand').style.filter = 'grayscale(95%)';
+                el.querySelector('.brand').style.transform = 'scale(100%)';
+            })
+        })
+
+        document.querySelector('form').addEventListener("change",function(e){
+            if(e.target.id != 'brand1'){
+                document.querySelector('#brand1').checked = false;
+            } else{
+                for(i=2;i<=10;i++){
+                    document.querySelector(`#brand${i}`).checked = false;
+                }
+            }
+            if(document.querySelector('#brand2').checked){
+                let text = ''
+                for(i=1;i<=16;i+=2){
+                    text += `<div class="brand_item">
+                                <img class="brand" src="./img/brands/img${i}.png">
+                                <div class="logo_wrap">
+                                    <img class=logo_w src="./img/brands/logo${i}.png">
+                                    <img class=logo_b src="./img/brands/logo_b_${i}.png">
+                                </div>
+                            </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else if(document.querySelector('#brand3').checked){
+                let text = ''
+                for(i=1;i<=16;i+=3){
+                    text += `<div class="brand_item">
+                                <img class="brand" src="./img/brands/img${i}.png">
+                                <div class="logo_wrap">
+                                    <img class=logo_w src="./img/brands/logo${i}.png">
+                                    <img class=logo_b src="./img/brands/logo_b_${i}.png">
+                                </div>
+                            </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else if(document.querySelector('#brand4').checked){
+                let text = ''
+                for(i=1;i<=16;i+=4){
+                    text += `<div class="brand_item">
+                                <img class="brand" src="./img/brands/img${i}.png">
+                                <div class="logo_wrap">
+                                    <img class=logo_w src="./img/brands/logo${i}.png">
+                                    <img class=logo_b src="./img/brands/logo_b_${i}.png">
+                                </div>
+                            </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else if(document.querySelector('#brand1').checked){
+                let text = ''
+                for(i=1;i<=16;i++){
+                    text += `<div class="brand_item">
+                                <img class="brand" src="./img/brands/img${i}.png">
+                                <div class="logo_wrap">
+                                    <img class=logo_w src="./img/brands/logo${i}.png">
+                                    <img class=logo_b src="./img/brands/logo_b_${i}.png">
+                                </div>
+                            </div>`
+                }
+                document.querySelector('.brand_wrap').innerHTML = text
+            }
+            else {
+                document.querySelector('.brand_wrap').innerHTML = ''
+            }
+
+            let item_list = document.querySelectorAll('.brand_item')
+            item_list.forEach((el, index) =>{
+                el.style.animation = ''
+                setTimeout(function(){
+                    el.style.animation = 'brand ease-in-out forwards .5s'
+                }, 300 * index)
+            })
+            
+            item_list.forEach((el) => {
+                el.addEventListener('mouseover', () =>{
+                    el.querySelector('.logo_b').style.display = 'block';
+                    el.querySelector('.brand').style.filter = 'none';
+                    el.querySelector('.brand').style.transform = 'scale(110%)';
+                })
+                el.addEventListener('mouseleave', () =>{
+                    el.querySelector('.logo_b').style.display = 'none';
+                    el.querySelector('.brand').style.filter = 'grayscale(95%)';
+                    el.querySelector('.brand').style.transform = 'scale(100%)';
+                })
+            })
+        })        
+    </script>
+</body>
+</html>

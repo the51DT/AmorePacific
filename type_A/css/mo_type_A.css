@@ -201,7 +201,6 @@
 }
 .sec3{
     position: relative;
-    max-width: 360px;
     padding: 60px 0;
     margin: 0 auto;
 }
@@ -214,6 +213,7 @@
 }
 .sec3 .swiper2{
     overflow: hidden;
+    margin: 0 16px;
 }
 .swiper2 .button{
     position: absolute;
@@ -468,7 +468,6 @@
     width: 24px;
 }
 .sec5{
-    max-width: 360px;
     margin: 0 auto;
     position: relative;
     padding: 64px 0;
