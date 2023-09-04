@@ -1265,9 +1265,12 @@ footer img {
 .swiperCareers > img {
   margin-bottom: 92px;
 }
-.swiperCareers .swiper-wrapper {
+.swiperCareers .swiper-wrapper{
+  height: 220px !important;
 }
-.swiperCareers .swiper-slide {
+.swiperCareers .swiper-slide{
+  width: 476px !important;
+  height: 220px !important;
 }
 .swiperCareers .button {
   position: absolute;
@@ -1411,9 +1414,12 @@ footer img {
 .mobile .swiperCareers > img {
   margin-bottom: 57px;
 }
-.mobile .swiperCareers .swiper-wrapper {
+.mobile .swiperCareers .swiper-wrapper{
+  height: 139px !important;
 }
-.mobile .swiperCareers .swiper-slide {
+.mobile .swiperCareers .swiper-slide{
+  width: 275px !important;
+  height: 139px !important;
 }
 .mobile .swiperCareers .swiper-slide img {
   width: 100%;
