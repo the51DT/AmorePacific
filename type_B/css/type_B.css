@@ -264,7 +264,7 @@ nav ul li > a img {
   /* padding: 64px 60px; */
 }
 .sec2 .swiper1 {
-  width: 542px;
+  width: 530px;
   height: 742px;
   overflow: hidden;
   /* position: absolute;
@@ -282,48 +282,31 @@ nav ul li > a img {
 }
 
 .sec2 .swiper1 .swiper-slide .slide-bg {
-  width: 542px;
+  width: 530px;
   height: 742px;
-  background-size: cover;
-  background-position: 50%;
+  background-size: auto 742px;
+  background-position: 0 0;
   background-repeat: no-repeat;
+  background-image: url(../img/our_brands_big_on.png);
 }
 .sec2 .swiper1 .swiper-slide:nth-child(1) .slide-bg {
-  background-image: url(../img/sec2_slide00.png);
+  background-position: 0 0;
 }
-/* .sec2 .swiper1 .swiper-slide:nth-child(1):hover .slide-bg {
-  background-image: url(../img/dim_img01.jpg);
-} */
 .sec2 .swiper1 .swiper-slide:nth-child(2) .slide-bg {
-  background-image: url(../img/sec2_slide01.png);
+  background-position: -554px 0;
 }
-/* .sec2 .swiper1 .swiper-slide:nth-child(2):hover .slide-bg {
-  background-image: url(../img/dim_img02.jpg); 
-}*/
 .sec2 .swiper1 .swiper-slide:nth-child(3) .slide-bg {
-  background-image: url(../img/sec2_slide02.png);
+  background-position: -1108px 0;
 }
-/* .sec2 .swiper1 .swiper-slide:nth-child(3):hover .slide-bg {
-  background-image: url(../img/dim_img03.jpg);
-} */
 .sec2 .swiper1 .swiper-slide:nth-child(4) .slide-bg {
-  background-image: url(../img/sec2_slide03.png);
+  background-position: -1662px 0;
 }
-/* .sec2 .swiper1 .swiper-slide:nth-child(4):hover .slide-bg {
-  background-image: url(../img/dim_img04.jpg);
-} */
 .sec2 .swiper1 .swiper-slide:nth-child(5) .slide-bg {
-  background-image: url(../img/sec2_slide04.png);
+  background-position: -2216px 0;
 }
-/* .sec2 .swiper1 .swiper-slide:nth-child(5):hover .slide-bg {
-  background-image: url(../img/dim_img05.jpg);
-} */
 .sec2 .swiper1 .swiper-slide:nth-child(6) .slide-bg {
-  background-image: url(../img/sec2_slide05.png);
+  background-position: -2770px 0;
 }
-/* .sec2 .swiper1 .swiper-slide:nth-child(6):hover .slide-bg {
-  background-image: url(../img/dim_img06.jpg);
-} */
 .sec2 .button0 {
   position: absolute;
   display: flex;
