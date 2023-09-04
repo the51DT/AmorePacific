@@ -106,28 +106,29 @@ header .util a img {
 }
 .swiper0 .scroll_wrap {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  gap: 9px;
   bottom: 54px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  width: 100%;
+  padding:0 35px;
+  box-sizing: border-box;
+
 }
 .swiper0 .swiper-pagination {
-  /* display: none; */
-  /* display: flex; */
-  /* gap: 240px; */
   position: relative;
-  /* top: 50%;
-  width: 200px;
-  bottom: 50%;
-  padding-bottom: 20px;
-  transform: translate(0, -50%);
-  justify-content: center; */
+  top:0 !important;
+  left:0 !important;
+  bottom:0 !important;
+  display: flex;
+  gap:8.5px;
+  align-items: center;
+  justify-content: space-between;
 }
 .swiper0 .swiper-pagination-bullet {
-  width: 288px;
+  margin: 0 !important;
+  width: calc(33.3% - 5.66px);
+  height: 3px;
   border-radius: 0;
   background-color: #D9D9D9;
   opacity: .25;

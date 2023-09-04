@@ -132,30 +132,22 @@ nav ul li > a img {
 }
 .swiper0 .scroll_wrap {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  bottom: 20px;
+  bottom: 52px;
   left: 50%;
   transform: translateX(-50%);
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: normal;
-  height: 29px;
+  max-width: 1112px;
+  width:100%;
   z-index: 10;
 }
 .swiper0 .swiper-pagination {
   /* display: none; */
   /* display: flex; */
-  gap: 240px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
   position: relative;
-  top: 50%;
-  width: 200px;
-  bottom: 50%;
-  padding-bottom: 20px;
-  transform: translate(0, -50%);
-  justify-content: center;
+  top: 0 !important;
+  bottom: 0 !important;
 }
 .swiper0 .swiper-wrapper .swiper-slide {
   color: #fff;
@@ -163,8 +155,10 @@ nav ul li > a img {
   border-radius: calc(100vw * 114 / 1920);
 }
 .swiper0 .swiper-pagination-bullet {
-  width: 288px;
   border-radius: 0;
+  margin:0 auto !important;
+  width: calc(33.3% - 10.66px);
+  height: 6px;
 }
 .swiper0 .swiper-pagination-bullet-active {
   background-color: #fff;
