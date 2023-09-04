@@ -190,3 +190,44 @@ targets.forEach((taregt) => {
 // if (document.querySelectorAll(".ob_parts").length > 0) {
 //   observerFn();
 // }
+
+const btn_toggle = document.querySelector('.btn_ham')
+const menu = document.querySelector('.header_menu')
+const ham_menu = document.querySelectorAll('.ham_menu')
+const header = document.querySelector('header')
+btn_toggle.addEventListener("click", ()=>{
+    if(btn_toggle.classList.contains('on')){
+        btn_toggle.classList.remove('on')
+        menu.classList.remove('on')
+        menu.style.opacity = "0"
+        btn_toggle.src = './img/moMenu.png'
+        document.documentElement.style.setProperty('--height', '0');
+        header.style.backgroundColor = "transparent"
+      }
+    else{
+        btn_toggle.classList.add('on')
+        menu.classList.add('on')
+        menu.style.visibility = "visible"
+        menu.style.opacity = "1"
+        btn_toggle.src = './img/btn_close.svg'
+        document.documentElement.style.setProperty('--height', '100vh');
+        header.style.backgroundColor = "#131313"
+      }
+})
+ham_menu.forEach((el)=>{
+    el.addEventListener("click", ()=>{
+        if(el.classList.contains('on')){
+            el.classList.remove('on')
+            el.closest('.menu_list').querySelector('.menu').style.visibility = "hidden"
+            el.closest('.menu_list').querySelector('.menu').style.height = "0"
+            el.querySelector('.arrow').style.transform = 'rotate(0deg)'
+        }
+        else{
+            el.classList.add('on')
+            console.log(header)
+            el.closest('.menu_list').querySelector('.menu').style.visibility = "visible"
+            el.closest('.menu_list').querySelector('.menu').style.height = "100%"
+            el.querySelector('.arrow').style.transform = 'rotate(180deg)'
+        }
+    })
+})
