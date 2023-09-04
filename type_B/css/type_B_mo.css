@@ -612,6 +612,7 @@ header .util a img {
 .sec4 {
   /* background-color: #000000de; */
   position: relative;
+  padding-bottom: 84px;
   background: url(../img/sec4-slide-bg01.png);
 }
 .sec4_title {
@@ -675,11 +676,13 @@ header .util a img {
   width:calc(100% - 100px);
 }
 .swiper3 .button3 {
-  position: absolute;
+  /* position: absolute; */
+  margin:34px auto 0;
   display: flex;
   gap: 24px;
-  top: 150px;
-  right: 160px;
+  /* top: 150px;
+  right: 160px; */
+  justify-content: center;
 }
 .swiper3 .swiper-slide {
 }
@@ -704,6 +707,11 @@ header .util a img {
 }
 .swiper3 .swiper-slide:nth-child(5) .slide-bg {
   background-image: url(../img/sec4-slide-bg05.png);
+}
+
+.swiper3 .swiper-button-next, 
+.swiper3 .swiper-button-prev {
+  margin-top: 0;
 }
 
 .swiper3 .swiper-button-prev {
@@ -771,20 +779,29 @@ header .util a img {
 .swiper3 .img_item.swiper-slide-active .img_dim{
   display: block;
 }
-.swiper3 .img_item .img_box {
-  /* border-radius: 183px; */
+
+.swiper3 .img_item .img_box h4:before {
+  display: block;
+  content: '';
+  width:42px;
+  height:3px;
 }
 .swiper3 .img_item .img_box h4 {
   text-align: center;
-  padding-top: 24px;
+  padding-top: 16px;
+  color:#fff;
   font-family: "Arita-dotum";
-  font-weight: 200;
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   /* letter-spacing: 0em; */
   text-align: center;
 }
 .swiper3 .img_item .img_dim img {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
   width: 114px;
 }
 .swiper3_button {
