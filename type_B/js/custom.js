@@ -177,7 +177,7 @@ let observer = new IntersectionObserver(
   },
   {
     root: document.getElementById("my-viewport"),
-    threshold: [0.5],
+    threshold: [0.2],
   }
 );
 
@@ -203,6 +203,7 @@ btn_toggle.addEventListener("click", ()=>{
         btn_toggle.src = './img/moMenu.png'
         document.documentElement.style.setProperty('--height', '0');
         header.style.backgroundColor = "transparent"
+        document.querySelector('html, body').style.overflow = "auto"
       }
     else{
         btn_toggle.classList.add('on')
@@ -212,6 +213,7 @@ btn_toggle.addEventListener("click", ()=>{
         btn_toggle.src = './img/btn_close.svg'
         document.documentElement.style.setProperty('--height', '100vh');
         header.style.backgroundColor = "#131313"
+        document.querySelector('html, body').style.overflow = "hidden"
       }
 })
 ham_menu.forEach((el)=>{

@@ -47,7 +47,7 @@ header .header_menu{
     box-sizing: border-box;
     padding: 46px 0 ;
     text-align: center;
-    overflow: hidden;
+    overflow: scroll;
     visibility: hidden;
     transition: height 0.5s ease-in-out;
     transition-delay: 0.4s;
@@ -94,6 +94,7 @@ nav ul button{
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
+    color: #000;
 }
 nav .menu{
     visibility: hidden;

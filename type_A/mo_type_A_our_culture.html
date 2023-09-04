@@ -132,6 +132,7 @@
                 menu.style.opacity = "0"
                 btn_toggle.src = './img/btn_menu.svg'
                 document.documentElement.style.setProperty('--height', '0');
+                document.querySelector('html, body').style.overflow = "auto"
             }
             else{
                 btn_toggle.classList.add('on')
@@ -141,6 +142,7 @@
                 menu.style.opacity = "1"
                 btn_toggle.src = './img/btn_close.svg'
                 document.documentElement.style.setProperty('--height', '100vh');
+                document.querySelector('html, body').style.overflow = "hidden"
             }
         })
         ham_menu.forEach((el)=>{
