@@ -1238,6 +1238,7 @@ footer img {
 .investors .cont {
   height: 136px;
   overflow: hidden;
+  margin: 100px 0;
 }
 .investors .cont img {
   animation: text_up 0.5s ease-in-out forwards;
