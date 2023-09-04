@@ -615,7 +615,7 @@ header .util a img {
   /* background-color: #000000de; */
   position: relative;
   padding-bottom: 84px;
-  background: url(../img/sec4-slide-bg01.png);
+  background: center 100% / 100% auto no-repeat url(../img/sec4-bg_01.jpg);
 }
 .sec4_title {
   /* padding-top: 150px; */
@@ -784,9 +784,11 @@ header .util a img {
 
 .swiper3 .img_item .img_box h4:before {
   display: block;
+  margin:0 auto 16px;
   content: '';
   width:42px;
   height:3px;
+  background: #fff;
 }
 .swiper3 .img_item .img_box h4 {
   text-align: center;
