@@ -435,7 +435,7 @@ nav ul li > a img {
 .swiper1 .swiper-pagination .swiper-pagination-bullet {
   margin: 0 !important;
   width: 120px;
-  height: 221px;
+  height: 223px;
   border-radius: 0;
   opacity: 1;
   background-repeat: no-repeat;
@@ -444,64 +444,48 @@ nav ul li > a img {
 
 .swiper1 .swiper-pagination .swiper-pagination-bullet {
   background-image: url(../img/our_brands_bg.png);
+  background-color: transparent;
+}
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url(../img/our_brands_bg_on.png);
+  background-size: auto 223px;
+}
+.swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(1) {
   background-position: 0 bottom;
 }
-.swiper1 .swiper-pagination .swiper-pagination-bulle-active {
-  background-image: url(../img/our_brands_bg_on.png);
-  background-position: 0 bottom;
-}
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(1).swiper-pagination-bullet-active {
-  background-image: url(../img/our_brands_bg_on.png);
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(1) {
   background-position: 0 bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(2) {
-  background: center 100% / contain no-repeat url(../img/our_brands_bg_on.png);
+  background-position: -133px bottom;
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(2).swiper-pagination-bullet-active {
-  background: center 100% / contain no-repeat
-    url(../img/sec1_pagenation02_hover.png);
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(2) {
+  background-position: -133px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
-  background: center 100% / contain no-repeat url(../img/sec1_pagenation03.png);
+  background-position: -266px bottom;
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
-  background: center 100% / contain no-repeat
-    url(../img/sec1_pagenation03_hover.png);
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(3) {
+  background-position: -266px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(4) {
-  background: center 100% / contain no-repeat url(../img/sec1_pagenation04.png);
+  background-position: -399px bottom;
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(4).swiper-pagination-bullet-active {
-  background: center 100% / contain no-repeat
-    url(../img/sec1_pagenation04_hover.png);
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(4) {
+  background-position: -399px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(5) {
-  background: center 100% / contain no-repeat url(../img/sec1_pagenation05.png);
+  background-position: -532px bottom;
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(5).swiper-pagination-bullet-active {
-  background: center 100% / contain no-repeat
-    url(../img/sec1_pagenation05_hover.png);
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(5) {
+  background-position: -532px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(6) {
-  background: center 100% / contain no-repeat url(../img/sec1_pagenation06.png);
+  background-position: -665px bottom;
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(6).swiper-pagination-bullet-active {
-  background: center 100% / contain no-repeat
-    url(../img/sec1_pagenation06_hover.png);
+.swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(6) {
+  background-position: -665px bottom;
 }
-
 .sec3 {
   padding: 150px 0 150px 160px;
 }
