@@ -1140,6 +1140,8 @@ footer img {
 .observerText h3 {
   font-size: 84px;
   line-height: 84px;
+  font-family: "Arita-dotum";
+  font-weight: 400;
 }
 .observerText p {
   margin-top: 64px;
