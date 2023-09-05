@@ -1138,10 +1138,13 @@ footer img {
   transform: translateX(0%);
 }
 .observerText h3 {
+  font-size: 90px;
+  line-height: 135px;  
+}
+.observerText h3.sft-Arita {
   font-size: 84px;
+  font-weight: 400;;
   line-height: 84px;
-  font-family: "Arita-dotum";
-  font-weight: 400;
 }
 .observerText p {
   margin-top: 64px;
