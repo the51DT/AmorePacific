@@ -90,17 +90,18 @@
 }
 .swiper1 .text_wrap{
     position: absolute;
-    bottom: -79px;
+    bottom: -89px;
     left: 16px;
     padding-left: 200px;
     opacity: 0;
 }
 .swiper1 .text_wrap h2{
-    text-align: left;
+    text-align: center;
     font-size: 32px;
     font-weight: 600;
     line-height: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+    width: 211px;
 }
 .swiper1 .text_wrap>img{
     width: 139px;
