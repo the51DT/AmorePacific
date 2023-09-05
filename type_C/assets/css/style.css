@@ -10,7 +10,7 @@ body {margin: 0 auto; height: 100%; width:100%; -ms-overflow-style: none; cursor
 i {background-repeat: no-repeat; background-position: center; background-size: 100%; position: absolute;}
 
 /* ---- Header ---- */
-header {z-index: 100; position: fixed; padding: calc(100vw * 32 /1920); width: 100%; height: calc(100vw * 100 /1920);  background-color: transparent;}
+header {z-index: 100; position: absolute; padding: calc(100vw * 32 /1920); width: 100%; height: calc(100vw * 100 /1920);  background-color: transparent;}
 header .gnb__wrap .gnb__1d-wrap {display: flex; justify-content: space-between;}
 header .gnb__wrap .gnb__1d-wrap .gnb {display: inline-flex; align-items: center; gap: calc(100vw * 96 /1920);}
 header .gnb__wrap .gnb__1d-wrap .gnb li {display: flex;	flex-direction: column; transition: all ease-in-out 0.5s; height: calc(100vw * 30 /1920);}
