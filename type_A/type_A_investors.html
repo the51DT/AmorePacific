@@ -195,67 +195,6 @@
             }
             
         })
-        // const io = new IntersectionObserver((entries) => {
-        //     const slide = document.querySelectorAll('.swiper1 .img_slide')
-        //     entries.forEach((e) => {
-        //         const $target = document.querySelectorAll('.swiper1');
-        //         // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
-                
-        //         if (e.isIntersecting) {
-        //             document.querySelector('body').style.overflow = "hidden"
-        //         }
-        //     });
-            
-        // }, {threshold: [0.9]});
-
-        // 옵저버할 대상을 선택하여 관찰 시작
-        // const $items = document.querySelector(".swiper1");
-        // io.observe($items);
-        let checkSectionTop = document.querySelector(".swiper1").offsetTop
-        let defaultTop = 0
-        window.addEventListener('scroll', () => {
-            
-            let winTop = window.scrollY
-            let checkBoolean = true;
-            if(winTop > defaultTop) {
-                defaultTop = winTop
-                // console.log('down')
-                if(winTop > checkSectionTop && winTop < checkSectionTop + 50){
-                    swiper1.on('slideChange', ()=>{
-                    if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
-                        setTimeout(() => {
-                            document.querySelector('body').style.overflow = "scroll"
-                        }, 2000);
-                    }else{
-                        document.querySelector('body').style.overflow = "hidden"
-                    }
-                })
-                }
-                
-                /* swiper1.on('slideChange', ()=>{
-                    if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
-                        setTimeout(() => {
-                            document.querySelector('body').style.overflow = "scroll"
-                        }, 2000);
-                    }
-                }) */
-            }else{
-                defaultTop = winTop
-                // console.log('up')
-                if(winTop < checkSectionTop && winTop > checkSectionTop - 50){
-                    swiper1.on('slideChange', ()=>{
-                    if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
-                        setTimeout(() => {
-                            document.querySelector('body').style.overflow = "scroll"
-                        }, 2000);
-                    }else{
-                        document.querySelector('body').style.overflow = "hidden"
-                    }
-                })
-                }
-                
-            }
-        })
     </script>
 </body>
 </html>
