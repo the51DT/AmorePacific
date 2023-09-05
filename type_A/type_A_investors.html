@@ -25,6 +25,7 @@
                         <li><a href="./type_A_commitments.html">Commitments</a></li>
                         <li><a href="./type_A_investors.html">Investors</a></li>
                         <li><a href="./type_A_careers.html">Careers</a></li>
+                        <li><img src="./img/btn_lang.png"></li>
                     </ul>
                 </nav>
             </div>
@@ -135,7 +136,7 @@
 
                 // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
                 if (e.isIntersecting) {
-                    for(i=0; i<3;i++){
+                    for(i=0; i<1;i++){
                         $target[i].style.padding = "0"  
                         $target[i].querySelector('.text_wrap .cont img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
                         $target[i].querySelector('.text_wrap .btn img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
@@ -156,7 +157,7 @@
                 // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
                 if (e.isIntersecting) {
                     for(i=0; i<3;i++){
-                        $target[i].style.padding = "120px 0 94px"
+                        $target[i].style.padding = "0 0 94px"
                         $target[i].querySelector('.text_wrap .cont img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
                         $target[i].querySelector('.text_wrap .btn img').style.animation = "text_up ease-in-out 1s 0.5s forwards"
                     }
@@ -169,6 +170,7 @@
         const sec3 = document.querySelector(".sec3");
         io2.observe(sec3);
 
+        
         const swiper1 = new Swiper('.swiper1', {
             // Optional parameters
             slidesPerView: 1.15,
@@ -184,6 +186,76 @@
             },
             speed: 2000,
         });
+        swiper1.on('slideChange', ()=>{
+            if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
+                setTimeout(() => {
+                    
+                    document.querySelector('body').style.overflow = "scroll"
+                }, 2000);
+            }
+            
+        })
+        // const io = new IntersectionObserver((entries) => {
+        //     const slide = document.querySelectorAll('.swiper1 .img_slide')
+        //     entries.forEach((e) => {
+        //         const $target = document.querySelectorAll('.swiper1');
+        //         // 화면에 노출 상태에 따라 해당 엘리먼트의 class를 컨트롤
+                
+        //         if (e.isIntersecting) {
+        //             document.querySelector('body').style.overflow = "hidden"
+        //         }
+        //     });
+            
+        // }, {threshold: [0.9]});
+
+        // 옵저버할 대상을 선택하여 관찰 시작
+        // const $items = document.querySelector(".swiper1");
+        // io.observe($items);
+        let checkSectionTop = document.querySelector(".swiper1").offsetTop
+        let defaultTop = 0
+        window.addEventListener('scroll', () => {
+            
+            let winTop = window.scrollY
+            let checkBoolean = true;
+            if(winTop > defaultTop) {
+                defaultTop = winTop
+                // console.log('down')
+                if(winTop > checkSectionTop && winTop < checkSectionTop + 50){
+                    swiper1.on('slideChange', ()=>{
+                    if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
+                        setTimeout(() => {
+                            document.querySelector('body').style.overflow = "scroll"
+                        }, 2000);
+                    }else{
+                        document.querySelector('body').style.overflow = "hidden"
+                    }
+                })
+                }
+                
+                /* swiper1.on('slideChange', ()=>{
+                    if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
+                        setTimeout(() => {
+                            document.querySelector('body').style.overflow = "scroll"
+                        }, 2000);
+                    }
+                }) */
+            }else{
+                defaultTop = winTop
+                // console.log('up')
+                if(winTop < checkSectionTop && winTop > checkSectionTop - 50){
+                    swiper1.on('slideChange', ()=>{
+                    if(swiper1.activeIndex === 0 || swiper1.activeIndex === swiper1.slides.length -1){
+                        setTimeout(() => {
+                            document.querySelector('body').style.overflow = "scroll"
+                        }, 2000);
+                    }else{
+                        document.querySelector('body').style.overflow = "hidden"
+                    }
+                })
+                }
+                
+            }
+        })
     </script>
 </body>
 </html>
