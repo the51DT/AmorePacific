@@ -143,13 +143,11 @@
                 }
             });
             
-        }, {threshold: [1]});
+        }, {threshold: [0.9]});
 
         // 옵저버할 대상을 선택하여 관찰 시작
-        const sec2 = document.querySelectorAll(".sec2");
-        sec2.forEach((item) => {
-            io1.observe(item);
-        });
+        const sec2 = document.querySelector(".sec2");
+        io1.observe(sec2);
 
         const io2 = new IntersectionObserver((entries) => {
             entries.forEach((e) => {
@@ -165,13 +163,11 @@
                 }
             });
             
-        }, {threshold: [1]});
+        }, {threshold: [0.9]});
 
         // 옵저버할 대상을 선택하여 관찰 시작
-        const sec3 = document.querySelectorAll(".sec3");
-        sec3.forEach((item) => {
-            io2.observe(item);
-        });
+        const sec3 = document.querySelector(".sec3");
+        io2.observe(sec3);
 
         const swiper1 = new Swiper('.swiper1', {
             // Optional parameters
