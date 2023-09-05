@@ -442,10 +442,10 @@ header .util a img {
 .swiper2 .img {
   position: relative;
 }
-.swiper2 .img:hover {
+/* .swiper2 .img:hover {
   overflow: hidden;
   transition: scale(1.2);
-}
+} */
 .swiper2 .careers_text {
   padding-top: 20px;
 }
@@ -533,8 +533,8 @@ header .util a img {
 
 .sec3 .sec3_text {
   position: absolute;
-  left:0;
-  bottom:-124px;
+  left:10px;
+  bottom:-178px;
   display: block;
   z-index: 1;
 }
