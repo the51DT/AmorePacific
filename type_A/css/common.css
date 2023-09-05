@@ -1,7 +1,12 @@
 body{
     font-family: 'AritaBuri';
     scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 .wrap{
     margin: 0 auto;
     overflow-x: hidden;
@@ -39,8 +44,12 @@ nav{
 nav ul{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 996px;
     width: calc(100vw * 1100 / 1920);
+}
+nav ul li img{
+    vertical-align: middle;
 }
 footer{
     margin-top: 64px;
