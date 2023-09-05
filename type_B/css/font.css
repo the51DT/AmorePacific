@@ -97,3 +97,14 @@
   src: url(../font/PPHatton-Ultralight.woff) format("woff");
 }
 
+@font-face {
+    font-family: 'AritaBuri';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/amore/AritaBuri-Medium.ttf') format("truetype");
+    font-display: swap;
+}
