@@ -78,7 +78,7 @@
     filter: brightness(70%);
 }
 .swiper1 p{
-    width: 244px;
+    width: 100%;
     font-size: 16px;
     font-weight: 500;
     line-height: 160%;
@@ -94,7 +94,7 @@
     animation-delay: 1000ms;
 }
 @keyframes text_ani {
-    0%{padding-left: 200px; opacity: 0;}
+    0%{padding-left: 15px; opacity: 0;}
     100%{padding-left: 0px; opacity: 1;}
 }
 .swiper1 .text_wrap{
