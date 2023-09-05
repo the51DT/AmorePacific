@@ -462,18 +462,20 @@ nav ul li > a img {
   background-position: -133px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3) {
-  background-position: -266px bottom;
+  /* background-position: -266px bottom; */
+  background-position: -399px bottom;
 }
-.swiper1
-  .swiper-pagination
-  .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
-  background-position: -266px bottom;
+.swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(3).swiper-pagination-bullet-active {
+  /* background-position: -266px bottom; */
+  background-position: -399px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(4) {
-  background-position: -399px bottom;
+  /* background-position: -399px bottom; */
+  background-position: -266px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet-active:nth-child(4) {
-  background-position: -399px bottom;
+  /* background-position: -399px bottom; */
+  background-position: -266px bottom;
 }
 .swiper1 .swiper-pagination .swiper-pagination-bullet:nth-child(5) {
   background-position: -532px bottom;
