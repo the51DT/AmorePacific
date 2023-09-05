@@ -8,8 +8,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding:42px 16px 22px;
-  /* position: absolute; */
-  position: fixed;
+  position: absolute;
+  /* position: fixed; */
   top: 0;
   /* background: #000; */
   color: #fff;
