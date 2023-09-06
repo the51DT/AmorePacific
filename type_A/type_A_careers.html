@@ -174,15 +174,15 @@
                 $target[i].style.padding = "0";
                 $target[i].querySelector(
                   ".text_wrap .cont img"
-                ).style.animation = "text_up ease-in-out 1s 0.5s forwards";
+                ).style.animation = "text_up ease-in-out 1s 0.2s forwards";
                 $target[i].querySelector(
                   ".text_wrap .btn img"
-                ).style.animation = "text_up ease-in-out 1s 0.5s forwards";
+                ).style.animation = "text_up ease-in-out 1s 0.2s forwards";
               }
             }
           });
         },
-        { threshold: [1] }
+        { threshold: [0.5] }
       );
 
       // 옵저버할 대상을 선택하여 관찰 시작
