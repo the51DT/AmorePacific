@@ -115,7 +115,7 @@
 }
 .swiper1 .text_wrap {
   position: absolute;
-  bottom: -172px;
+  bottom: -130px;
   left: 60px;
   padding-left: 200px;
   opacity: 0;
@@ -132,9 +132,16 @@ footer {
 }
 .horizontal {
   box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 1600px;
 }
 .wrapper.swiper1 {
   margin-top: 120px;
+}
+.swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: calc(50vw - 1314px / 2);
+}
+.swiper1 .img_slide {
+  min-width: 100%;
+  display: flex;
 }
